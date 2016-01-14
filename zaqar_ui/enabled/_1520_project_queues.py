@@ -25,14 +25,6 @@ ADD_ANGULAR_MODULES = [
     'horizon.dashboard.project.queues'
 ]
 
-ADD_JS_FILES = [
-    'dashboard/project/queues/queues.module.js',
-]
-
-ADD_JS_SPEC_FILES = [
-    'dashboard/project/queues/queues.module.spec.js',
-]
-
 ADD_SCSS_FILES = [
     'dashboard/project/queues/queues.scss'
 ]

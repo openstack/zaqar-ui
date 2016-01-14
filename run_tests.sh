@@ -428,9 +428,9 @@ function run_makemessages {
   babel_extract djangojs
   ZAQAR_JS_RESULT=$?
 
-  #if [ $check_only -eq 1 ]; then
-    #git checkout -- zaqar_ui/locale/django*.pot
-  #fi
+  if [ $check_only -eq 1 ]; then
+    git checkout -- zaqar_ui/locale/django*.pot
+  fi
 
   exit $(($ZAQAR_PY_RESULT || $ZAQAR_JS_RESULT))
 }
