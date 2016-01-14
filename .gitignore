@@ -1,0 +1,12 @@
+AUTHORS
+ChangeLog
+build
+dist
+doc/source/sourcecode
+zaqar_ui/test/.secret_key_store
+.venv
+.tox
+*.pyc
+*.lock
+*.egg*
+*.swp

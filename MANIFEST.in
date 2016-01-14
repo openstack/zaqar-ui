@@ -1,0 +1,4 @@
+include setup.py
+
+recursive-include zaqar_ui/content/queues/templates *
+recursive-include zaqar_ui/static *
