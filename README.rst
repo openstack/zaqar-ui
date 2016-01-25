@@ -41,8 +41,8 @@ Install Zaqar UI with all dependencies in your virtual environment::
 
 And enable it in Horizon::
 
-    cp ../zaqar-ui/enabled/_1510_messaging_panel_group.py openstack_dashboard/local/enabled
-    cp ../zaqar-ui/enabled/_1520_zaqar_project_queues.py openstack_dashboard/local/enabled
+    cp ../zaqar-ui/zaqar_ui/enabled/_1510_project_messaging_group.py openstack_dashboard/local/enabled
+    cp ../zaqar-ui/zaqar_ui/enabled/_1520_project_queues.py openstack_dashboard/local/enabled
 
 To run horizon with the newly enabled Zaqar UI plugin run::
 
