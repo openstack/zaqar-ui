@@ -12,12 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.conf import urls
+"""This package holds the REST API that supports the LBaaS v2 dashboard
+Javascript code.
+It is not intended to be used outside of Horizon, and makes no promises of
+stability or fitness for purpose outside of that scope.
+It does not promise to adhere to the general OpenStack API Guidelines set out
+in https://wiki.openstack.org/wiki/APIChangeGuidelines.
+"""
 
-from zaqar_ui.content.queues import views
-
-
-urlpatterns = urls.patterns(
-    'zaqar_ui.content.queues',
-    urls.url(r'^$', views.IndexView.as_view(), name='index'),
-)
+# import REST API modules here
+from zaqar_ui.api.rest import zaqar  # noqa

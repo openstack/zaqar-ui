@@ -25,8 +25,19 @@ ADD_ANGULAR_MODULES = [
     'horizon.dashboard.project.queues'
 ]
 
+ADD_JS_FILES = [
+    'app/core/openstack-service-api/zaqar.service.js',
+    'dashboard/project/queues/queues.module.js',
+    'dashboard/project/queues/table/table.controller.js',
+]
+
+ADD_JS_SPEC_FILES = [
+    'dashboard/project/queues/queues.module.spec.js',
+    'dashboard/project/queues/table/table.controller.spec.js',
+]
+
 ADD_SCSS_FILES = [
     'dashboard/project/queues/queues.scss'
 ]
 
-AUTO_DISCOVER_STATIC_FILES = True
+# AUTO_DISCOVER_STATIC_FILES = True

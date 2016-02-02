@@ -1,0 +1,112 @@
+<hz-page-header header="{$ 'Queues' | translate $}"></hz-page-header>
+
+<table ng-controller="horizon.dashboard.project.queues.tableController as table"
+  hz-table ng-cloak
+  st-table="table.iqueues"
+  st-safe-src="table.queues"
+  default-sort="name"
+  default-sort-reverse="false"
+  class="table-striped table-rsp table-detail modern">
+
+  <thead>
+
+    <!--
+      Table-column-headers:
+      The headers for the table columns
+    -->
+    <tr>
+      <th class=select-col>
+        <input type="checkbox" hz-select-all="table.iqueues">
+      </th>
+      <th class="expander"></th>
+      <th class="rsp-p1" st-sort="name" st-sort-default translate>Name</th>
+      <th class="rsp-p2" st-sort="metadata" translate>Claimed Messages</th>
+      <th class="rsp-p2" st-sort="metadata" translate>Free Messages</th>
+      <th class="rsp-p2" st-sort="metadata" translate>Total Messages</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <!--
+      Table-rows:
+      This is where we declaratively define the table columns.
+      Include select-col if you want to select all.
+      Include expander if you want to inline details.
+      Include action-col if you want to perform actions.
+      rsp-p1 rsp-p2 are responsive priority as user resizes window.
+    -->
+    <tr ng-repeat-start="q in table.iqueues track by q.name"
+        nt-class="{'st-selected': checked[q.name]}">
+
+      <td class="select-col">
+        <input type="checkbox"
+          ng-model="selected[q.name].checked"
+          hz-select="q">
+      </td>
+
+      <td class="expander">
+        <span class="fa fa-chevron-right"
+          hz-expand-detail duration="200"></span>
+      </td>
+
+      <td class="rsp-p1">{$ q.name $}</td>
+      <td class="rsp-p2">{$ q.claimed $}</td>
+      <td class="rsp-p2">{$ q.free $}</td>
+      <td class="rsp-p2">{$ q.total $}</td>
+
+    </tr>
+    <tr ng-repeat-end class="detail-row">
+
+      <!--
+        Table-row-details:
+        Provides detail view of specific view, with more information than can be
+        displayed in the table alone.
+      -->
+      <td class="detail" colspan="100">
+        <!--
+          The responsive columns that disappear typically should reappear here
+          with the same responsive priority that they disappear.
+          E.g. table header with rsp-p2 should be here with rsp-alt-p2
+          The layout should minimize vertical space to reduce scrolling.
+        -->
+        <div class="row">
+
+          <!-- Important metadata should go here and table header.
+            It will appear in the table above if there is room, otherwise
+            it will appear in the drawer when user resizes the window.
+          -->
+          <span class="rsp-alt-p2">
+            <dl class="col-sm-2">
+              <dt translate>Flavor</dt>
+              <dd>{$ q.metadata.flavor $}</dd>
+            </dl>
+
+            <dl class="col-sm-2">
+              <dt translate>Max Message Size</dt>
+              <dd>{$ q.metadata.max_message_size $}</dd>
+            </dl>
+
+            <dl class="col-sm-2">
+              <dt translate>Time To Live</dt>
+              <dd>{$ q.metadata.ttl $}</dd>
+            </dl>
+          </span>
+
+          <!-- additional unimportant metadata can be place here -->
+          <dl class="col-sm-2">
+            <dt translate>Metadata</dt>
+            <dd>{$ q.metadata $}</dd>
+          </dl>
+
+        </div>
+      </td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <td colspan="100">
+        <span class="display">{$ table.iqueues.length|itemCount $}</span>
+          <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
+        </td>
+  </tfoot>
+</table>
