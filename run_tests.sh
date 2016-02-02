@@ -187,7 +187,7 @@ function warn_on_flake8_without_venv {
 function run_pep8 {
   echo "Running flake8 ..."
   warn_on_flake8_without_venv
-  DJANGO_SETTINGS_MODULE=zaqar_ui.test.settings ${command_wrapper} flake8
+  DJANGO_SETTINGS_MODULE=openstack_dashboard.test.settings ${command_wrapper} flake8
 }
 
 function run_pep8_changed {
@@ -200,13 +200,13 @@ function run_pep8_changed {
     files=$(git diff --name-only $base_commit | tr '\n' ' ')
     echo "Running flake8 on ${files}"
     warn_on_flake8_without_venv
-    diff -u --from-file /dev/null ${files} | DJANGO_SETTINGS_MODULE=zaqar_ui.test.settings ${command_wrapper} flake8 --diff
+    diff -u --from-file /dev/null ${files} | DJANGO_SETTINGS_MODULE=openstack_dashboard.test.settings ${command_wrapper} flake8 --diff
     exit
 }
 
 function run_sphinx {
     echo "Building sphinx..."
-    DJANGO_SETTINGS_MODULE=zaqar_ui.test.settings ${command_wrapper} python setup.py build_sphinx
+    DJANGO_SETTINGS_MODULE=openstack_dashboard.test.settings ${command_wrapper} python setup.py build_sphinx
     echo "Build complete."
 }
 

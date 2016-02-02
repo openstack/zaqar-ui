@@ -34,7 +34,7 @@ sys.path.insert(0, ROOT)
 
 # This is required for ReadTheDocs.org, but isn't a bad idea anyway.
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
-                      'zaqar_ui.test.settings')
+                      'openstack_dashboard.test.settings')
 
 from zaqar_ui \
     import version as zaqarui_ver
