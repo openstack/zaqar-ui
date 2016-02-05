@@ -22,21 +22,18 @@ from openstack_dashboard.api.rest import utils as rest_utils
 
 @urls.register
 class Queue(generic.View):
-    """API for retrieving a single queue
-    """
+    """API for retrieving a single queue"""
     url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)$'
 
     @rest_utils.ajax()
     def get(self, request, queue_name):
-        """Get a specific queue
-        """
+        """Get a specific queue"""
         return zaqar.queue_show(request, queue_name).to_dict()
 
 
 @urls.register
 class Queues(generic.View):
-    """API for queues
-    """
+    """API for queues"""
     url_regex = r'zaqar/queues/$'
 
     @rest_utils.ajax()

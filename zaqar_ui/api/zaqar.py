@@ -55,12 +55,11 @@ def queue_list(request, limit=None, marker=None):
 
 
 def queue_create(request, queue_name, metadata):
-    """Pop up a modal form, which contains several inputbox:
-    1. queue_name
-    2. ttl
-    3. max message size
-    4. Metadata
-    """
+    # Pop up a modal form, which contains several inputbox:
+    # 1. queue_name
+    # 2. ttl
+    # 3. max message size
+    # 4. Metadata
 
     queue = zaqarclient(request).queue(queue_name, force_create=True)
     queue.metadata(new_meta=metadata)
@@ -72,9 +71,8 @@ def queue_delete(request, queue_name):
 
 
 def queue_update(request, queue_name, metadata):
-    """Popup a modal form, the queue name is a realonly label or inputbox.
-    user can change ttl, max message size and metadata
-    """
+    # Popup a modal form, the queue name is a realonly label or inputbox.
+    # user can change ttl, max message size and metadata
 
     queue = zaqarclient(request).queue(queue_name, auto_create=False)
     queue.metadata(new_meta=metadata)
@@ -85,9 +83,7 @@ def queue_get(request, queue_name):
 
 
 def queue_subscribe(request, subscriber, ttl=None, options={}):
-    """Popup a modal form, user can input subscriber, ttl and options to
-    subscribe the queue.
-
-    subscriber could be an URL or email address.
-    """
+    # Popup a modal form, user can input subscriber, ttl and options to
+    # subscribe the queue.
+    # subscriber could be an URL or email address.
     pass
