@@ -17,7 +17,6 @@ from django.conf import urls
 from zaqar_ui.content.queues import views
 
 
-urlpatterns = urls.patterns(
-    'zaqar_ui.content.queues',
+urlpatterns = [
     urls.url(r'^$', views.IndexView.as_view(), name='index'),
-)
+]
