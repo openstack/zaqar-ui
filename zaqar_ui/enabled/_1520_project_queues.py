@@ -28,6 +28,12 @@ ADD_ANGULAR_MODULES = [
 ADD_JS_FILES = [
     'app/core/openstack-service-api/zaqar.service.js',
     'dashboard/project/queues/queues.module.js',
+    'dashboard/project/queues/actions/create.action.service.js',
+    'dashboard/project/queues/actions/create.workflow.service.js',
+    'dashboard/project/queues/steps/queue-details/queue-details.controller.js',
+    'dashboard/project/queues/steps/queue-metadata/'
+    'queue-metadata.controller.js',
+    'dashboard/project/queues/table/batch-actions.service.js',
     'dashboard/project/queues/table/table.controller.js',
 ]
 

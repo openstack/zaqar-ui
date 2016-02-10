@@ -29,17 +29,32 @@
 
   queuesTableController.$inject = [
     '$scope',
-    'horizon.app.core.openstack-service-api.zaqar'
+    'horizon.app.core.openstack-service-api.zaqar',
+    'horizon.dashboard.project.queues.batch-actions.service',
+    'horizon.dashboard.project.queues.events'
   ];
 
-  function queuesTableController($scope, zaqar) {
+  function queuesTableController($scope, zaqar, batchActions, events) {
 
     var ctrl = this;
 
-    ctrl.iqueues = [];
     ctrl.queues = [];
+    ctrl.queuesSrc = [];
+
+    ctrl.batchActions = batchActions;
+    ctrl.batchActions.initScope($scope);
 
     init();
+    initScope();
+
+    //////////
+
+    function initScope() {
+      var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
+      $scope.$on('$destroy', function destroy() {
+        createWatcher();
+      })
+    }
 
     //////////
 
@@ -48,12 +63,12 @@
     }
 
     function getQueuesSuccess(response) {
+      ctrl.queuesSrc = response;
+    }
 
-      // TODO: If the response does not contain the id field
-      // then you must manually add them on the client-side
-      // the horizon table's checkboxes requires that the id field be present
-      console.log(response);
-      ctrl.queues = response;
+    function onCreateSuccess(e, newQueue) {
+      e.stopPropagation();
+      ctrl.queuesSrc.push(newQueue);
     }
   }
 

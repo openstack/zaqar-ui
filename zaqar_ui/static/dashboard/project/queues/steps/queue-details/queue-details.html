@@ -1,0 +1,33 @@
+
+<div ng-controller="horizon.dashboard.project.queues.steps.QueueDetailsController as detailsCtrl">
+
+  <h1 translate>Queue Details</h1>
+  <div class="content">
+
+    <div translate style="margin-bottom:1em;">
+      Note that you can create a queue without defining metadata.
+      The metadata step is optional but recommended.
+    </div>
+
+    <div class="selected-source clearfix">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <div class="form-group required">
+            <label class="control-label" translate>Queue Name</label>
+            <input required
+              id="queueDetailsForm-name" name="name"
+              type="text" class="form-control"
+              ng-model="detailsCtrl.queue.name"
+              ng-maxlength="255"
+              placeholder="{$ 'Enter a queue name'|translate $}">
+            <p class="help-block alert alert-danger"
+              ng-show="queueDetailsForm.name.$invalid && queueDetailsForm.name.$dirty">
+              <translate>A user name between 1-256 characters is required.</translate>
+            </p>
+          </div>
+        </div>
+      </div><!-- row -->
+    </div><!-- clearfix -->
+
+  </div><!-- content -->
+</div><!-- controller -->

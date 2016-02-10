@@ -60,9 +60,9 @@ def queue_create(request, queue_name, metadata):
     # 2. ttl
     # 3. max message size
     # 4. Metadata
-
     queue = zaqarclient(request).queue(queue_name, force_create=True)
     queue.metadata(new_meta=metadata)
+    return queue
 
 
 def queue_delete(request, queue_name):

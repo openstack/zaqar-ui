@@ -64,12 +64,13 @@ class Queues(generic.View):
             zaqar.queue_delete(request, queue_name)
 
     @rest_utils.ajax(data_required=True)
-    def create(self, request):
+    def put(self, request):
         """Create a new queue.
 
         Returns the new queue object on success.
         """
         new_queue = zaqar.queue_create(request, **request.DATA)
-        return rest_utils.CreatedResponse(
-            '/api/messaging/queues/%s' % new_queue.name,
-            new_queue.to_dict())
+        location = '/api/zaqar/queues/%s' % new_queue.name
+        response = {'name': new_queue.name,
+                    'metadata': new_queue._metadata}
+        return rest_utils.CreatedResponse(location, response)

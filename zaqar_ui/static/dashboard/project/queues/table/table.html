@@ -2,13 +2,26 @@
 
 <table ng-controller="horizon.dashboard.project.queues.tableController as table"
   hz-table ng-cloak
-  st-table="table.iqueues"
-  st-safe-src="table.queues"
+  st-table="table.queues"
+  st-safe-src="table.queuesSrc"
   default-sort="name"
   default-sort-reverse="false"
   class="table-striped table-rsp table-detail modern">
 
   <thead>
+
+    <tr>
+      <!--
+        Table-batch-actions:
+        This is where batch actions like searching, creating, and deleting.
+      -->
+      <th colspan="100" class="search-header">
+        <hz-search-bar group-classes="input-group-sm" icon-classes="fa-search">
+          <actions allowed="table.batchActions.actions" type="batch">
+          </actions>
+        </hz-search-bar>
+      </th>
+    </tr>
 
     <!--
       Table-column-headers:
@@ -16,7 +29,7 @@
     -->
     <tr>
       <th class=select-col>
-        <input type="checkbox" hz-select-all="table.iqueues">
+        <input type="checkbox" hz-select-all="table.queuesSrc">
       </th>
       <th class="expander"></th>
       <th class="rsp-p1" st-sort="name" st-sort-default translate>Name</th>
@@ -35,7 +48,7 @@
       Include action-col if you want to perform actions.
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
-    <tr ng-repeat-start="q in table.iqueues track by q.name"
+    <tr ng-repeat-start="q in table.queuesSrc track by q.name"
         nt-class="{'st-selected': checked[q.name]}">
 
       <td class="select-col">
@@ -105,7 +118,7 @@
 
   <tfoot>
     <td colspan="100">
-        <span class="display">{$ table.iqueues.length|itemCount $}</span>
+        <span class="display">{$ table.queuesSrc.length|itemCount $}</span>
           <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
         </td>
   </tfoot>
