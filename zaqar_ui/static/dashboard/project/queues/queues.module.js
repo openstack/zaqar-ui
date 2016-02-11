@@ -1,5 +1,6 @@
 /**
  * Copyright 2015 Catalyst IT Ltd
+ * Copyright 2016 IBM Corp.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may
  * not use this file except in compliance with the License. You may obtain
@@ -19,20 +20,40 @@
 
   /**
    * @ngdoc overview
-   * @name horizon.dashboard.project
-   *
-   * @description
-   * Dashboard module to host various queues panels.
+   * @name horizon.dashboard.project.queues
+   * @description Dashboard module to host various queues panels.
    */
   angular
     .module('horizon.dashboard.project.queues', [])
+    .constant('horizon.dashboard.project.queues.events', events())
     .config(config);
 
-  config.$inject = ['$provide', '$windowProvider'];
+  config.$inject = [
+    '$provide',
+    '$windowProvider'
+  ];
 
+  /**
+   * @ngdoc value
+   * @name horizon.dashboard.project.queues.events
+   * @description a list of events for queues
+   */
+  function events() {
+    return {
+      CREATE_SUCCESS: 'horizon.dashboard.project.queues.CREATE_SUCCESS',
+      DETAILS_CHANGED: 'horizon.dashboard.project.queues.DETAILS_CHANGED',
+      METADATA_CHANGED: 'horizon.dashboard.project.queues.METADATA_CHANGED'
+    };
+  }
+
+  /**
+   * @ndoc config
+   * @name horizon.dashboard.project.queues.basePath
+   * @description Base path for the queues panel
+   */
   function config($provide, $windowProvider) {
-    var path = $windowProvider.$get().STATIC_URL + 'dashboard/project/';
-    $provide.constant('horizon.dashboard.project.basePath', path);
+    var path = $windowProvider.$get().STATIC_URL + 'dashboard/project/queues/';
+    $provide.constant('horizon.dashboard.project.queues.basePath', path);
   }
 
 })();

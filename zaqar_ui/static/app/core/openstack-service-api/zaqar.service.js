@@ -28,7 +28,8 @@
 
   function ZaqarAPI(apiService, toastService) {
     var service = {
-      getQueues: getQueues
+      getQueues: getQueues,
+      createQueue: createQueue
     };
 
     return service;
@@ -39,6 +40,13 @@
       return apiService.get('/api/zaqar/queues/')
         .error(function() {
           toastService.add('error', gettext('Unable to retrieve the Queues.'));
+        });
+    }
+
+    function createQueue(newQueue) {
+      return apiService.put('/api/zaqar/queues/', newQueue)
+        .error(function() {
+          toastService.add('error', gettext('Unable to create the queue.'));
         });
     }
 
