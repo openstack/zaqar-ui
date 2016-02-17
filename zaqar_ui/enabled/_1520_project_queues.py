@@ -17,33 +17,8 @@ PANEL_GROUP = 'messaging'
 PANEL_DASHBOARD = 'project'
 
 ADD_PANEL = ('zaqar_ui.content.queues.panel.Queues')
-
-# ADD_INSTALLED_APPS enables using html templates from within the plugin
 ADD_INSTALLED_APPS = ['zaqar_ui']
+ADD_ANGULAR_MODULES = ['horizon.dashboard.project.queues']
+ADD_SCSS_FILES = ['dashboard/project/queues/queues.scss']
 
-ADD_ANGULAR_MODULES = [
-    'horizon.dashboard.project.queues'
-]
-
-ADD_JS_FILES = [
-    'app/core/openstack-service-api/zaqar.service.js',
-    'dashboard/project/queues/queues.module.js',
-    'dashboard/project/queues/actions/create.action.service.js',
-    'dashboard/project/queues/actions/create.workflow.service.js',
-    'dashboard/project/queues/steps/queue-details/queue-details.controller.js',
-    'dashboard/project/queues/steps/queue-metadata/'
-    'queue-metadata.controller.js',
-    'dashboard/project/queues/table/batch-actions.service.js',
-    'dashboard/project/queues/table/table.controller.js',
-]
-
-ADD_JS_SPEC_FILES = [
-    'dashboard/project/queues/queues.module.spec.js',
-    'dashboard/project/queues/table/table.controller.spec.js',
-]
-
-ADD_SCSS_FILES = [
-    'dashboard/project/queues/queues.scss'
-]
-
-# AUTO_DISCOVER_STATIC_FILES = True
+AUTO_DISCOVER_STATIC_FILES = True
