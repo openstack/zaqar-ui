@@ -24,8 +24,10 @@
    * @description Dashboard module to host various queues panels.
    */
   angular
-    .module('horizon.dashboard.project.queues', [])
+    .module('horizon.dashboard.project.queues', [
+      'horizon.dashboard.project.queues.actions'])
     .constant('horizon.dashboard.project.queues.events', events())
+    .constant('horizon.dashboard.project.queues.resourceType', 'OS::Zaqar::Queues')
     .config(config);
 
   config.$inject = [
@@ -42,7 +44,8 @@
     return {
       CREATE_SUCCESS: 'horizon.dashboard.project.queues.CREATE_SUCCESS',
       DETAILS_CHANGED: 'horizon.dashboard.project.queues.DETAILS_CHANGED',
-      METADATA_CHANGED: 'horizon.dashboard.project.queues.METADATA_CHANGED'
+      METADATA_CHANGED: 'horizon.dashboard.project.queues.METADATA_CHANGED',
+      DELETE_SUCCESS: 'horizon.dashboard.project.queues.DELETE_SUCCESS'
     };
   }
 

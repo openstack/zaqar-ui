@@ -17,7 +17,7 @@
       -->
       <th colspan="100" class="search-header">
         <hz-search-bar group-classes="input-group-sm" icon-classes="fa-search">
-          <actions allowed="table.batchActions.actions" type="batch">
+          <actions allowed="table.batchActions" type="batch">
           </actions>
         </hz-search-bar>
       </th>
@@ -29,7 +29,7 @@
     -->
     <tr>
       <th class=select-col>
-        <input type="checkbox" hz-select-all="table.queuesSrc">
+        <input type="checkbox" hz-select-all="table.queues">
       </th>
       <th class="expander"></th>
       <th class="rsp-p1" st-sort="name" st-sort-default translate>Name</th>
@@ -48,12 +48,11 @@
       Include action-col if you want to perform actions.
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
-    <tr ng-repeat-start="q in table.queuesSrc track by q.name"
-        nt-class="{'st-selected': checked[q.name]}">
+    <tr ng-repeat-start="q in table.queuesSrc track by q.id">
 
       <td class="select-col">
         <input type="checkbox"
-          ng-model="selected[q.name].checked"
+          ng-model="tCtrl.selections[q.id].checked"
           hz-select="q">
       </td>
 
@@ -114,12 +113,9 @@
         </div>
       </td>
     </tr>
+
+    <tr hz-no-items items="table.queues"></tr>
   </tbody>
 
-  <tfoot>
-    <td colspan="100">
-        <span class="display">{$ table.queuesSrc.length|itemCount $}</span>
-          <div st-pagination="" st-items-by-page="10" st-displayed-pages="10"></div>
-        </td>
-  </tfoot>
+  <tfoot hz-table-footer items="table.queues"></tfoot>
 </table>

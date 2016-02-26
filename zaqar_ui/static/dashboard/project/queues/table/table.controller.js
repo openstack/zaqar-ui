@@ -30,19 +30,20 @@
   queuesTableController.$inject = [
     '$scope',
     'horizon.app.core.openstack-service-api.zaqar',
-    'horizon.dashboard.project.queues.batch-actions.service',
-    'horizon.dashboard.project.queues.events'
+    'horizon.dashboard.project.queues.events',
+    'horizon.dashboard.project.queues.resourceType',
+    'horizon.framework.conf.resource-type-registry.service',
   ];
 
-  function queuesTableController($scope, zaqar, batchActions, events) {
+  function queuesTableController($scope, zaqar, events, type, registry) {
 
     var ctrl = this;
 
     ctrl.queues = [];
     ctrl.queuesSrc = [];
 
-    ctrl.batchActions = batchActions;
-    ctrl.batchActions.initScope($scope);
+    //ctrl.getItemActions = typeRegistry.getItemActionsFunction(imageResourceType);
+    ctrl.batchActions = registry.getBatchActionsFunction(type);
 
     init();
     initScope();
@@ -51,24 +52,46 @@
 
     function initScope() {
       var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
+      var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
       $scope.$on('$destroy', function destroy() {
         createWatcher();
+        deleteWatcher();
       })
     }
 
     //////////
 
     function init() {
+      registry.initActions(type, $scope);
       zaqar.getQueues().success(getQueuesSuccess);
     }
 
     function getQueuesSuccess(response) {
+      // hz-table expects all items to have the id field
+      // so we need to manually add name as id here
       ctrl.queuesSrc = response;
+      ctrl.queuesSrc.map(function addIdentifier(queue, index){
+        queue.id = queue.name;
+      });
     }
 
     function onCreateSuccess(e, newQueue) {
       e.stopPropagation();
+      newQueue.id = newQueue.name;
       ctrl.queuesSrc.push(newQueue);
+    }
+
+    function onDeleteSuccess(e, deletedNames) {
+      // remove existing item from table
+      e.stopPropagation();
+      for (var i = ctrl.queuesSrc.length - 1; i >= 0; i--) {
+        var queue = ctrl.queuesSrc[i];
+        if (deletedNames.indexOf(queue.name) >= 0) {
+          ctrl.queuesSrc.splice(i, 1);
+        }
+      }
+      // clear selections upon deletion
+      $scope.$emit('hzTable:clearSelected');
     }
   }
 

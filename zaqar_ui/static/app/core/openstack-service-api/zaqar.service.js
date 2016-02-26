@@ -29,7 +29,8 @@
   function ZaqarAPI(apiService, toastService) {
     var service = {
       getQueues: getQueues,
-      createQueue: createQueue
+      createQueue: createQueue,
+      deleteQueue: deleteQueue
     };
 
     return service;
@@ -50,6 +51,9 @@
         });
     }
 
+    function deleteQueue(queueName) {
+      return apiService.delete('/api/zaqar/queues/', [queueName]);
+    }
   }
 
 }());
