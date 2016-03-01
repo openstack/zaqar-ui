@@ -45,7 +45,8 @@
       CREATE_SUCCESS: 'horizon.dashboard.project.queues.CREATE_SUCCESS',
       DETAILS_CHANGED: 'horizon.dashboard.project.queues.DETAILS_CHANGED',
       METADATA_CHANGED: 'horizon.dashboard.project.queues.METADATA_CHANGED',
-      DELETE_SUCCESS: 'horizon.dashboard.project.queues.DELETE_SUCCESS'
+      DELETE_SUCCESS: 'horizon.dashboard.project.queues.DELETE_SUCCESS',
+      UPDATE_SUCCESS: 'horizon.dashboard.project.queues.UPDATE_SUCCESS'
     };
   }
 

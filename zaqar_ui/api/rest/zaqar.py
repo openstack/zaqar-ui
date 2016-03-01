@@ -28,7 +28,19 @@ class Queue(generic.View):
     @rest_utils.ajax()
     def get(self, request, queue_name):
         """Get a specific queue"""
-        return zaqar.queue_show(request, queue_name).to_dict()
+        return zaqar.queue_get(request, queue_name).to_dict()
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, queue_name):
+        """Update a queue.
+
+        Returns the updated queue object on success.
+        """
+        queue = zaqar.queue_update(request, queue_name, **request.DATA)
+        location = '/api/zaqar/queue/%s' % queue._name
+        response = {'name': queue._name,
+                    'metadata': queue._metadata}
+        return rest_utils.CreatedResponse(location, response)
 
 
 @urls.register

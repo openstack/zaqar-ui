@@ -30,7 +30,8 @@
     var service = {
       getQueues: getQueues,
       createQueue: createQueue,
-      deleteQueue: deleteQueue
+      deleteQueue: deleteQueue,
+      updateQueue: updateQueue
     };
 
     return service;
@@ -54,6 +55,12 @@
     function deleteQueue(queueName) {
       return apiService.delete('/api/zaqar/queues/', [queueName]);
     }
-  }
 
+    function updateQueue(queue) {
+      return apiService.post('/api/zaqar/queue/' + queue.queue_name, {"metadata": queue.metadata})
+        .error(function() {
+          toastService.add('error', gettext('Unable to update the queue.'));
+        });
+    }
+  }
 }());

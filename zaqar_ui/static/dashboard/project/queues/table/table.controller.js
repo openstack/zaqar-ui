@@ -52,9 +52,11 @@
     function initScope() {
       var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
       var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
+      var updateWatcher = $scope.$on(events.UPDATE_SUCCESS, onUpdateSuccess);
       $scope.$on('$destroy', function destroy() {
         createWatcher();
         deleteWatcher();
+        updateWatcher();
       })
     }
 
@@ -91,6 +93,13 @@
       }
       // clear selections upon deletion
       $scope.$emit('hzTable:clearSelected');
+    }
+
+    function onUpdateSuccess(e, queue) {
+      e.stopPropagation();
+      queue.id = queue.name;
+      // update queue
+      ctrl.queuesSrc[queue.id] = queue;
     }
   }
 

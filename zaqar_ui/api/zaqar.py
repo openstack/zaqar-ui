@@ -76,6 +76,7 @@ def queue_update(request, queue_name, metadata):
 
     queue = zaqarclient(request).queue(queue_name, auto_create=False)
     queue.metadata(new_meta=metadata)
+    return queue
 
 
 def queue_get(request, queue_name):

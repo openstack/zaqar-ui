@@ -35,7 +35,8 @@
   function controller($scope, zaqar, events) {
 
     var ctrl = this;
-    ctrl.queue = {};
+    ctrl.queue = $scope.queue? $scope.queue: {};
+    ctrl.update = $scope.queue? true: false;
 
     ////////////////////////
 

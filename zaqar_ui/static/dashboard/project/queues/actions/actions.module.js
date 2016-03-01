@@ -31,6 +31,7 @@
     'horizon.framework.conf.resource-type-registry.service',
     'horizon.dashboard.project.queues.actions.createService',
     'horizon.dashboard.project.queues.actions.deleteService',
+    'horizon.dashboard.project.queues.actions.updateService',
     'horizon.dashboard.project.queues.resourceType'
   ];
 
@@ -38,15 +39,24 @@
     registry,
     createService,
     deleteService,
+    updateService,
     resourceType
   ) {
 
     var queueResourceType = registry.getResourceType(resourceType);
     queueResourceType.itemActions
       .append({
-        id: 'queuesRowDelete',
+        id: 'queuesItemUpdate',
+        service: updateService,
+        template: {
+          text: gettext('Update')
+        }
+      })
+      .append({
+        id: 'queuesItemDelete',
         service: deleteService,
         template: {
+          type: 'delete',
           text: gettext('Delete')
         }
       });

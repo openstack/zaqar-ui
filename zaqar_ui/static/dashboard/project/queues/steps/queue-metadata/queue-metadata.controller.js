@@ -52,14 +52,13 @@
 
     function init() {
       $q.all({
-        available: standardDefinitions(),
+        available: standardDefinitions(queue),
         existing: getExistingMetdataPromise(queue)
       })
       .then(onMetadataGet);
     }
 
     function onMetadataGet(response) {
-      console.log(response);
       ctrl.tree = new metaTree.Tree(
         response.available.data.items,
         response.existing.data
@@ -70,26 +69,31 @@
       return ctrl.tree.getExisting();
     }
 
-    function standardDefinitions() {
+    function standardDefinitions(queue) {
 
       // TODO: currently, there is no standard metadefinitions
       // should add some reserved/fixed definition here
       // preferably it should come from zaqar and not hardcoded here
-      var deferred = $q.defer();
-      deferred.resolve({data: []});
-      return deferred.promise;
+      // however available metadata is needed for showing to be updated,
+      // so now we set existing metadata to available metadata.
+      if (angular.isDefined(queue.id)) {
+        return {data: queue.metadata};
+      } else {
+        var deferred = $q.defer();
+        deferred.resolve({data: []});
+        return deferred.promise;
+      }
     }
 
     function getExistingMetdataPromise(queue) {
 
-      //if (angular.isDefined(queue.id)) {
-      //  return metadata.getMetadata('queue', queue.id);
-      //}
-      //else {
+      if (angular.isDefined(queue.id)) {
+        return {data: queue.metadata};
+      } else {
         var deferred = $q.defer();
         deferred.resolve({data: []});
         return deferred.promise;
-      //}
+      }
     }
 
     function onMetadataChanged(newValue, oldValue) {

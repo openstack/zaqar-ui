@@ -19,6 +19,7 @@
               type="text" class="form-control"
               ng-model="detailsCtrl.queue.queue_name"
               ng-maxlength="255"
+              ng-disabled="detailsCtrl.update"
               placeholder="{$ 'Enter a queue name'|translate $}">
             <p class="help-block alert alert-danger"
               ng-show="queueDetailsForm.name.$invalid && queueDetailsForm.name.$dirty">
