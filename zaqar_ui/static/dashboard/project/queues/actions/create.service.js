@@ -62,7 +62,7 @@
     // will know when a new queue has been created
     function initScope($scope) {
       scope = $scope;
-      var queueWatcher = $scope.$on(events.DETAILS_CHANGED, onQueueChange);
+      var queueWatcher = $scope.$on(events.DETAILS_CHANGED, onDetailChange);
       var metadataWatcher = $scope.$on(events.METADATA_CHANGED, onMetadataChange);
       $scope.$on('$destroy', function destroy() {
         queueWatcher();
@@ -70,8 +70,8 @@
       });
     }
 
-    function onQueueChange(e, queue) {
-      model.queue_name = queue.name;
+    function onDetailChange(e, queue) {
+      angular.extend(model, queue);
       e.stopPropagation();
     }
 

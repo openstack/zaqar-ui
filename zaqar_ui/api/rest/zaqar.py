@@ -72,5 +72,8 @@ class Queues(generic.View):
         new_queue = zaqar.queue_create(request, **request.DATA)
         location = '/api/zaqar/queues/%s' % new_queue.name
         response = {'name': new_queue.name,
+                    'claimed': 0,
+                    'free': 0,
+                    'total': 0,
                     'metadata': new_queue._metadata}
         return rest_utils.CreatedResponse(location, response)

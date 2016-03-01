@@ -33,9 +33,9 @@
       </th>
       <th class="expander"></th>
       <th class="rsp-p1" st-sort="name" st-sort-default translate>Name</th>
-      <th class="rsp-p2" st-sort="metadata" translate>Claimed Messages</th>
+      <th class="rsp-p1" st-sort="metadata" translate>Claimed Messages</th>
       <th class="rsp-p2" st-sort="metadata" translate>Free Messages</th>
-      <th class="rsp-p2" st-sort="metadata" translate>Total Messages</th>
+      <th class="rsp-p1" st-sort="metadata" translate>Total Messages</th>
       <th class="action-col" translate>Actions</th>
     </tr>
   </thead>
@@ -63,9 +63,9 @@
       </td>
 
       <td class="rsp-p1">{$ q.name $}</td>
-      <td class="rsp-p2">{$ q.claimed $}</td>
+      <td class="rsp-p1">{$ q.claimed $}</td>
       <td class="rsp-p2">{$ q.free $}</td>
-      <td class="rsp-p2">{$ q.total $}</td>
+      <td class="rsp-p1">{$ q.total $}</td>
       <td class="action-col">
         <!--
           Table-row-action-column:
@@ -96,18 +96,8 @@
           -->
           <span class="rsp-alt-p2">
             <dl class="col-sm-2">
-              <dt translate>Flavor</dt>
-              <dd>{$ q.metadata.flavor $}</dd>
-            </dl>
-
-            <dl class="col-sm-2">
-              <dt translate>Max Message Size</dt>
-              <dd>{$ q.metadata.max_message_size $}</dd>
-            </dl>
-
-            <dl class="col-sm-2">
-              <dt translate>Time To Live</dt>
-              <dd>{$ q.metadata.ttl $}</dd>
+              <dt translate>Free Messages</dt>
+              <dd>{$ q.free $}</dd>
             </dl>
           </span>
 

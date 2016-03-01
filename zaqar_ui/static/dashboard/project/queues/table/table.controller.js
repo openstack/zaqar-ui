@@ -62,13 +62,13 @@
 
     function init() {
       registry.initActions(type, $scope);
-      zaqar.getQueues().success(getQueuesSuccess);
+      zaqar.getQueues().then(showQueues);
     }
 
-    function getQueuesSuccess(response) {
+    function showQueues(response) {
       // hz-table expects all items to have the id field
       // so we need to manually add name as id here
-      ctrl.queuesSrc = response;
+      ctrl.queuesSrc = response.data;
       ctrl.queuesSrc.map(function addIdentifier(queue, index){
         queue.id = queue.name;
       });
