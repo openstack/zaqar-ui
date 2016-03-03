@@ -42,8 +42,7 @@
     ctrl.queues = [];
     ctrl.queuesSrc = [];
 
-    //ctrl.getItemActions = typeRegistry.getItemActionsFunction(imageResourceType);
-    ctrl.batchActions = registry.getBatchActionsFunction(type);
+    ctrl.resourceType = registry.getResourceType(type);
 
     init();
     initScope();

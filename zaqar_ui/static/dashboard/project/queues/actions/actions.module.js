@@ -41,7 +41,8 @@
     resourceType
   ) {
 
-    registry.getItemActions(resourceType)
+    var queueResourceType = registry.getResourceType(resourceType);
+    queueResourceType.itemActions
       .append({
         id: 'queuesRowDelete',
         service: deleteService,
@@ -50,7 +51,7 @@
         }
       });
 
-    registry.getBatchActions(resourceType)
+    queueResourceType.batchActions
       .append({
         id: 'queuesBatchCreate',
         service: createService,
