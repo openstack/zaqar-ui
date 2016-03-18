@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,32 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from setuptools import find_packages
-from setuptools import setup
+import setuptools
 
-setup(
-    name='zaqar-ui',
-    version='0.0.1',
-    summary='Zaqar User Interface',
-    description_file='README.rst',
-    author='OpenStack',
-    author_email='openstack-dev@lists.openstack.org',
-    home_page='http://www.openstack.org/',
-    classifiers=[
-        'Environment :: OpenStack',
-        'Framework :: Django',
-        'Intended Audience :: Information Technology',
-        'Intended Audience :: System Administrators',
-        'License :: OSI Approved :: Apache Software License',
-        'Operating System :: POSIX :: Linux',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-    ],
-    packages=find_packages(),
-    include_package_data=True,
-)
+try:
+    import multiprocessing  # noqa
+except ImportError:
+    pass
+
+setuptools.setup(
+    setup_requires=['pbr>=1.8'],
+    pbr=True)

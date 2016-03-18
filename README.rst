@@ -8,8 +8,16 @@ Zaqar Dashboard
 * Source: http://git.openstack.org/cgit/openstack/zaqar-ui
 * Bugs: http://bugs.launchpad.net/zaqar-ui
 
-Installation instructions
--------------------------
+Enabling in DevStack
+--------------------
+
+Add this repo as an external repository into your ``local.conf`` file::
+
+    [[local|localrc]]
+    enable_plugin zaqar-ui https://github.com/openstack/zaqar-ui
+
+Manual Installation
+-------------------
 
 Begin by cloning the Horizon and Zaqar UI repositories::
 
