@@ -89,3 +89,42 @@ class Queues(generic.View):
                     'total': 0,
                     'metadata': new_queue._metadata}
         return rest_utils.CreatedResponse(location, response)
+
+
+@urls.register
+class Subscriptions(generic.View):
+    """API for queues"""
+    url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)/subscriptions/$'
+
+    @rest_utils.ajax()
+    def get(self, request, queue_name):
+        """Get a list of the Subscriptions for a queue."""
+        return zaqar.subscription_list(request, queue_name)
+
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request, queue_name):
+        """Delete one or more queue by name.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        zaqar.subscription_delete(request, queue_name, request.DATA)
+
+    @rest_utils.ajax(data_required=True)
+    def put(self, request, queue_name):
+        """Create a new subscription.
+
+        Returns the new queue object on success.
+        """
+        return zaqar.subscription_create(request, queue_name, request.DATA)
+
+
+@urls.register
+class Subscription(generic.View):
+    """API for retrieving a single subscription"""
+    url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)/' \
+                r'subscription/(?P<subscriber>[^/]+)/$'
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, queue_name, subscriber):
+        zaqar.subscription_update(request, queue_name,
+                                  {'id': subscriber}, request.DATA)
