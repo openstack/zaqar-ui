@@ -415,12 +415,13 @@ function babel_extract {
   KEYWORDS+=" -k ugettext_noop -k ugettext_lazy -k ungettext_lazy:1,2"
   KEYWORDS+=" -k npgettext:1c,2,3 -k pgettext_lazy:1c,2 -k npgettext_lazy:1c,2,3"
 
-  ${command_wrapper} pybabel extract -F babel-${DOMAIN}.cfg -o zaqar_ui/locale/${DOMAIN}.pot $KEYWORDS .
+  mkdir -p locale
+  ${command_wrapper} pybabel extract -F ../babel-${DOMAIN}.cfg -o locale/${DOMAIN}.pot $KEYWORDS .
 }
 
 function run_makemessages {
-
   echo -n "zaqar ui: "
+  cd zaqar_ui
   babel_extract django
   ZAQAR_PY_RESULT=$?
 
@@ -428,8 +429,9 @@ function run_makemessages {
   babel_extract djangojs
   ZAQAR_JS_RESULT=$?
 
+  cd ../
   if [ $check_only -eq 1 ]; then
-    git checkout -- zaqar_ui/locale/django*.pot
+    rm -f zaqar_ui/locale/django*.pot
   fi
 
   exit $(($ZAQAR_PY_RESULT || $ZAQAR_JS_RESULT))
