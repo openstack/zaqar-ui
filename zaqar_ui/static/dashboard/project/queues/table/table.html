@@ -59,7 +59,7 @@
 
       <td class="expander">
         <span class="fa fa-chevron-right"
-          hz-expand-detail duration="200"></span>
+          hz-expand-detail item="q" duration="200"></span>
       </td>
 
       <td class="rsp-p1">{$ q.name $}</td>
@@ -71,7 +71,7 @@
           Table-row-action-column:
           Actions taken here applies to a single item/row.
         -->
-        <actions allowed="table.resourceType.itemActions" type="row" item="q" />
+        <actions allowed="table.resourceType.itemActions" type="row" item="q"></actions>
       </td>
     </tr>
     <tr ng-repeat-end class="detail-row">
@@ -88,8 +88,8 @@
           E.g. table header with rsp-p2 should be here with rsp-alt-p2
           The layout should minimize vertical space to reduce scrolling.
         -->
-        <div class="row">
 
+        <div class="row">
           <!-- Important metadata should go here and table header.
             It will appear in the table above if there is room, otherwise
             it will appear in the drawer when user resizes the window.
@@ -100,16 +100,16 @@
               <dd>{$ q.free $}</dd>
             </dl>
           </span>
-
         </div>
-
         <div class="row">
+
           <!-- additional unimportant metadata can be place here -->
           <dl class="col-sm-12">
             <dt translate>Metadata</dt>
             <dd>{$ q.metadata $}</dd>
           </dl>
         </div>
+        <ng-include src="table.subsTemplate"></ng-include>
       </td>
     </tr>
 

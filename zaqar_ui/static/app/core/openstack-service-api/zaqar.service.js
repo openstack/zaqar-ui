@@ -26,12 +26,19 @@
     'horizon.framework.widgets.toast.service'
   ];
 
-  function ZaqarAPI(apiService, toastService) {
+  function ZaqarAPI(apiService, toast) {
+
+    var queuePath = '/api/zaqar/queues/';
+    var subPath = '/api/zaqar/queues/%s/subscriptions/';
+
     var service = {
       getQueues: getQueues,
       createQueue: createQueue,
       deleteQueue: deleteQueue,
-      updateQueue: updateQueue
+      updateQueue: updateQueue,
+      getSubscriptions: getSubscriptions,
+      addSubscription: addSubscription,
+      deleteSubscription: deleteSubscription
     };
 
     return service;
@@ -39,28 +46,47 @@
     //////////
 
     function getQueues() {
-      return apiService.get('/api/zaqar/queues/')
-        .error(function() {
-          toastService.add('error', gettext('Unable to retrieve the Queues.'));
-        });
+      var msg = gettext('Unable to retrieve the Queues.');
+      return apiService.get(queuePath).error(error(msg));
     }
 
     function createQueue(newQueue) {
-      return apiService.put('/api/zaqar/queues/', newQueue)
-        .error(function() {
-          toastService.add('error', gettext('Unable to create the queue.'));
-        });
+      var msg = gettext('Unable to create the queue.');
+      return apiService.put(queuePath, newQueue).error(error(msg));
     }
 
     function deleteQueue(queueName) {
-      return apiService.delete('/api/zaqar/queues/', [queueName]);
+      return apiService.delete(queuePath, [queueName]);
     }
 
     function updateQueue(queue) {
-      return apiService.post('/api/zaqar/queue/' + queue.queue_name, {"metadata": queue.metadata})
-        .error(function() {
-          toastService.add('error', gettext('Unable to update the queue.'));
-        });
+      var msg = gettext('Unable to update the queue.');
+      var url = '/api/zaqar/queue/' + queue.queue_name;
+      var form = { metadata: queue.metadata };
+      return apiService.post(url, form).error(error(msg));
+    }
+
+    function getSubscriptions(queue) {
+      var url = interpolate(subPath, [queue.name]);
+      return apiService.get(url);
+    }
+
+    function addSubscription(sub) {
+      var msg = gettext('Unable to add subscription.');
+      var url = interpolate(subPath, [sub.queueName]);
+      return apiService.put(url, sub).error(error(msg));
+    }
+
+    function deleteSubscription(queue, subscription) {
+      var msg = gettext('Unable to delete subscription.');
+      var url = interpolate(subPath, [queue.name]);
+      return apiService.delete(url, subscription).error(error(msg));
+    }
+
+    function error(message) {
+      return function() {
+        toast.add('error', message);
+      };
     }
   }
 }());
