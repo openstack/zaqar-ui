@@ -1,0 +1,125 @@
+# Mie Yamamoto <myamamot@redhat.com>, 2016. #zanata
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 0.0.1.dev33\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-06-07 00:06+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-06-07 06:03+0000\n"
+"Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+#, fuzzy
+msgid "A user name between 1-256 characters is required."
+msgstr "256 文字以下のキュー名が必要です。"
+
+msgid "Actions"
+msgstr "アクション"
+
+msgid "Claimed Messages"
+msgstr "要求メッセージ数"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "キューの削除の確認"
+
+msgid "Create"
+msgstr "作成"
+
+msgid "Create Queue"
+msgstr "キューの作成"
+
+msgid "Create Queues"
+msgstr "キューの作成"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "キューの削除"
+
+msgid "Delete Queues"
+msgstr "キューの削除"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "キュー %s を削除しました。"
+
+msgid "Enter a queue name"
+msgstr "キューの名前を入力してください。"
+
+msgid "Free Messages"
+msgstr "空きメッセージ数"
+
+msgid "Metadata"
+msgstr "メタデータ"
+
+msgid "Name"
+msgstr "名前"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"メタデータを定義しないでキューを作成できることに留意してください。\n"
+"      メタデータのステップはオプションですが、推奨されています。"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "キュー %s が正常に作成されました。"
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "キュー %s が正常に更新されました。"
+
+msgid "Queue Details"
+msgstr "キューの詳細"
+
+msgid "Queue Metadata"
+msgstr "キューのメタデータ"
+
+msgid "Queue Name"
+msgstr "キュー名"
+
+msgid "Queues"
+msgstr "キュー"
+
+msgid "Total Messages"
+msgstr "合計メッセージ数"
+
+msgid "Unable to create the queue."
+msgstr "キューを作成できません。"
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "キューを削除できません: %s"
+
+msgid "Unable to retrieve the Queues."
+msgstr "キューの一覧を取得できません。"
+
+msgid "Unable to update the queue."
+msgstr "キューを更新できません。"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Update Queue"
+msgstr "キューの更新"
+
+#, python-format
+msgid "You are not allowed to delete images: %s"
+msgstr "イメージの削除は許可されていません: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "\"%s\" を選択しました。削除されたキューは元に戻せません。"
