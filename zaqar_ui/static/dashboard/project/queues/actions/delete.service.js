@@ -86,7 +86,7 @@
     }
 
     function getMessage(entities) {
-      var message = gettext("You are not allowed to delete images: %s");
+      var message = gettext("You are not allowed to delete queues: %s");
       return interpolate(message, [entities.map(getName).join(", ")]);
     }
 
