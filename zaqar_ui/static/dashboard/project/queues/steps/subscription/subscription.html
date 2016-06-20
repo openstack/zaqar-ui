@@ -1,0 +1,48 @@
+
+<div ng-controller="horizon.dashboard.project.queues.steps.SubscriptionController as detailsCtrl">
+
+  <h1 translate>Subscription</h1>
+  <div class="content">
+
+    <div class="subtitle" translate>
+      Note that you can create a subscription without defining options.
+      Subscribers must be in the form of mailto, HTTP, or HTTPS.
+      The TTL for a subscription must be at least 60 seconds long.
+    </div>
+
+    <div class="selected-source clearfix">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <div class="form-group required">
+            <label class="control-label required">
+              <translate>Subscriber</translate>
+              <span class="hz-icon-required fa fa-asterisk"></span>
+            </label>
+            <input required
+              id="subscriptionForm-subscriber" name="subscriber"
+              type="text" class="form-control"
+              ng-model="detailsCtrl.subscription.subscriber"
+              ng-maxlength="255"
+              ng-disabled="detailsCtrl.update"
+              placeholder="{$ 'Enter a subscriber'|translate $}">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-8">
+          <div class="form-group required">
+            <label class="control-label required" translate>
+              <translate>Time To Live</translate>
+              <span class="hz-icon-required fa fa-asterisk"></span>
+            </label>
+            <input required
+               id="" name="ttl" min="60"
+               type="number" class="form-control"
+               ng-model="detailsCtrl.subscription.ttl"
+               ng-disabled="detailsCtrl.update"
+               placeholder="{$ 'Enter TTL for subscription'|translate $}">
+          </div>
+        </div>
+      </div><!-- row -->
+    </div><!-- clearfix -->
+
+  </div><!-- content -->
+</div><!-- controller -->

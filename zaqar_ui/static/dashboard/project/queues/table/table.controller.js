@@ -30,19 +30,20 @@
   queuesTableController.$inject = [
     '$scope',
     'horizon.app.core.openstack-service-api.zaqar',
+    'horizon.dashboard.project.queues.basePath',
     'horizon.dashboard.project.queues.events',
     'horizon.dashboard.project.queues.resourceType',
     'horizon.framework.conf.resource-type-registry.service',
   ];
 
-  function queuesTableController($scope, zaqar, events, type, registry) {
+  function queuesTableController($scope, zaqar, base, events, type, registry) {
 
     var ctrl = this;
 
     ctrl.queues = [];
     ctrl.queuesSrc = [];
-
     ctrl.resourceType = registry.getResourceType(type);
+    ctrl.subsTemplate = base + 'table/subscriptionTable.html';
 
     init();
     initScope();
@@ -53,11 +54,13 @@
       var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
       var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
       var updateWatcher = $scope.$on(events.UPDATE_SUCCESS, onUpdateSuccess);
+      var subWatcher = $scope.$on(events.SUBSCRIPTION_CREATE_SUCCESS, broadcastEvents);
       $scope.$on('$destroy', function destroy() {
         createWatcher();
         deleteWatcher();
         updateWatcher();
-      })
+        subWatcher();
+      });
     }
 
     //////////
@@ -65,6 +68,12 @@
     function init() {
       registry.initActions(type, $scope);
       zaqar.getQueues().then(showQueues);
+    }
+
+    function broadcastEvents(event, data) {
+      if (event.targetScope !== $scope) {
+        $scope.$broadcast(event.name, data);
+      }
     }
 
     function showQueues(response) {

@@ -32,6 +32,7 @@
     'horizon.dashboard.project.queues.actions.createService',
     'horizon.dashboard.project.queues.actions.deleteService',
     'horizon.dashboard.project.queues.actions.updateService',
+    'horizon.dashboard.project.queues.actions.createSubscriptionService',
     'horizon.dashboard.project.queues.resourceType'
   ];
 
@@ -40,6 +41,7 @@
     createService,
     deleteService,
     updateService,
+    createSubscriptionService,
     resourceType
   ) {
 
@@ -50,6 +52,13 @@
         service: updateService,
         template: {
           text: gettext('Update')
+        }
+      })
+      .append({
+        id: 'subscriptionsCreate',
+        service: createSubscriptionService,
+        template: {
+          text: gettext('Create Subscription')
         }
       })
       .append({

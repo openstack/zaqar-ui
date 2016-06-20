@@ -1,0 +1,28 @@
+
+<table class="table tabler-inner"
+  ng-controller="horizon.dashboard.project.queues.SubscriptionTableController as subCtrl">
+  <thead>
+    <tr>
+      <th translate>Subscriber</th>
+      <th translate>Time to Live</th>
+      <th translate>Options</th>
+      <th translate>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-if="subCtrl.queuesMap[q.name].subscriptions.length === 0">
+      <td colspan="100">No subscribers to show.</td>
+    </tr>
+    <tr ng-repeat="sub in subCtrl.queuesMap[q.name].subscriptions">
+      <td>{$ sub.subscriber $}</td>
+      <td>{$ sub.ttl $}</td>
+      <td>{$ sub.options $}</td>
+      <td>
+        <button class="btn btn-xs btn-danger"
+          ng-click="subCtrl.deleteSubscription(q, sub)">
+          <span class="fa fa-trash"></span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
