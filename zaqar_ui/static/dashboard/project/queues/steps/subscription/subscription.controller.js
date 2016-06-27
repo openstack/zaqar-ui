@@ -36,7 +36,7 @@
   function SubscriptionController($scope, zaqar, events) {
 
     var ctrl = this;
-    ctrl.subscription = {};
+    ctrl.subscription = { ttl: 3600 };
     ctrl.update = false;
 
     ////////////////////////

@@ -6,14 +6,13 @@
 
     <div class="subtitle" translate>
       Note that you can create a subscription without defining options.
-      Subscribers must be in the form of mailto, HTTP, or HTTPS.
-      The TTL for a subscription must be at least 60 seconds long.
     </div>
 
     <div class="selected-source clearfix">
       <div class="row">
         <div class="col-xs-12 col-sm-8">
-          <div class="form-group required">
+          <div class="form-group required"
+            ng-class="{'has-error': subscriptionForm.subscriber.$invalid && subscriptionForm.subscriber.$dirty}">
             <label class="control-label required">
               <translate>Subscriber</translate>
               <span class="hz-icon-required fa fa-asterisk"></span>
@@ -24,21 +23,31 @@
               ng-model="detailsCtrl.subscription.subscriber"
               ng-maxlength="255"
               ng-disabled="detailsCtrl.update"
+              validate-subscriber
               placeholder="{$ 'Enter a subscriber'|translate $}">
+            <p class="help-block alert alert-danger" translate
+              ng-show="subscriptionForm.subscriber.$invalid && subscriptionForm.subscriber.$dirty">
+              Subscribers must be in the form of mailto, HTTP, or HTTPS.
+            </p>
           </div>
         </div>
         <div class="col-xs-12 col-sm-8">
-          <div class="form-group required">
+          <div class="form-group required"
+            ng-class="{'has-error': subscriptionForm.ttl.$invalid && subscriptionForm.ttl.$dirty}">
             <label class="control-label required" translate>
               <translate>Time To Live</translate>
               <span class="hz-icon-required fa fa-asterisk"></span>
             </label>
             <input required
-               id="" name="ttl" min="60"
-               type="number" class="form-control"
-               ng-model="detailsCtrl.subscription.ttl"
-               ng-disabled="detailsCtrl.update"
-               placeholder="{$ 'Enter TTL for subscription'|translate $}">
+              id="subscriptionForm-ttl" name="ttl"
+              min="60" step="10"
+              type="number" class="form-control"
+              ng-model="detailsCtrl.subscription.ttl"
+              ng-disabled="detailsCtrl.update">
+            <p class="help-block alert alert-danger" translate
+              ng-show="subscriptionForm.ttl.$invalid && subscriptionForm.ttl.$dirty">
+              The TTL for a subscription must be at least 60 seconds long.
+            </p>
           </div>
         </div>
       </div><!-- row -->
