@@ -17,7 +17,7 @@
 
   /**
    * @ngdoc overview
-   * @name queuesTableController
+   * @name queueController
    * @ngController
    *
    * @description
@@ -25,9 +25,9 @@
    */
   angular
     .module('horizon.dashboard.project.queues')
-    .controller('horizon.dashboard.project.queues.tableController', queuesTableController);
+    .controller('horizon.dashboard.project.queues.table.queueController', queueController);
 
-  queuesTableController.$inject = [
+  queueController.$inject = [
     '$scope',
     'horizon.app.core.openstack-service-api.zaqar',
     'horizon.dashboard.project.queues.basePath',
@@ -36,14 +36,14 @@
     'horizon.framework.conf.resource-type-registry.service',
   ];
 
-  function queuesTableController($scope, zaqar, base, events, type, registry) {
+  function queueController($scope, zaqar, base, events, type, registry) {
 
     var ctrl = this;
 
     ctrl.queues = [];
     ctrl.queuesSrc = [];
     ctrl.resourceType = registry.getResourceType(type);
-    ctrl.subsTemplate = base + 'table/subscriptionTable.html';
+    ctrl.subsTemplate = base + 'table/subscription.html';
 
     init();
     initScope();

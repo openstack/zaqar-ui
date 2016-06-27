@@ -19,9 +19,9 @@
 
   angular
     .module('horizon.dashboard.project.queues')
-    .factory('horizon.dashboard.project.queues.actions.deleteService', deleteService);
+    .factory('horizon.dashboard.project.queues.actions.deleteQueueService', deleteQueueService);
 
-  deleteService.$inject = [
+  deleteQueueService.$inject = [
     '$q',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.app.core.openstack-service-api.zaqar',
@@ -34,12 +34,13 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.project.queues.actions.deleteService
+   * @name horizon.dashboard.project.queues.actions.deleteQueueService
    * @Description Brings up the delete queues confirmation modal dialog.
    * On submit, delete given queues.
    * On cancel, do nothing.
    */
-  function deleteService($q, policy, zaqar, events, gettext, $qExtensions, deleteModal, toast) {
+  function deleteQueueService(
+    $q, policy, zaqar, events, gettext, $qExtensions, deleteModal, toast) {
 
     var scope, context;
     var service = {

@@ -19,13 +19,13 @@
 
   angular
     .module('horizon.dashboard.project.queues')
-    .factory('horizon.dashboard.project.queues.actions.createService', createService);
+    .factory('horizon.dashboard.project.queues.actions.createQueueService', createQueueService);
 
-  createService.$inject = [
+  createQueueService.$inject = [
     'horizon.app.core.metadata.service',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.dashboard.project.queues.events',
-    'horizon.dashboard.project.queues.actions.createWorkflow',
+    'horizon.dashboard.project.queues.actions.createQueueWorkflow',
     'horizon.app.core.openstack-service-api.zaqar',
     'horizon.framework.widgets.modal.wizard-modal.service',
     'horizon.framework.widgets.toast.service'
@@ -33,10 +33,10 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.project.queues.actions.createService
+   * @name horizon.dashboard.project.queues.actions.createQueueService
    * @Description A service to open the queues wizard.
    */
-  function createService(meta, policy, events, createWorkflow, zaqar, wizard, toast) {
+  function createQueueService(meta, policy, events, createQueueWorkflow, zaqar, wizard, toast) {
 
     var message = {
       success: gettext('Queue %s was successfully created.')
@@ -83,7 +83,7 @@
     function perform() {
       wizard.modal({
         scope: scope,
-        workflow: createWorkflow,
+        workflow: createQueueWorkflow,
         submit: submit
       });
     }
@@ -101,5 +101,5 @@
       scope.$emit(events.CREATE_SUCCESS, response.data);
     }
 
-  } // end of createService
+  } // end of createQueueService
 })(); // end of IIFE

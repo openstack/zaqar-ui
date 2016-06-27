@@ -19,25 +19,25 @@
 
   /**
    * @ngdoc overview
-   * @name queuesTableController
+   * @name subscriptionController
    * @ngController
    *
    * @description
-   * Controller for the queues table
+   * Controller for the subscriptions table
    */
   angular
     .module('horizon.dashboard.project.queues')
-    .controller('horizon.dashboard.project.queues.SubscriptionTableController',
-        SubscriptionTableController);
+    .controller('horizon.dashboard.project.queues.table.subscriptionController',
+        subscriptionController);
 
-  SubscriptionTableController.$inject = [
+  subscriptionController.$inject = [
     '$scope',
     'horizon.app.core.openstack-service-api.zaqar',
     'horizon.dashboard.project.queues.events',
     'horizon.framework.widgets.toast.service'
   ];
 
-  function SubscriptionTableController($scope, zaqar, events, toast) {
+  function subscriptionController($scope, zaqar, events, toast) {
 
     var ctrl = this;
     ctrl.queuesMap = {};

@@ -19,24 +19,34 @@
 
   angular
     .module('horizon.dashboard.project.queues')
-    .factory('horizon.dashboard.project.queues.actions.updateWorkflow', updateWorkflow);
+    .factory('horizon.dashboard.project.queues.actions.createQueueWorkflow', createQueueWorkflow);
 
-  updateWorkflow.$inject = [
-    'horizon.dashboard.project.queues.actions.createWorkflow',
+  createQueueWorkflow.$inject = [
+    'horizon.app.core.workflow.factory',
     'horizon.dashboard.project.queues.basePath',
     'horizon.framework.util.i18n.gettext'
   ];
 
   /**
    * @ngdoc factory
-   * @name horizon.dashboard.project.queues.actions.updateWorkflow
-   * @description A workflow for the update queue action.
+   * @name horizon.dashboard.project.queues.actions.createQueueWorkflow
+   * @description A workflow for the create queue action.
    */
-  function updateWorkflow(createWorkflow, basePath, gettext) {
+  function createQueueWorkflow(workflowService, basePath, gettext) {
 
-    var workflow = angular.copy(createWorkflow);
-    workflow.title = gettext('Update Queue');
-    workflow.btnText = { finish: gettext('Update') };
+    var workflow = workflowService({
+      title: gettext('Create Queue'),
+      btnText: { finish: gettext('Create') },
+      steps: [{
+        title: gettext('Queue Details'),
+        templateUrl: basePath + 'steps/queue-details/queue-details.html',
+        formName: 'queueDetailsForm'
+      }, {
+        title: gettext('Queue Metadata'),
+        templateUrl: basePath + 'steps/queue-metadata/queue-metadata.html',
+        formName: 'queueMetadataForm'
+      }]
+    });
 
     return workflow;
   }

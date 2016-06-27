@@ -39,7 +39,7 @@
    * @Description A service to open the subscriptions wizard.
    */
   function createSubscriptionService(
-    $q, meta, policy, events, createWorkflow, zaqar, wizard, toast) {
+    $q, meta, policy, events, createSubWorkflow, zaqar, wizard, toast) {
 
     var message = {
       success: gettext('Subscription %s was successfully created.')
@@ -78,7 +78,7 @@
       model.queueName = queue.name;
       wizard.modal({
         scope: scope,
-        workflow: createWorkflow,
+        workflow: createSubWorkflow,
         submit: submit
       });
     }

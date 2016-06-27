@@ -29,18 +29,18 @@
 
   registerActions.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
-    'horizon.dashboard.project.queues.actions.createService',
-    'horizon.dashboard.project.queues.actions.deleteService',
-    'horizon.dashboard.project.queues.actions.updateService',
+    'horizon.dashboard.project.queues.actions.createQueueService',
+    'horizon.dashboard.project.queues.actions.deleteQueueService',
+    'horizon.dashboard.project.queues.actions.updateQueueService',
     'horizon.dashboard.project.queues.actions.createSubscriptionService',
     'horizon.dashboard.project.queues.resourceType'
   ];
 
   function registerActions(
     registry,
-    createService,
-    deleteService,
-    updateService,
+    createQueueService,
+    deleteQueueService,
+    updateQueueService,
     createSubscriptionService,
     resourceType
   ) {
@@ -49,7 +49,7 @@
     queueResourceType.itemActions
       .append({
         id: 'queuesItemUpdate',
-        service: updateService,
+        service: updateQueueService,
         template: {
           text: gettext('Update')
         }
@@ -63,7 +63,7 @@
       })
       .append({
         id: 'queuesItemDelete',
-        service: deleteService,
+        service: deleteQueueService,
         template: {
           type: 'delete',
           text: gettext('Delete')
@@ -73,7 +73,7 @@
     queueResourceType.batchActions
       .append({
         id: 'queuesBatchCreate',
-        service: createService,
+        service: createQueueService,
         template: {
           type: 'create',
           text: gettext('Create Queues')
@@ -81,7 +81,7 @@
       })
       .append({
         id: 'queuesBatchDelete',
-        service: deleteService,
+        service: deleteQueueService,
         template: {
           type: 'delete-selected',
           text: gettext('Delete Queues')

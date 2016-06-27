@@ -19,13 +19,13 @@
 
   angular
     .module('horizon.dashboard.project.queues')
-    .factory('horizon.dashboard.project.queues.actions.updateService', updateService);
+    .factory('horizon.dashboard.project.queues.actions.updateQueueService', updateQueueService);
 
-  updateService.$inject = [
+  updateQueueService.$inject = [
     'horizon.app.core.metadata.service',
     'horizon.app.core.openstack-service-api.policy',
     'horizon.dashboard.project.queues.events',
-    'horizon.dashboard.project.queues.actions.updateWorkflow',
+    'horizon.dashboard.project.queues.actions.updateQueueWorkflow',
     'horizon.app.core.openstack-service-api.zaqar',
     'horizon.framework.widgets.modal.wizard-modal.service',
     'horizon.framework.widgets.toast.service'
@@ -33,10 +33,10 @@
 
   /**
    * @ngDoc factory
-   * @name horizon.dashboard.project.queues.actions.updateService
+   * @name horizon.dashboard.project.queues.actions.updateQueueService
    * @Description A service to open the queues wizard.
    */
-  function updateService(meta, policy, events, updateWorkflow, zaqar, wizard, toast) {
+  function updateQueueService(meta, policy, events, updateQueueWorkflow, zaqar, wizard, toast) {
 
     var message = {
       success: gettext('Queue %s was successfully updated.')
@@ -86,7 +86,7 @@
       model.queue_name = queue.name;
       wizard.modal({
         scope: scope,
-        workflow: updateWorkflow,
+        workflow: updateQueueWorkflow,
         submit: submit
       });
     }
@@ -104,5 +104,5 @@
       scope.$emit(events.UPDATE_SUCCESS, response.data);
     }
 
-  } // end of updateService
+  } // end of updateQueueService
 })(); // end of IIFE
