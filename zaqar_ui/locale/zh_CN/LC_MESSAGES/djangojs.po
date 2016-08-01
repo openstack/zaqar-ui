@@ -1,0 +1,169 @@
+# Linda <duleish@cn.ibm.com>, 2016. #zanata
+# hanchao <han.chaoB@h3c.com>, 2016. #zanata
+# zenglulu <zengluul@gmail.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 1.0.0.0b3.dev1\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-07-26 00:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-07-30 03:16+0000\n"
+"Last-Translator: zenglulu <zengluul@gmail.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh-CN\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "队列名称必须为1~256字符之间。 "
+
+msgid "Actions"
+msgstr "行为。"
+
+msgid "Claimed Messages"
+msgstr "声明消息"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "确认删除队列。"
+
+msgid "Create"
+msgstr "已创建"
+
+msgid "Create Queue"
+msgstr "创建队列。"
+
+msgid "Create Queues"
+msgstr "创建队列。"
+
+msgid "Create Subscription"
+msgstr "新建订阅"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "删除队列。"
+
+msgid "Delete Queues"
+msgstr "删除队列。"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "删除队列： %s。"
+
+msgid "Enter a queue name"
+msgstr "输入队列名称。"
+
+msgid "Enter a subscriber"
+msgstr "输入一个订阅者"
+
+msgid "Free Messages"
+msgstr "免费消息"
+
+msgid "Metadata"
+msgstr "元数据"
+
+msgid "Name"
+msgstr "名字"
+
+msgid ""
+"Note that you can create a queue without defining metadata. The metadata "
+"step is optional but recommended."
+msgstr ""
+"请注意您已完成创建队列操作，该队列未定义元数据。定义元数据为可选操作，但推荐"
+"为您创建的队列应以元数据。"
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "请注意，您可以创建一个不带任何选项的订阅。"
+
+msgid "Options"
+msgstr "选项"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "创建队列 %s成功。"
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "修改队列%s成功。"
+
+msgid "Queue Details"
+msgstr "队列详情。"
+
+msgid "Queue Metadata"
+msgstr "队列元数据。"
+
+msgid "Queue Name"
+msgstr "队列名称。"
+
+msgid "Queues"
+msgstr "队列"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "将订阅者 %(subscriber)s从队列 %(queue)s中移除。 "
+
+msgid "Subscriber"
+msgstr "订阅者"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "订阅者必须为mailto、HTTP或HTTPS的格式。"
+
+msgid "Subscription"
+msgstr "订阅"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "新建订阅%s 成功。"
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "一次订阅的生存时间必须至少为60s时长。"
+
+msgid "Time To Live"
+msgstr "生存时间"
+
+msgid "Time to Live"
+msgstr "生存时间"
+
+msgid "Total Messages"
+msgstr "消息总计。"
+
+msgid "Unable to add subscription."
+msgstr "无法添加订阅。"
+
+msgid "Unable to create the queue."
+msgstr "无法创建队列。"
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "无法删除队列: %s。"
+
+msgid "Unable to delete subscription."
+msgstr "无法删除订阅。"
+
+msgid "Unable to retrieve the Queues."
+msgstr "无法检索队列。"
+
+msgid "Unable to update the queue."
+msgstr "无法更新此队列。"
+
+msgid "Update"
+msgstr "更新"
+
+msgid "Update Queue"
+msgstr "修改队列。"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "您不被允许删除这些队列：%s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "已选择 \"%s\"。删除队列操作将不可恢复。"
