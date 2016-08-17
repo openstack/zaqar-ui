@@ -66,7 +66,7 @@
     //////////
 
     function init() {
-      registry.initActions(type, $scope);
+      ctrl.resourceType.initActions($scope);
       zaqar.getQueues().then(showQueues);
     }
 
