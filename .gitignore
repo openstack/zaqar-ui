@@ -1,11 +1,16 @@
 AUTHORS
 ChangeLog
 build
+cover
 dist
 doc/source/sourcecode
 zaqar_ui/test/.secret_key_store
+node_modules
+npm-debug.log
 .venv
 .tox
+.project
+.pydevproject
 *.pyc
 *.lock
 *.egg*
