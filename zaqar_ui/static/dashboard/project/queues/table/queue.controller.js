@@ -33,7 +33,7 @@
     'horizon.dashboard.project.queues.basePath',
     'horizon.dashboard.project.queues.events',
     'horizon.dashboard.project.queues.resourceType',
-    'horizon.framework.conf.resource-type-registry.service',
+    'horizon.framework.conf.resource-type-registry.service'
   ];
 
   function queueController($scope, zaqar, base, events, type, registry) {
@@ -80,7 +80,7 @@
       // hz-table expects all items to have the id field
       // so we need to manually add name as id here
       ctrl.queuesSrc = response.data;
-      ctrl.queuesSrc.map(function addIdentifier(queue, index){
+      ctrl.queuesSrc.map(function addIdentifier(queue) {
         queue.id = queue.name;
       });
     }

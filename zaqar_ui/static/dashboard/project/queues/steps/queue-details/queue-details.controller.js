@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -30,13 +30,17 @@
   /**
    * @ngdoc controller
    * @name horizon.dashboard.project.queues.steps.QueueDetailsController
+   * @param {Object} $scope
+   * @param {Object} zaqar
+   * @param {Object} events
+   * @returns {undefined} Returns nothing
    * @description This controller is use for creating a queue.
    */
   function controller($scope, zaqar, events) {
 
     var ctrl = this;
-    ctrl.queue = $scope.queue? $scope.queue: {};
-    ctrl.update = $scope.queue? true: false;
+    ctrl.queue = $scope.queue ? $scope.queue : {};
+    ctrl.update = $scope.queue;
 
     ////////////////////////
 
@@ -44,7 +48,7 @@
     var watcher = $scope.$watchCollection(getQueue, onQueneChange);
     $scope.$on('$destroy', function() {
       watcher();
-    })
+    });
 
     ////////////////////////
 
@@ -52,12 +56,10 @@
       return ctrl.queue;
     }
 
-    function onQueneChange(newValue, oldValue){
+    function onQueneChange(newValue, oldValue) {
       if (newValue !== oldValue) {
         $scope.$emit(events.DETAILS_CHANGED, newValue);
       }
     }
-
   } // end of controller
-
 })();

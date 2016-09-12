@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -31,6 +31,10 @@
   /**
    * @ngdoc factory
    * @name horizon.dashboard.project.queues.actions.createSubscriptionWorkflow
+   * @param {Object} workflowService
+   * @param {Object} basePath
+   * @param {Object} gettext
+   * @returns {Object} create subscription workflow service
    * @description A workflow for the create subscription action.
    */
   function createSubscriptionWorkflow(workflowService, basePath, gettext) {

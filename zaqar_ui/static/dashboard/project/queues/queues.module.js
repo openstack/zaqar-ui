@@ -38,6 +38,7 @@
   /**
    * @ngdoc value
    * @name horizon.dashboard.project.queues.events
+   * @returns {Object} The event object
    * @description a list of events for queues
    */
   function events() {
@@ -54,6 +55,9 @@
   /**
    * @ndoc config
    * @name horizon.dashboard.project.queues.basePath
+   * @param {Object} $provide
+   * @param {Object} $windowProvider
+   * @returns {undefined} Returns nothing
    * @description Base path for the queues panel
    */
   function config($provide, $windowProvider) {

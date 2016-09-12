@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -31,6 +31,10 @@
   /**
    * @ngdoc controller
    * @name horizon.dashboard.project.queues.steps.SubscriptionController
+   * @param {Object} $scope
+   * @param {Object} zaqar
+   * @param {Object} events
+   * @returns {undefined} Returns nothing
    * @description This controller is use for creating a subscription.
    */
   function SubscriptionController($scope, zaqar, events) {
@@ -45,7 +49,7 @@
     var watcher = $scope.$watchCollection(getSubscription, onSubscriptionChange);
     $scope.$on('$destroy', function() {
       watcher();
-    })
+    });
 
     ////////////////////////
 
@@ -53,7 +57,7 @@
       return ctrl.subscription;
     }
 
-    function onSubscriptionChange(newValue, oldValue){
+    function onSubscriptionChange(newValue, oldValue) {
       if (newValue !== oldValue) {
         $scope.$emit(events.SUBSCRIPTION_CHANGED, newValue);
       }

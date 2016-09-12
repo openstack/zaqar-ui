@@ -51,7 +51,7 @@
     function initScope() {
       var expandWatcher = $scope.$on('hzTable:rowExpanded', getSubscriptions);
       var createWatcher = $scope.$on(events.SUBSCRIPTION_CREATE_SUCCESS, addSubscription);
-       $scope.$on('$destroy', function destroy() {
+      $scope.$on('$destroy', function destroy() {
         expandWatcher();
         createWatcher();
       });
@@ -69,20 +69,20 @@
       }
     }
 
-    function addSubscription(event, sub){
+    function addSubscription(event, sub) {
       checkAndInitMap(sub.queueName);
       ctrl.queuesMap[sub.queueName].subscriptions.push(sub);
     }
 
-    function deleteSubscription(queue, sub){
+    function deleteSubscription(queue, sub) {
       var msg = gettext('Removed %(subscriber)s subscriber from the %(queue)s queue.');
       var context = { subscriber: sub.subscriber, queue: queue.name };
       zaqar.deleteSubscription(queue.name, sub).success(deleteSuccess);
 
-      function deleteSuccess(){
+      function deleteSuccess() {
         toast.add('success', interpolate(msg, context, true));
         var index = ctrl.queuesMap[queue.name].subscriptions.indexOf(sub);
-        if (index >= 0){ ctrl.queuesMap[queue.name].subscriptions.splice(index, 1); }
+        if (index >= 0) { ctrl.queuesMap[queue.name].subscriptions.splice(index, 1); }
       }
     }
 

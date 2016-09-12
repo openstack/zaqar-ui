@@ -37,7 +37,7 @@
 
   function validateSubscriber() {
 
-    var regex = /^(http:\/\/\w+|https:\/\/\w+|mailto:\w+)/
+    var regex = /^(http:\/\/\w+|https:\/\/\w+|mailto:\w+)/;
     var directive = {
       require: 'ngModel',
       restrict: 'A',
@@ -60,5 +60,4 @@
       }
     } // end of link
   } // end of validateSubscriber
-
 })();

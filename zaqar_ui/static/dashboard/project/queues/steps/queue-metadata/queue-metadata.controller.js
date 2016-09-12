@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -33,12 +33,19 @@
   /**
    * @ngdoc controller
    * @name horizon.dashboard.project.queues.steps.QueueDetailsController
+   * @param {Object} $q
+   * @param {Object} $scope
+   * @param {Object} metadata
+   * @param {Object} zaqar
+   * @param {Object} events
+   * @param {Object} metaTree
+   * @returns {undefined} Returns nothing
    * @description This controller is use for creating a queue.
    */
   function controller($q, $scope, metadata, zaqar, events, metaTree) {
 
     var ctrl = this;
-    var queue = $scope.queue? $scope.queue: {};
+    var queue = $scope.queue ? $scope.queue : {};
 
     ctrl.tree = new metaTree.Tree([], []);
 

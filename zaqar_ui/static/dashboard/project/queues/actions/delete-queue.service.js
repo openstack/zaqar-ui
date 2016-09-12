@@ -35,7 +35,16 @@
   /**
    * @ngDoc factory
    * @name horizon.dashboard.project.queues.actions.deleteQueueService
-   * @Description Brings up the delete queues confirmation modal dialog.
+   * @param {Object} $q
+   * @param {Object} policy
+   * @param {Object} zaqar
+   * @param {Object} events
+   * @param {Object} gettext
+   * @param {Object} $qExtensions
+   * @param {Object} deleteModal
+   * @param {Object} toast
+   * @returns {Object} delete queue service
+   * @description Brings up the delete queues confirmation modal dialog.
    * On submit, delete given queues.
    * On cancel, do nothing.
    */
@@ -65,7 +74,7 @@
       $qExtensions.allSettled(queues.map(checkPermission)).then(afterCheck);
     }
 
-    function allowed(queue) {
+    function allowed() {
       return policy.ifAllowed({ rules: [['zaqar', 'delete_queues']] });
     }
 

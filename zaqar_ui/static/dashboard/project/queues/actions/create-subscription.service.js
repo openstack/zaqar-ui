@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -36,7 +36,16 @@
   /**
    * @ngDoc factory
    * @name horizon.dashboard.project.queues.actions.createSubscriptionService
-   * @Description A service to open the subscriptions wizard.
+   * @param {Object} $q
+   * @param {Object} meta
+   * @param {Object} policy
+   * @param {Object} events
+   * @param {Object} createSubWorkflow
+   * @param {Object} zaqar
+   * @param {Object} wizard
+   * @param {Object} toast
+   * @returns {Object} create subscription service
+   * @description A service to open the subscriptions wizard.
    */
   function createSubscriptionService(
     $q, meta, policy, events, createSubWorkflow, zaqar, wizard, toast) {
@@ -83,8 +92,8 @@
       });
     }
 
-    function allowed(queue) {
-      return policy.ifAllowed({ rules: [['queue', 'add_subscriptions']] });;
+    function allowed() {
+      return policy.ifAllowed({ rules: [['queue', 'add_subscriptions']] });
     }
 
     function submit() {
@@ -97,7 +106,7 @@
       scope.$emit(events.SUBSCRIPTION_CREATE_SUCCESS, model);
     }
 
-    function error(response) {
+    function error() {
       // TODO: Currently, when server throws an error
       // close the modal dialog and display the error message
       // In the future, display the error message inside the dialog
@@ -107,6 +116,3 @@
 
   } // end of createSubscriptionService
 })(); // end of IIFE
-
-
-

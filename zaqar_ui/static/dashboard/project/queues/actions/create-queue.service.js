@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -34,7 +34,15 @@
   /**
    * @ngDoc factory
    * @name horizon.dashboard.project.queues.actions.createQueueService
-   * @Description A service to open the queues wizard.
+   * @param {Object} meta
+   * @param {Object} policy
+   * @param {Object} events
+   * @param {Object} createQueueWorkflow
+   * @param {Object} zaqar
+   * @param {Object} wizard
+   * @param {Object} toast
+   * @returns {Object} service
+   * @description A service to open the queues wizard.
    */
   function createQueueService(meta, policy, events, createQueueWorkflow, zaqar, wizard, toast) {
 
@@ -89,7 +97,7 @@
     }
 
     function allowed() {
-      return policy.ifAllowed({ rules: [['queue', 'add_queue']] });;
+      return policy.ifAllowed({ rules: [['queue', 'add_queue']] });
     }
 
     function submit() {

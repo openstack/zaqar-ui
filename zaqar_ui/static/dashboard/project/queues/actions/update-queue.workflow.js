@@ -14,7 +14,7 @@
  * under the License.
  */
 
- (function() {
+(function() {
   'use strict';
 
   angular
@@ -30,6 +30,10 @@
   /**
    * @ngdoc factory
    * @name horizon.dashboard.project.queues.actions.updateQueueWorkflow
+   * @param {Object} createQueueWorkflow
+   * @param {Object} basePath
+   * @param {Object} gettext
+   * @returns {Object} update queue workflow service
    * @description A workflow for the update queue action.
    */
   function updateQueueWorkflow(createQueueWorkflow, basePath, gettext) {
