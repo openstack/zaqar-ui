@@ -1,0 +1,169 @@
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
+# Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 1.0.0.0b3.dev9\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-08-19 02:16+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-09-14 04:38+0000\n"
+"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
+"Language-Team: Korean (South Korea)\n"
+"Language: ko-KR\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "큐 이름은 1-256 문자로 되어야 합니다."
+
+msgid "Actions"
+msgstr "작업"
+
+msgid "Claimed Messages"
+msgstr "요청 메시지"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "큐 삭제 확인"
+
+msgid "Create"
+msgstr "생성"
+
+msgid "Create Queue"
+msgstr "큐 생성"
+
+msgid "Create Queues"
+msgstr "큐 생성"
+
+msgid "Create Subscription"
+msgstr "구독 생성"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "큐 삭제"
+
+msgid "Delete Queues"
+msgstr "큐 삭제"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "큐 삭제됨: %s."
+
+msgid "Enter a queue name"
+msgstr "큐 이름을 입력합니다"
+
+msgid "Enter a subscriber"
+msgstr "구독자를 입력합니다"
+
+msgid "Free Messages"
+msgstr "프리 메시지"
+
+msgid "Metadata"
+msgstr "메타데이터"
+
+msgid "Name"
+msgstr "이름"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"참고로 메타데이터 정의 없이 큐 생성이 가능합니다.\n"
+"      메타데이터 단계는 옵션이지만 권장합니다."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "참고로 옵션 정의 없이 구독 생성이 가능합니다."
+
+msgid "Options"
+msgstr "옵션"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "큐 %s 를 성공적으로 생성하였습니다."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "큐 %s를 성공적으로 삭제하였습니다."
+
+msgid "Queue Details"
+msgstr "큐 세부사항"
+
+msgid "Queue Metadata"
+msgstr "큐 메타데이터"
+
+msgid "Queue Name"
+msgstr "큐 이름"
+
+msgid "Queues"
+msgstr "큐"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "%(subscriber)s 구독자를 %(queue)s 큐에서 제거하였습니다."
+
+msgid "Subscriber"
+msgstr "구독자"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "구독자는 mailto, HTTP, 또는 HTTPS 형태로 되어야 합니다."
+
+msgid "Subscription"
+msgstr "구독"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "큐 %s 를 성공적으로 생성하였습니다."
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "구독자에 대한 TTL은 적어도 60초 길이여야 합니다."
+
+msgid "Time To Live"
+msgstr "지속 시간"
+
+msgid "Time to Live"
+msgstr "Time to Live"
+
+msgid "Total Messages"
+msgstr "총 메시지"
+
+msgid "Unable to add subscription."
+msgstr "구독을 추가할 수 없습니다."
+
+msgid "Unable to create the queue."
+msgstr "큐를 생성할 수 없습니다."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "큐를 삭제할 수 없습니다: %s."
+
+msgid "Unable to delete subscription."
+msgstr "구독을 삭제할 수 없습니다."
+
+msgid "Unable to retrieve the Queues."
+msgstr "큐를 가져올 수 없습니다."
+
+msgid "Unable to update the queue."
+msgstr "큐를 업데이트할 수 없습니다."
+
+msgid "Update"
+msgstr "업데이트"
+
+msgid "Update Queue"
+msgstr "큐 업데이트"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "큐 삭제가 허용되어 있지 않습니다: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "\"%s\"를 선택했습니다. 삭제된 큐는 복구 할 수 없습니다."
