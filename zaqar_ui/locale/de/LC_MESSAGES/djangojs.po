@@ -1,0 +1,179 @@
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Frank Kloeker <eumel@arcor.de>, 2016. #zanata
+# Monika Wolf <vcomas3@de.ibm.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 1.0.0.0rc2.dev5\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-09-29 06:08+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-01 07:37+0000\n"
+"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "Ein Warteschlangenname zwischen 1 und 256 Zeichen ist erforderlich."
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Claimed Messages"
+msgstr "Beanspruchte Nachrichten"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Bestätige Löschung Warteschlange"
+msgstr[1] "Bestätige Löschung Warteschlangen"
+
+msgid "Create"
+msgstr "Erstellen"
+
+msgid "Create Queue"
+msgstr "Erstelle Warteschlange"
+
+msgid "Create Queues"
+msgstr "Erstelle Warteschlange"
+
+msgid "Create Subscription"
+msgstr "Erstelle Abbonement"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Lösche Warteschlange"
+msgstr[1] "Lösche Warteschlangen"
+
+msgid "Delete Queues"
+msgstr "Lösche Warteschlange"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "Gelösche Warteschlange: %s."
+msgstr[1] "Gelöschte Warteschlangen: %s."
+
+msgid "Enter a queue name"
+msgstr "Warteschlangenname eingeben"
+
+msgid "Enter a subscriber"
+msgstr "Abbonent eingeben"
+
+msgid "Free Messages"
+msgstr "Freie Nachrichten"
+
+msgid "Metadata"
+msgstr "Metadaten"
+
+msgid "Name"
+msgstr "Name"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Beachten Sie, dass Sie eine Warteschlange ohne definierte Metadaten "
+"erstellen können.\n"
+"      Erstellung Metadaten ist optional aber empfehlenswert."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "Beachten Sie, dass Sie ein Abbonement ohne Optionen erstellen können."
+
+msgid "Options"
+msgstr "Optionen"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "Warteschlange %s erfolgreich erstellt."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "Warteschlange %s erfolgreich aktualisiert."
+
+msgid "Queue Details"
+msgstr "Warteschlangendetails"
+
+msgid "Queue Metadata"
+msgstr "Warteschlangen Metadaten"
+
+msgid "Queue Name"
+msgstr "Warteschlangenname"
+
+msgid "Queues"
+msgstr "Warteschlangen"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "%(subscriber)s Abbonementen von der %(queue)s Warteschlange gelöscht."
+
+msgid "Subscriber"
+msgstr "Abonnent"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Abbonement muss in der Form mailto, HTTP, oder HTTPS sein."
+
+msgid "Subscription"
+msgstr "Abbonement"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "Abbonement %s wurde erfolgreich erstellt."
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "Die TTL für ein Abbonement muss wenigstens 60 Sekunden lang sein."
+
+msgid "Time To Live"
+msgstr "Lebenszeit"
+
+msgid "Time to Live"
+msgstr "Lebenszeit"
+
+msgid "Total Messages"
+msgstr "Alle Nachrichten"
+
+msgid "Unable to add subscription."
+msgstr "Konnte Abbonement nicht hinzufügen."
+
+msgid "Unable to create the queue."
+msgstr "Konnte Warteschlange nicht erstellen."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Konnte Warteschlange %s nicht löschen."
+msgstr[1] "Konnte Warteschlangen %s nicht löschen."
+
+msgid "Unable to delete subscription."
+msgstr "Konnte Abbonement nicht löschen."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Konnte die Warteschlangen nicht abrufen."
+
+msgid "Unable to update the queue."
+msgstr "Konnte Warteschlange nicht aktualisieren."
+
+msgid "Update"
+msgstr "Aktualisieren"
+
+msgid "Update Queue"
+msgstr "Aktualisiere Warteschlange"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "SIe sind nicht berechtig, die Warteschlangen zu löschen: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] ""
+"Sie haben ausgewählt \"%s\". Gelöschte Warteschlange kann nicht "
+"wiederhergestellt werden."
+msgstr[1] ""
+"Sie haben ausgewählt \"%s\". Gelöschte Warteschlangen können nicht "
+"wiederhergestellt werden."
