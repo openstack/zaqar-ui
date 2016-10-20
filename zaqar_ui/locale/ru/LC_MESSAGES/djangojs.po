@@ -1,0 +1,181 @@
+# Antonio Kless <antoniok.spb@gmail.com>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Artem <amikhalev90@gmail.com>, 2016. #zanata
+# Valentin Chikunov <vchikunov@hystax.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 1.0.1.dev13\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-10-17 00:17+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-10-19 02:21+0000\n"
+"Last-Translator: Artem <amikhalev90@gmail.com>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "Имя очереди должно состоять из 1-256 символов."
+
+msgid "Actions"
+msgstr "Действия"
+
+msgid "Claimed Messages"
+msgstr "Помеченные сообщения"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Подтвердите удаление Очереди"
+msgstr[1] "Подтвердите удаление очередей"
+msgstr[2] "Подтвердите удаление очередей"
+
+msgid "Create"
+msgstr "Создать"
+
+msgid "Create Queue"
+msgstr "Создать Очередь"
+
+msgid "Create Queues"
+msgstr "Создать Очереди"
+
+msgid "Create Subscription"
+msgstr "Создать Подписку"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Удалить Очередь"
+msgstr[1] "Удалить Очереди"
+msgstr[2] "Удалить Очереди"
+
+msgid "Delete Queues"
+msgstr "Удалить Очереди"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "Удалена Очередь: %s."
+msgstr[1] "Удалены Очереди: %s."
+msgstr[2] "Удалены Очереди: %s."
+
+msgid "Enter a queue name"
+msgstr "Введите имя очереди"
+
+msgid "Enter a subscriber"
+msgstr "Введите подписчика"
+
+msgid "Free Messages"
+msgstr "Свободные сообщения"
+
+msgid "Metadata"
+msgstr "Метаданные"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Обратите внимание, что можно создать очередь не определяя метаданные..\n"
+"      Этап метаданных не обязателен, но рекомендуется."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "Обратите внимание, что можно создать подписку не определяя параметры."
+
+msgid "Options"
+msgstr "Параметры"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "Очередь %s создана успешно."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "Очередь %s успешно обновлена."
+
+msgid "Queue Details"
+msgstr "Информация об Очереди"
+
+msgid "Queue Metadata"
+msgstr "Метаданные Очереди"
+
+msgid "Queue Name"
+msgstr "Имя Очереди."
+
+msgid "Queues"
+msgstr "Очереди"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "Подписчик %(subscriber)s удален из очереди %(queue)s."
+
+msgid "Subscriber"
+msgstr "Подписчик"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Подписчики должны быть  формата mailto, HTTP или HTTPS."
+
+msgid "Subscription"
+msgstr "Подписка"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "Подписка %s создана успешно."
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "TTL подписки должно быть по крайней мере 60 секунд."
+
+msgid "Time To Live"
+msgstr "Время жизни"
+
+msgid "Time to Live"
+msgstr "Время жизни"
+
+msgid "Total Messages"
+msgstr "Всего Сообщений"
+
+msgid "Unable to add subscription."
+msgstr "Не удалось добавить подписку."
+
+msgid "Unable to create the queue."
+msgstr "Не удалось создать очередь."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Не удалось удалить Очередь: %s."
+msgstr[1] "Не удалось удалить Очереди: %s."
+msgstr[2] "Не удалось удалить Очереди: %s."
+
+msgid "Unable to delete subscription."
+msgstr "Не удалось удалить подписку."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Не удалось получить очереди."
+
+msgid "Unable to update the queue."
+msgstr "Не удалось обновить очередь."
+
+msgid "Update"
+msgstr "Обновить"
+
+msgid "Update Queue"
+msgstr "Обновить Очередь"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "Вам не разрешено удалять образы: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "Вы выбрали \"%s\". Восстановить удаленную очередь невозможно."
+msgstr[1] "Вы выбрали \"%s\". Восстановить удаленные очереди невозможно."
+msgstr[2] "Вы выбрали \"%s\". Восстановить удаленные очереди невозможно."
