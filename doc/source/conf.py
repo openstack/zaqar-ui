@@ -369,7 +369,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', u'Zaqar UI Documentation',
-     'Documentation for the Zaqar UI plugin to the Openstack\
+     'Documentation for the Zaqar UI plugin to the OpenStack\
       Dashboard (Horizon)',
      [u'OpenStack'], 1)
 ]
