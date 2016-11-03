@@ -1,0 +1,180 @@
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Gérald LONLAS <g.lonlas@gmail.com>, 2016. #zanata
+# Martine Marin <mmarin@fr.ibm.com>, 2016. #zanata
+# Sylvie Chesneau <sissicdf@fr.ibm.com>, 2016. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui unknown\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-11-02 22:52+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-11-01 07:27+0000\n"
+"Last-Translator: Gérald LONLAS <g.lonlas@gmail.com>\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "Un nom de file d'attente de moins de 256 caractères est obligatoire."
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Claimed Messages"
+msgstr "Messages réclamés"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Confirmer la suppression de la file d'attente"
+msgstr[1] "Confirmer la suppression des files d'attente"
+
+msgid "Create"
+msgstr "Créer"
+
+msgid "Create Queue"
+msgstr "Créer une file d'attente"
+
+msgid "Create Queues"
+msgstr "Créer des files d'attente"
+
+msgid "Create Subscription"
+msgstr "Créer une suscription"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Supprimer la file d'attente"
+msgstr[1] "Supprimer les files d'attente"
+
+msgid "Delete Queues"
+msgstr "Supprimer les files d'attente"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "File d'attente supprimé : %s"
+msgstr[1] "Files d'attente supprimés : %s"
+
+msgid "Enter a queue name"
+msgstr "Entrer un nom pour la file d'attente"
+
+msgid "Enter a subscriber"
+msgstr "Entrer un abonné"
+
+msgid "Free Messages"
+msgstr "Messages libres"
+
+msgid "Metadata"
+msgstr "Métadonnées"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Notez que vous pouvez créer une suscription sans définir les métadonnées.\n"
+"      L'étape de métadonnées est optionnelle mais recommandée."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "Notez que vous pouvez créer une suscription sans définir les options."
+
+msgid "Options"
+msgstr "Options"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "La file d'attente %s a été créé avec succès."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "La file d'attente %s a été mise à jour."
+
+msgid "Queue Details"
+msgstr "Détails de la file d'attente"
+
+msgid "Queue Metadata"
+msgstr "Métadonnées de la file d'attente"
+
+msgid "Queue Name"
+msgstr "Nom de la file d'attente"
+
+msgid "Queues"
+msgstr "Files d'attente"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr ""
+"L'abonné %(subscriber)s a été supprimé de la liste d'attente %(queue)s."
+
+msgid "Subscriber"
+msgstr "Abonné"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Les abonnés doivent être au format : mailto, HTTP ou HTTPS."
+
+msgid "Subscription"
+msgstr "Suscription"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "La suscription %s a été créé avec succès."
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "Le TTL pour une suscription doit être d'au moins 60 secondes."
+
+msgid "Time To Live"
+msgstr "Durée de vie"
+
+msgid "Time to Live"
+msgstr "Durée de vie"
+
+msgid "Total Messages"
+msgstr "Messages au total"
+
+msgid "Unable to add subscription."
+msgstr "Impossible d'ajouter la suscription."
+
+msgid "Unable to create the queue."
+msgstr "Impossible de créer la file d'attente."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Impossible de supprimer la file d'attente : %s"
+msgstr[1] "Impossible de supprimer les files d'attente : %s"
+
+msgid "Unable to delete subscription."
+msgstr "Impossible de supprimer la suscription."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Impossible de récupérer les files d'attente."
+
+msgid "Unable to update the queue."
+msgstr "Impossible de mettre à jour la file d'attente."
+
+msgid "Update"
+msgstr "Mettre à jour"
+
+msgid "Update Queue"
+msgstr "Mettre à jour la file d'attente"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "Vous n'êtes pas autorisé à supprimer les files d'attente : %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] ""
+"Vous avez sélectionné \"%s\". La file d'attente supprimée ne sera pas "
+"récupérable."
+msgstr[1] ""
+"Vous avez sélectionné \"%s\". Les files d'attente supprimées ne seront pas "
+"récupérables."
