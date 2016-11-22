@@ -10,10 +10,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import mock
+
 from openstack_dashboard.test import helpers
+from zaqarclient.queues.v2 import client as zaqar_client
+
 from zaqar_ui import api
 from zaqar_ui.test import test_data
-from zaqarclient.queues.v2 import client as zaqar_client
 
 
 class APITestCase(helpers.APITestCase):
@@ -34,6 +37,6 @@ class APITestCase(helpers.APITestCase):
 
     def stub_zaqarclient(self):
         if not hasattr(self, "zaqarclient"):
-            self.mox.StubOutWithMock(zaqar_client, 'Client')
-            self.zaqarclient = self.mox.CreateMock(zaqar_client.Client)
+            zaqar_client.Client = mock.Mock()
+            self.zaqarclient = zaqar_client.Client
         return self.zaqarclient
