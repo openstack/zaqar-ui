@@ -51,9 +51,9 @@
   function deleteQueueService(
     $q, policy, zaqar, events, gettext, $qExtensions, deleteModal, toast) {
 
-    var scope, context;
+    var context;
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       allowed: allowed,
       perform: perform
     };
@@ -62,16 +62,24 @@
 
     //////////////
 
-    function initScope(newScope) {
-      scope = newScope;
+    function initAction() {
       context = { successEvent: events.DELETE_SUCCESS };
     }
 
-    function perform(items) {
+    function perform(items, $scope) {
       var queues = angular.isArray(items) ? items : [items];
       context.labels = labelize(queues.length);
       context.deleteEntity = deleteQueue;
       $qExtensions.allSettled(queues.map(checkPermission)).then(afterCheck);
+
+      function afterCheck(result) {
+        if (result.fail.length > 0) {
+          toast.add('error', getMessage(result.fail));
+        }
+        if (result.pass.length > 0) {
+          deleteModal.open($scope, result.pass.map(getEntity), context);
+        }
+      }
     }
 
     function allowed() {
@@ -84,15 +92,6 @@
 
     function checkPermission(queue) {
       return { promise: allowed(queue), context: queue };
-    }
-
-    function afterCheck(result) {
-      if (result.fail.length > 0) {
-        toast.add('error', getMessage(result.fail));
-      }
-      if (result.pass.length > 0) {
-        deleteModal.open(scope, result.pass.map(getEntity), context);
-      }
     }
 
     function getMessage(entities) {

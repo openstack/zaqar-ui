@@ -58,7 +58,7 @@
     var model = null;
 
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       perform: perform,
       allowed: allowed
     };
@@ -67,14 +67,7 @@
 
     //////////////
 
-    // we define initScope so that the table controller
-    // will know when a new subscription has been created
-    function initScope($scope) {
-      scope = $scope;
-      var subWatcher = $scope.$on(events.SUBSCRIPTION_CHANGED, onSubscriptionChange);
-      $scope.$on('$destroy', function destroy() {
-        subWatcher();
-      });
+    function initAction() {
     }
 
     function onSubscriptionChange(e, subscription) {
@@ -82,7 +75,13 @@
       e.stopPropagation();
     }
 
-    function perform(queue) {
+    function perform(queue, $scope) {
+      scope = $scope;
+      var subWatcher = $scope.$on(events.SUBSCRIPTION_CHANGED, onSubscriptionChange);
+      $scope.$on('$destroy', function destroy() {
+        subWatcher();
+      });
+
       model = { subscriber: null, ttl: null, options: {} };
       model.queueName = queue.name;
       wizard.modal({

@@ -57,7 +57,7 @@
     };
 
     var service = {
-      initScope: initScope,
+      initAction: initAction,
       perform: perform,
       allowed: allowed
     };
@@ -66,16 +66,7 @@
 
     //////////////
 
-    // we define initScope so that the table controller
-    // will know when a queue has been updated
-    function initScope($scope) {
-      scope = $scope;
-      var queueWatcher = $scope.$on(events.DETAILS_CHANGED, onDetailChange);
-      var metadataWatcher = $scope.$on(events.METADATA_CHANGED, onMetadataChange);
-      $scope.$on('$destroy', function destroy() {
-        queueWatcher();
-        metadataWatcher();
-      });
+    function initAction() {
     }
 
     function onDetailChange(e, queue) {
@@ -88,12 +79,20 @@
       e.stopPropagation();
     }
 
-    function perform(queue) {
+    function perform(queue, $scope) {
+      scope = $scope;
+      var queueWatcher = $scope.$on(events.DETAILS_CHANGED, onDetailChange);
+      var metadataWatcher = $scope.$on(events.METADATA_CHANGED, onMetadataChange);
+      $scope.$on('$destroy', function destroy() {
+        queueWatcher();
+        metadataWatcher();
+      });
+
       model = queue;
-      scope.queue = model;
+      $scope.queue = model;
       model.queue_name = queue.name;
       wizard.modal({
-        scope: scope,
+        scope: $scope,
         workflow: updateQueueWorkflow,
         submit: submit
       });
