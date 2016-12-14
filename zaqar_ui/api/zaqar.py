@@ -108,3 +108,55 @@ def subscription_update(request, queue_name, old_data, new_data):
     subscription = zaqarclient(request).subscription(queue_name, **old_data)
     subscription.update(new_data)
     return subscription
+
+
+def pool_list(request, limit=None, marker=None):
+    return zaqarclient(request).pools(limit=limit,
+                                      marker=marker,
+                                      detailed=True)
+
+
+def pool_create(request, pool_name, params):
+    pool = zaqarclient(request).pool(pool_name, **params)
+    return pool
+
+
+def pool_delete(request, pool_name):
+    pool = zaqarclient(request).pool(pool_name, auto_create=False)
+    pool.delete()
+
+
+def pool_update(request, pool_name, params):
+    pool = zaqarclient(request).pool(pool_name, auto_create=False)
+    pool.update(params)
+    return pool
+
+
+def pool_get(request, pool_name):
+    return zaqarclient(request).pool(pool_name, auto_create=False).get()
+
+
+def flavor_list(request, limit=None, marker=None):
+    return zaqarclient(request).flavors(limit=limit,
+                                        marker=marker,
+                                        detailed=True)
+
+
+def flavor_create(request, flavor_name, params):
+    flavor = zaqarclient(request).flavor(flavor_name, **params)
+    return flavor
+
+
+def flavor_delete(request, flavor_name):
+    flavor = zaqarclient(request).flavor(flavor_name, auto_create=False)
+    flavor.delete()
+
+
+def flavor_update(request, flavor_name, params):
+    flavor = zaqarclient(request).flavor(flavor_name, auto_create=False)
+    flavor.update(params)
+    return flavor
+
+
+def flavor_get(request, flavor_name):
+    return zaqarclient(request).flavor(flavor_name, auto_create=False).get()
