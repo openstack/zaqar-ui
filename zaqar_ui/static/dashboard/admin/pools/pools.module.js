@@ -22,7 +22,8 @@
 
   angular
     .module('horizon.dashboard.admin.pools', [
-      'ngRoute'
+      'ngRoute',
+      'horizon.dashboard.admin.pools.actions'
     ])
     .constant('horizon.dashboard.admin.pools.resourceType', 'OS::Zaqar::Pools')
     .run(run)
