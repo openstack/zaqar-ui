@@ -22,7 +22,8 @@
 
   angular
     .module('horizon.dashboard.admin.pool-flavors', [
-      'ngRoute'
+      'ngRoute',
+      'horizon.dashboard.admin.pool-flavors.actions'
     ])
     .constant('horizon.dashboard.admin.pool-flavors.resourceType', 'OS::Zaqar::Flavors')
     .run(run)

@@ -1,0 +1,8 @@
+---
+features:
+  - >
+    Storage pool flavors management panel is added. This
+    panel is added into Admin dashboard. Also create,
+    update and delete actions are implemeted. Create action
+    is implemented as globalAction, so it is callable from
+    other panels.

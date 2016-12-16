@@ -43,7 +43,19 @@
      * flavors.  This is used in displaying lists of Pool Flavors.
      */
     function getFlavorsPromise(params) {
-      return zaqar.getFlavors(params);
+      return zaqar.getFlavors(params).then(modifyResponse);
+    }
+
+    function modifyResponse(response) {
+      return {data: {items: response.data.items.map(modifyItem)}};
+
+      function modifyItem(item) {
+        // we should set 'trackBy' as follows ideally.
+        // item.trackBy = item.id + item.updated_at;
+        var timestamp = new Date();
+        item.trackBy = item.name.concat(timestamp.getTime());
+        return item;
+      }
     }
   }
 })();

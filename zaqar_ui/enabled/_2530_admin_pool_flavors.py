@@ -18,5 +18,6 @@ PANEL_DASHBOARD = 'admin'
 
 ADD_PANEL = ('zaqar_ui.content.pool-flavors.panel.PoolFlavors')
 ADD_ANGULAR_MODULES = ['horizon.dashboard.admin.pool-flavors']
+ADD_SCSS_FILES = ['dashboard/admin/pool-flavors/pool-flavors.scss']
 
 AUTO_DISCOVER_STATIC_FILES = True
