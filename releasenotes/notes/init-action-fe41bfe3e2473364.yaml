@@ -1,0 +1,6 @@
+---
+features:
+  - >
+    Use initAction() instead initScope(). initScope() is
+    deprecated from Horizon in Ocata and will be removed
+    in Queens.
