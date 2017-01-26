@@ -1,0 +1,30 @@
+# suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: Zaqar UI Release Notes 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-24 10:21+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-01-25 10:52+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"X-Generator: Zanata 3.7.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "2.0.0.0b2-2"
+msgstr "2.0.0.0b2-2"
+
+msgid "Current Series Release Notes"
+msgstr "Catatan rilis seri saat ini"
+
+msgid "Other Notes"
+msgstr "Catatan lainnya"
+
+msgid "Switch to reno for managing release notes."
+msgstr "Switch ke Reno untuk mengelola catatan rilis."
+
+msgid "Zaqar UI Release Notes"
+msgstr "Catatan Rilis Zaqar UI"
