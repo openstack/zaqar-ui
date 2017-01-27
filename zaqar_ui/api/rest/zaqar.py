@@ -12,12 +12,34 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import six
+import yaml
+
 from django.views import generic
-
-from zaqar_ui.api import zaqar
-
 from openstack_dashboard.api.rest import urls
 from openstack_dashboard.api.rest import utils as rest_utils
+from zaqar_ui.api import zaqar
+
+
+def _convert_to_yaml(data, default_flow_style=False):
+    if not data:
+        return ''
+    try:
+        return yaml.safe_dump(data, default_flow_style=default_flow_style)
+    except Exception:
+        return ''
+
+
+def _load_yaml(data):
+    if not data:
+        loaded_data = {}
+    else:
+        try:
+            loaded_data = yaml.load(data)
+        except Exception as ex:
+            raise Exception(_('The specified input is not a valid '
+                              'YAML format: %s') % six.text_type(ex))
+    return loaded_data
 
 
 @urls.register
@@ -128,3 +150,167 @@ class Subscription(generic.View):
     def post(self, request, queue_name, subscriber):
         zaqar.subscription_update(request, queue_name,
                                   {'id': subscriber}, request.DATA)
+
+
+@urls.register
+class Pool(generic.View):
+    """API for retrieving a single pool"""
+    url_regex = r'zaqar/pools/(?P<pool_name>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, pool_name):
+        """Get a specific pool"""
+        pool = zaqar.pool_get(request, pool_name)
+        pool['id'] = pool.get('name')
+        pool['options'] = _convert_to_yaml(pool.get('options'))
+        return pool
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, pool_name):
+        """Update a pool.
+
+        Returns the updated pool object on success.
+        """
+        request.DATA["options"] = _load_yaml(request.DATA.get("options"))
+        params = request.DATA
+        pool_name = params.pop('name')
+        new_pool = zaqar.pool_update(request, pool_name, params)
+        location = '/api/zaqar/pools/%s' % new_pool.name
+        response = {'name': new_pool.name,
+                    'uri': new_pool.uri,
+                    'weight': new_pool.weight,
+                    'group': new_pool.group,
+                    'options': new_pool.options}
+        return rest_utils.CreatedResponse(location, response)
+
+
+@urls.register
+class Pools(generic.View):
+    """API for pools"""
+    url_regex = r'zaqar/pools/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Pools for admin.
+
+        The returned result is an object with property 'items' and each
+        item under this is a pool.
+        """
+        result = zaqar.pool_list(request)
+        pools = []
+        for p in result:
+            options = _convert_to_yaml(p.options)
+            pools.append({'id': p.name,
+                          'name': p.name,
+                          'uri': p.uri,
+                          'weight': p.weight,
+                          'group': p.group,
+                          'options': options})
+        return {'items': pools}
+
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request):
+        """Delete one or more pool by name.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        for pool_name in request.DATA:
+            zaqar.pool_delete(request, pool_name)
+
+    @rest_utils.ajax(data_required=True)
+    def put(self, request):
+        """Create a new pool.
+
+        Returns the new pool object on success.
+        """
+        request.DATA['options'] = _load_yaml(request.DATA.get('options'))
+        params = request.DATA
+        pool_name = params.pop('name')
+        new_pool = zaqar.pool_create(request, pool_name, params)
+        location = '/api/zaqar/pools/%s' % new_pool.name
+        response = {'name': new_pool.name,
+                    'uri': new_pool.uri,
+                    'weight': new_pool.weight,
+                    'group': new_pool.group,
+                    'options': new_pool.options}
+        return rest_utils.CreatedResponse(location, response)
+
+
+@urls.register
+class Flavor(generic.View):
+    """API for retrieving a single flavor"""
+    url_regex = r'zaqar/flavors/(?P<flavor_name>[^/]+)$'
+
+    @rest_utils.ajax()
+    def get(self, request, flavor_name):
+        """Get a specific flavor"""
+        flavor = zaqar.flavor_get(request, flavor_name)
+        flavor['id'] = flavor.get('name')
+        flavor['capabilities'] = _convert_to_yaml(flavor.get('capabilities'))
+        return flavor
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, flavor_name):
+        """Update a flavor.
+
+        Returns the updated flavor object on success.
+        """
+        capabilities = request.DATA.get('capabilities')
+        request.DATA['capabilities'] = _load_yaml(capabilities)
+        params = request.DATA
+        flavor_name = params.pop('name')
+        new_flavor = zaqar.flavor_update(request, flavor_name, params)
+        location = '/api/zaqar/flavors/%s' % new_flavor.name
+        response = {'name': new_flavor.name,
+                    'pool_group': new_flavor.pool_group,
+                    'capabilities': new_flavor.capabilities}
+        return rest_utils.CreatedResponse(location, response)
+
+
+@urls.register
+class Flavors(generic.View):
+    """API for flavors"""
+    url_regex = r'zaqar/flavors/$'
+
+    @rest_utils.ajax()
+    def get(self, request):
+        """Get a list of the Flavors for admin.
+
+        The returned result is an object with property 'items' and each
+        item under this is a flavor.
+        """
+        result = zaqar.flavor_list(request)
+        flavors = []
+        for f in result:
+            capabilities = _convert_to_yaml(f.capabilities)
+            flavors.append({'id': f.name,
+                            'name': f.name,
+                            'pool_group': f.pool_group,
+                            'capabilities': capabilities})
+        return {'items': flavors}
+
+    @rest_utils.ajax(data_required=True)
+    def delete(self, request):
+        """Delete one or more flavor by name.
+
+        Returns HTTP 204 (no content) on successful deletion.
+        """
+        for flavor_name in request.DATA:
+            zaqar.flavor_delete(request, flavor_name)
+
+    @rest_utils.ajax(data_required=True)
+    def put(self, request):
+        """Create a new flavor.
+
+        Returns the new flavor object on success.
+        """
+        capabilities = request.DATA.get('capabilities')
+        request.DATA['capabilities'] = _load_yaml(capabilities)
+        params = request.DATA
+        flavor_name = params.pop('name')
+        new_flavor = zaqar.flavor_create(request, flavor_name, params)
+        location = '/api/zaqar/flavors/%s' % new_flavor.name
+        response = {'name': new_flavor.name,
+                    'pool_group': new_flavor.pool_group,
+                    'capabilities': new_flavor.capabilities}
+        return rest_utils.CreatedResponse(location, response)
