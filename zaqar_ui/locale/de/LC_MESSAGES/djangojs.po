@@ -1,15 +1,16 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
 # Monika Wolf <vcomas3@de.ibm.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 1.0.1.dev14\n"
+"Project-Id-Version: zaqar-ui 2.0.0.0b3.dev12\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-10-21 01:21+0000\n"
+"POT-Creation-Date: 2017-01-27 21:41+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-23 09:05+0000\n"
+"PO-Revision-Date: 2017-01-29 06:59+0000\n"
 "Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -21,6 +22,9 @@ msgstr "Ein Warteschlangenname zwischen 1 und 256 Zeichen ist erforderlich."
 
 msgid "Actions"
 msgstr "Aktionen"
+
+msgid "Capabilities"
+msgstr "Fähigkeiten"
 
 msgid "Claimed Messages"
 msgstr "Beanspruchte Nachrichten"
@@ -68,6 +72,9 @@ msgstr "Abonent eingeben"
 msgid "Free Messages"
 msgstr "Freie Nachrichten"
 
+msgid "Group"
+msgstr "Gruppe"
+
 msgid "Metadata"
 msgstr "Metadaten"
 
@@ -87,6 +94,21 @@ msgstr "Beachten Sie, dass Sie ein Abonnement ohne Optionen erstellen können."
 
 msgid "Options"
 msgstr "Optionen"
+
+msgid "Pool"
+msgstr "Pool"
+
+msgid "Pool Flavor"
+msgstr "Pool Variante"
+
+msgid "Pool Flavors"
+msgstr "Pool Varianten"
+
+msgid "Pool Group"
+msgstr "Pool Gruppe"
+
+msgid "Pools"
+msgstr "Pools"
 
 #, python-format
 msgid "Queue %s was successfully created."
@@ -137,8 +159,17 @@ msgstr "Lebenszeit"
 msgid "Total Messages"
 msgstr "Alle Nachrichten"
 
+msgid "URI"
+msgstr "URI"
+
 msgid "Unable to add subscription."
 msgstr "Konnte Abonnement nicht hinzufügen."
+
+msgid "Unable to create the flavor."
+msgstr "Die Variante kann nicht erstellt werden."
+
+msgid "Unable to create the pool."
+msgstr "Der Pool kann nicht erzeugt werden."
 
 msgid "Unable to create the queue."
 msgstr "Konnte Warteschlange nicht erstellen."
@@ -155,6 +186,24 @@ msgstr "Konnte Abonnement nicht löschen."
 msgid "Unable to retrieve the Queues."
 msgstr "Konnte die Warteschlangen nicht abrufen."
 
+msgid "Unable to retrieve the flavor."
+msgstr "Die Variante kann nicht abgerufen werden."
+
+msgid "Unable to retrieve the flavors."
+msgstr "Die Varianten können nicht abgerufen werden."
+
+msgid "Unable to retrieve the pool."
+msgstr "Der Pool kann nicht abgerufen werden."
+
+msgid "Unable to retrieve the pools."
+msgstr "Die Pools können nicht abgerufen werden."
+
+msgid "Unable to update the flavor."
+msgstr "Die Variante kann nicht aktualisiert werden."
+
+msgid "Unable to update the pool."
+msgstr "Der Pool kann nicht aktualisiert werden."
+
 msgid "Unable to update the queue."
 msgstr "Konnte Warteschlange nicht aktualisieren."
 
@@ -163,6 +212,9 @@ msgstr "Aktualisieren"
 
 msgid "Update Queue"
 msgstr "Aktualisiere Warteschlange"
+
+msgid "Weight"
+msgstr "Gewicht"
 
 #, python-format
 msgid "You are not allowed to delete queues: %s"
