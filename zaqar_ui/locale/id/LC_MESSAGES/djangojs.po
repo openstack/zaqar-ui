@@ -1,15 +1,16 @@
 # OpenStack Infra <zanata@openstack.org>, 2015. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # suhartono <cloudsuhartono@gmail.com>, 2016. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 1.0.1.dev14\n"
+"Project-Id-Version: zaqar-ui 2.0.0.0b4.dev2\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-10-21 01:21+0000\n"
+"POT-Creation-Date: 2017-01-31 09:28+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-10-24 06:57+0000\n"
+"PO-Revision-Date: 2017-01-31 03:42+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -21,6 +22,9 @@ msgstr "Sebuah nama antrian antara 1-256 karakter diperlukan."
 
 msgid "Actions"
 msgstr "Aksi"
+
+msgid "Capabilities"
+msgstr "Capabilities (kemampuan)"
 
 msgid "Claimed Messages"
 msgstr "Claimed Messages (pesan diklaim)"
@@ -65,6 +69,9 @@ msgstr "Masukkan pelanggan"
 msgid "Free Messages"
 msgstr "Free Messages (pesan bebas)"
 
+msgid "Group"
+msgstr "Group (grup))"
+
 # #-#-#-#-#  config_ml2_plug_in.pot (Networking Guide 0.9)  #-#-#-#-#
 # #-#-#-#-#  intro_os_networking_service.pot (Networking Guide 0.9)  #-#-#-#-#
 msgid "Metadata"
@@ -86,6 +93,21 @@ msgstr ""
 
 msgid "Options"
 msgstr "Options (opsi)"
+
+msgid "Pool"
+msgstr "Pool (kolam)"
+
+msgid "Pool Flavor"
+msgstr "Pool Flavor (flavor kolam)"
+
+msgid "Pool Flavors"
+msgstr "Pool Flavors (flavor kolam)"
+
+msgid "Pool Group"
+msgstr "Pool Group (group kolam)"
+
+msgid "Pools"
+msgstr "Pools (kolam)"
 
 #, python-format
 msgid "Queue %s was successfully created."
@@ -136,8 +158,17 @@ msgstr "Time to Live (waktu untuk hidup)"
 msgid "Total Messages"
 msgstr "Total Messages (total pesan)"
 
+msgid "URI"
+msgstr "URI"
+
 msgid "Unable to add subscription."
 msgstr "Tidak dapat menambahkan langganan."
+
+msgid "Unable to create the flavor."
+msgstr "Tidak dapat membuat flavor."
+
+msgid "Unable to create the pool."
+msgstr "Tidak dapat membuat kolam."
 
 msgid "Unable to create the queue."
 msgstr "Tidak dapat membuat antrian."
@@ -153,6 +184,24 @@ msgstr "Tidak dapat menghapus langganan."
 msgid "Unable to retrieve the Queues."
 msgstr "Tidak dapat mengambil Queues (antrian)"
 
+msgid "Unable to retrieve the flavor."
+msgstr "Tidak dapat mengambil flavor."
+
+msgid "Unable to retrieve the flavors."
+msgstr "Tidak dapat mengambil flavor."
+
+msgid "Unable to retrieve the pool."
+msgstr "Tidak dapat mengambil kolam (pool)."
+
+msgid "Unable to retrieve the pools."
+msgstr "Tidak dapat mengambil kolam (pool)."
+
+msgid "Unable to update the flavor."
+msgstr "Tidak dapat memperbarui flavor."
+
+msgid "Unable to update the pool."
+msgstr "Tidak dapat memperbarui kolam."
+
 msgid "Unable to update the queue."
 msgstr "Tidak dapat memperbarui antrian."
 
@@ -161,6 +210,9 @@ msgstr "Perbaharui"
 
 msgid "Update Queue"
 msgstr "Perbaharui Queue"
+
+msgid "Weight"
+msgstr "Weight (berat)"
 
 #, python-format
 msgid "You are not allowed to delete queues: %s"
