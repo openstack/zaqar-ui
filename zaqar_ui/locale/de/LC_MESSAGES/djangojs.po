@@ -2,16 +2,17 @@
 # Frank Kloeker <eumel@arcor.de>, 2016. #zanata
 # Monika Wolf <vcomas3@de.ibm.com>, 2016. #zanata
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
+# Robert Simai <robert.simai@suse.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.0.0b3.dev12\n"
+"Project-Id-Version: zaqar-ui 2.0.0.0b4.dev6\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-01-27 21:41+0000\n"
+"POT-Creation-Date: 2017-02-01 09:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-01-29 06:59+0000\n"
-"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
+"PO-Revision-Date: 2017-02-01 10:56+0000\n"
+"Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
 "X-Generator: Zanata 3.7.3\n"
@@ -23,11 +24,28 @@ msgstr "Ein Warteschlangenname zwischen 1 und 256 Zeichen ist erforderlich."
 msgid "Actions"
 msgstr "Aktionen"
 
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr ""
+"Eine optionale Anfragekomponente für Storage-spezifische Optionen im YAML-"
+"Format."
+
 msgid "Capabilities"
 msgstr "Fähigkeiten"
 
 msgid "Claimed Messages"
 msgstr "Beanspruchte Nachrichten"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "Pool löschen bestätigen"
+msgstr[1] "Pools löschen bestätigen"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "Pool-Variante löschen bestätigen"
+msgstr[1] "Pool-Varianten löschen bestätigen"
 
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
@@ -36,6 +54,12 @@ msgstr[1] "Bestätige Löschung Warteschlangen"
 
 msgid "Create"
 msgstr "Erstellen"
+
+msgid "Create Pool"
+msgstr "Pool erstellen"
+
+msgid "Create Pool Flavor"
+msgstr "Pool-Variante erstellen"
 
 msgid "Create Queue"
 msgstr "Erstelle Warteschlange"
@@ -49,6 +73,22 @@ msgstr "Erstelle Abonnement"
 msgid "Delete"
 msgstr "Löschen"
 
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "Pool löschen"
+msgstr[1] "Pools löschen"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "Pool-Variante löschen"
+msgstr[1] "Pool-Varianten löschen"
+
+msgid "Delete Pool Flavors"
+msgstr "Pool-Varianten löschen"
+
+msgid "Delete Pools"
+msgstr "Pool löschen"
+
 msgid "Delete Queue"
 msgid_plural "Delete Queues"
 msgstr[0] "Lösche Warteschlange"
@@ -58,10 +98,25 @@ msgid "Delete Queues"
 msgstr "Lösche Warteschlange"
 
 #, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "Gelöschte Pool-Variante: %s"
+msgstr[1] "Gelöschte Pool-Varianten: %s"
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "Gelöschter Pool: %s"
+msgstr[1] "Gelöschte Pools: %s"
+
+#, python-format
 msgid "Deleted Queue: %s."
 msgid_plural "Deleted Queues: %s."
 msgstr[0] "Gelösche Warteschlange: %s."
 msgstr[1] "Gelöschte Warteschlangen: %s."
+
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "Beschreibt Varianten-spezifische Eigenschaften im YAML-Format."
 
 msgid "Enter a queue name"
 msgstr "Warteschlangenname eingeben"
@@ -75,11 +130,20 @@ msgstr "Freie Nachrichten"
 msgid "Group"
 msgstr "Gruppe"
 
+msgid "Group of the pool."
+msgstr "Gruppe des Pools."
+
 msgid "Metadata"
 msgstr "Metadaten"
 
 msgid "Name"
 msgstr "Name"
+
+msgid "Name of the flavor."
+msgstr "Name der Variante."
+
+msgid "Name of the pool."
+msgstr "Name des Pools."
 
 msgid ""
 "Note that you can create a queue without defining metadata.\n"
@@ -98,6 +162,14 @@ msgstr "Optionen"
 msgid "Pool"
 msgstr "Pool"
 
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "Pool %s wurde erfolgreich erstellt."
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "Pool %s wurde erfolgreich aktualisiert."
+
 msgid "Pool Flavor"
 msgstr "Pool Variante"
 
@@ -106,6 +178,17 @@ msgstr "Pool Varianten"
 
 msgid "Pool Group"
 msgstr "Pool Gruppe"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "Pool-Variante %s wurde erfolgreich erstellt."
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "Pool-Variante %s wurde erfolgreich aktualisiert."
+
+msgid "Pool group for flavor."
+msgstr "Pool-Gruppe der Variante."
 
 msgid "Pools"
 msgstr "Pools"
@@ -162,6 +245,9 @@ msgstr "Alle Nachrichten"
 msgid "URI"
 msgstr "URI"
 
+msgid "URI for storage engine of this pool."
+msgstr "URI für die Storage Engine dieses Pools."
+
 msgid "Unable to add subscription."
 msgstr "Konnte Abonnement nicht hinzufügen."
 
@@ -173,6 +259,18 @@ msgstr "Der Pool kann nicht erzeugt werden."
 
 msgid "Unable to create the queue."
 msgstr "Konnte Warteschlange nicht erstellen."
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "Pool-Variante kann nicht gelöscht werden: %s"
+msgstr[1] "Pool-Varianten können nicht gelöscht werden: %s"
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "Pool kann nicht gelöscht werden: %s"
+msgstr[1] "Pools können nicht gelöscht werden: %s"
 
 #, python-format
 msgid "Unable to delete Queue: %s."
@@ -210,15 +308,53 @@ msgstr "Konnte Warteschlange nicht aktualisieren."
 msgid "Update"
 msgstr "Aktualisieren"
 
+msgid "Update Pool"
+msgstr "Pool aktualiseren"
+
+msgid "Update Pool Flavor"
+msgstr "Pool-Varianten aktualisieren"
+
 msgid "Update Queue"
 msgstr "Aktualisiere Warteschlange"
 
 msgid "Weight"
 msgstr "Gewicht"
 
+msgid "Weight of the pool."
+msgstr "Gewichtung des Pools."
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "Sie haben keine Berechtigung zum löschen von Pool-Varianten: %s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "Sie haben keine Berechtigung zum löschen von Pools: %s"
+
 #, python-format
 msgid "You are not allowed to delete queues: %s"
 msgstr "SIe sind nicht berechtig, die Warteschlangen zu löschen: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] ""
+"Sie haben %s gewählt. Eine gelöschte Pool-Variante kann nicht wieder "
+"hergestellt werden."
+msgstr[1] ""
+"Sie haben %s gewählt. Gelöschte Pool-Varianten können nicht wieder "
+"hergestellt werden."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] ""
+"Sie haben %s ausgewählt. Ein gelöschter Pool kann nicht wieder hergestellt "
+"werden."
+msgstr[1] ""
+"Sie haben %s ausgewählt. Gelöschte Pools können nicht wieder hergestellt "
+"werden."
 
 #, python-format
 msgid "You have selected \"%s\". Deleted queue is not recoverable."
@@ -229,3 +365,11 @@ msgstr[0] ""
 msgstr[1] ""
 "Sie haben ausgewählt \"%s\". Gelöschte Warteschlangen können nicht "
 "wiederhergestellt werden."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr ""
+"Sie müssen eine der in Storage Pools konfigurierten Pool-Gruppe angeben."
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "z.B. mongodb://127.0.0.1:27017"
