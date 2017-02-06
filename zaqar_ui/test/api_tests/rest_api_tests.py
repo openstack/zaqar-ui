@@ -13,11 +13,11 @@
 import mock
 
 from openstack_dashboard.test import helpers as test
-from openstack_dashboard.test.test_data.utils import TestData
+from openstack_dashboard.test.test_data import utils
 from zaqar_ui.api.rest import zaqar
 from zaqar_ui.test import test_data
 
-TEST = TestData(test_data.data)
+TEST = utils.TestData(test_data.data)
 
 
 class ZaqarRestTestCase(test.TestCase):
