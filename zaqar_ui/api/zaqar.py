@@ -12,9 +12,9 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-
 from __future__ import absolute_import
 import logging
+import six
 from zaqarclient.queues import client as zaqar_client
 
 from horizon import exceptions
@@ -22,6 +22,8 @@ from horizon.utils.memoized import memoized
 from openstack_dashboard.api import base
 
 LOG = logging.getLogger(__name__)
+
+RESERVED_QUEUE_METADATA = ["_max_messages_post_size", "_default_message_ttl"]
 
 
 @memoized
@@ -75,6 +77,10 @@ def queue_update(request, queue_name, metadata):
     # user can change ttl, max message size and metadata
 
     queue = zaqarclient(request).queue(queue_name, auto_create=False)
+    for key in RESERVED_QUEUE_METADATA:
+        if (key in metadata and isinstance(metadata[key], six.string_types)):
+            metadata[key] = int(metadata[key])
+
     queue.metadata(new_meta=metadata)
     return queue
 
