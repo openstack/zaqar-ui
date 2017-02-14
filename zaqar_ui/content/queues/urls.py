@@ -13,10 +13,10 @@
 # limitations under the License.
 
 from django.conf import urls
+from horizon.browsers import views
+from zaqar_ui.content.queues import panel
 
-from zaqar_ui.content.queues import views
-
-
+title = panel.Queues.name
 urlpatterns = [
-    urls.url(r'^$', views.IndexView.as_view(), name='index'),
+    urls.url(r'^$', views.AngularIndexView.as_view(title=title), name='index'),
 ]

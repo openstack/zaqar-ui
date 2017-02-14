@@ -32,7 +32,8 @@
 
   config.$inject = [
     '$provide',
-    '$windowProvider'
+    '$windowProvider',
+    '$routeProvider'
   ];
 
   /**
@@ -58,12 +59,16 @@
    * @name horizon.dashboard.project.queues.basePath
    * @param {Object} $provide
    * @param {Object} $windowProvider
+   * @param {Object} $routeProvider
    * @returns {undefined} Returns nothing
    * @description Base path for the queues panel
    */
-  function config($provide, $windowProvider) {
+  function config($provide, $windowProvider, $routeProvider) {
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/project/queues/';
     $provide.constant('horizon.dashboard.project.queues.basePath', path);
+    $routeProvider.when('/project/queues', {
+      templateUrl: path + 'table/queue.html'
+    });
   }
 
 })();
