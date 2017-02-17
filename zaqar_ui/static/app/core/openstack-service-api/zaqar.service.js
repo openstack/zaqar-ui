@@ -89,9 +89,9 @@
       return apiService.put(url, sub).error(error(msg));
     }
 
-    function deleteSubscription(queue, subscription) {
+    function deleteSubscription(queueName, subscription) {
       var msg = gettext('Unable to delete subscription.');
-      var url = interpolate(subPath, [queue.name]);
+      var url = interpolate(subPath, [queueName]);
       return apiService.delete(url, subscription).error(error(msg));
     }
 
