@@ -48,6 +48,7 @@
       METADATA_CHANGED: 'horizon.dashboard.project.queues.METADATA_CHANGED',
       DELETE_SUCCESS: 'horizon.dashboard.project.queues.DELETE_SUCCESS',
       UPDATE_SUCCESS: 'horizon.dashboard.project.queues.UPDATE_SUCCESS',
+      PURGE_SUCCESS: 'horizon.dashboard.project.queues.PURGE_SUCCESS',
       SUBSCRIPTION_CREATE_SUCCESS: 'horizon.dashboard.project.queues.SUBSCRIPTION_CREATE_SUCCESS'
     };
   }

@@ -15,7 +15,7 @@ function install_zaqar_ui {
 }
 
 function configure_zaqar_ui {
-    cp -a ${ZAQAR_UI_DIR}/zaqar_ui/enabled/* ${DEST}/horizon/openstack_dashboard/local/enabled/
+    #cp -a ${ZAQAR_UI_DIR}/zaqar_ui/enabled/* ${DEST}/horizon/openstack_dashboard/local/enabled/
     # NOTE: If locale directory does not exist, compilemessages will fail,
     # so check for an existence of locale directory is required.
     if [ -d ${ZAQAR_UI_DIR}/zaqar_ui/locale ]; then

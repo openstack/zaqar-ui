@@ -54,11 +54,13 @@
       var createWatcher = $scope.$on(events.CREATE_SUCCESS, onCreateSuccess);
       var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
       var updateWatcher = $scope.$on(events.UPDATE_SUCCESS, onUpdateSuccess);
+      var purgeWatcher = $scope.$on(events.PURGE_SUCCESS, onPurgeSuccess);
       var subWatcher = $scope.$on(events.SUBSCRIPTION_CREATE_SUCCESS, broadcastEvents);
       $scope.$on('$destroy', function destroy() {
         createWatcher();
         deleteWatcher();
         updateWatcher();
+        purgeWatcher();
         subWatcher();
       });
     }
@@ -82,6 +84,32 @@
       ctrl.queuesSrc = response.data;
       ctrl.queuesSrc.map(function addIdentifier(queue) {
         queue.id = queue.name;
+      });
+    }
+
+    function refreshQueue(queueName) {
+      zaqar.getQueue(queueName).then(function(response) {
+        response.data.id = queueName;
+        for (var i = 0; i < ctrl.queuesSrc.length; i++) {
+          var queue = ctrl.queuesSrc[i];
+          if (queue.id === queueName) {
+            ctrl.queuesSrc[i] = response.data;
+          }
+        }
+        for (var i = 0; i < ctrl.queues.length; i++) {
+          var queue = ctrl.queues[i];
+          if (queue.id === queueName) {
+            ctrl.queues[i] = response.data;
+          }
+        }
+      });
+    }
+
+    function refreshSubscriptions(queueName) {
+      var queue = new Object();
+      queue.name = queueName;
+      zaqar.getSubscriptions(queue).then(function() {
+        $scope.tCtrl.broadcastExpansion(queue);
       });
     }
 
@@ -110,6 +138,14 @@
       // update queue
       ctrl.queuesSrc[queue.id] = queue;
     }
+
+    function onPurgeSuccess(e, queueName) {
+      e.stopPropagation();
+      // purge queue
+      refreshQueue(queueName);
+      refreshSubscriptions(queueName);
+    }
+
   }
 
 })();

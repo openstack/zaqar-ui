@@ -45,12 +45,19 @@ def _load_yaml(data):
 @urls.register
 class Queue(generic.View):
     """API for retrieving a single queue"""
-    url_regex = r'zaqar/queue/(?P<queue_name>[^/]+)$'
+    url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)$'
 
     @rest_utils.ajax()
     def get(self, request, queue_name):
         """Get a specific queue"""
-        return zaqar.queue_get(request, queue_name).to_dict()
+        queue = zaqar.queue_get(request, queue_name)
+        stats = queue.stats['messages']
+        queue_info = {'name': queue_name,
+                      'claimed': stats['claimed'],
+                      'free': stats['free'],
+                      'total': stats['total'],
+                      'metadata': queue.metadata()}
+        return queue_info
 
     @rest_utils.ajax(data_required=True)
     def post(self, request, queue_name):
@@ -59,10 +66,26 @@ class Queue(generic.View):
         Returns the updated queue object on success.
         """
         queue = zaqar.queue_update(request, queue_name, **request.DATA)
-        location = '/api/zaqar/queue/%s' % queue._name
+        location = '/api/zaqars/queue/%s' % queue._name
         response = {'name': queue._name,
                     'metadata': queue._metadata}
         return rest_utils.CreatedResponse(location, response)
+
+
+@urls.register
+class QueueActions(generic.View):
+    """API for actions on a single queue"""
+    url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)/(?P<action>[^/]+)$'
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, queue_name, action):
+        """Actions for a queue"""
+        if action == "purge":
+            resource_types = request.DATA.get("resource_types")
+            zaqar.queue_purge(request, queue_name, resource_types)
+        elif action == "share":
+            # FIXME(flwang): This is placeholder for pre-signed feature.
+            pass
 
 
 @urls.register

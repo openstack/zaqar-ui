@@ -89,6 +89,11 @@ def queue_get(request, queue_name):
     return zaqarclient(request).queue(queue_name, auto_create=False)
 
 
+def queue_purge(request, queue_name, resource_types):
+    queue = zaqarclient(request).queue(queue_name, auto_create=False)
+    queue.purge(resource_types=resource_types)
+
+
 def subscription_list(request, queue_name):
     return [{'subscriber': s.subscriber,
              'id': s.id,

@@ -32,6 +32,7 @@
     'horizon.dashboard.project.queues.actions.createQueueService',
     'horizon.dashboard.project.queues.actions.deleteQueueService',
     'horizon.dashboard.project.queues.actions.updateQueueService',
+    'horizon.dashboard.project.queues.actions.purgeQueueService',
     'horizon.dashboard.project.queues.actions.createSubscriptionService',
     'horizon.dashboard.project.queues.resourceType'
   ];
@@ -41,6 +42,7 @@
     createQueueService,
     deleteQueueService,
     updateQueueService,
+    purgeQueueService,
     createSubscriptionService,
     resourceType
   ) {
@@ -52,6 +54,13 @@
         service: updateQueueService,
         template: {
           text: gettext('Update')
+        }
+      })
+      .append({
+        id: 'queuesItemPurge',
+        service: purgeQueueService,
+        template: {
+          text: gettext('Purge')
         }
       })
       .append({

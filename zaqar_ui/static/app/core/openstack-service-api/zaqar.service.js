@@ -35,9 +35,11 @@
 
     var service = {
       getQueues: getQueues,
+      getQueue: getQueue,
       createQueue: createQueue,
       deleteQueue: deleteQueue,
       updateQueue: updateQueue,
+      purgeQueue: purgeQueue,
       getSubscriptions: getSubscriptions,
       addSubscription: addSubscription,
       deleteSubscription: deleteSubscription,
@@ -62,6 +64,11 @@
       return apiService.get(queuePath).error(error(msg));
     }
 
+    function getQueue(queueName) {
+      var msg = gettext('Unable to retrieve the Queue.');
+      return apiService.get(queuePath + queueName).error(error(msg));
+    }
+
     function createQueue(newQueue) {
       var msg = gettext('Unable to create the queue.');
       return apiService.put(queuePath, newQueue).error(error(msg));
@@ -73,8 +80,15 @@
 
     function updateQueue(queue) {
       var msg = gettext('Unable to update the queue.');
-      var url = '/api/zaqar/queue/' + queue.queue_name;
+      var url = queuePath + queue.queue_name;
       var form = { metadata: queue.metadata };
+      return apiService.post(url, form).error(error(msg));
+    }
+
+    function purgeQueue(queueName, resourceTypes) {
+      var msg = gettext('Unable to purge the queue.');
+      var url = queuePath + queueName + '/purge';
+      var form = resourceTypes;
       return apiService.post(url, form).error(error(msg));
     }
 
