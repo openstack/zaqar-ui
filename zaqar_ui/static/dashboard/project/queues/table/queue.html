@@ -33,9 +33,9 @@
       </th>
       <th class="expander"></th>
       <th class="rsp-p1" st-sort="name" st-sort-default translate>Name</th>
-      <th class="rsp-p1" st-sort="metadata" translate>Claimed Messages</th>
-      <th class="rsp-p2" st-sort="metadata" translate>Free Messages</th>
-      <th class="rsp-p1" st-sort="metadata" translate>Total Messages</th>
+      <th class="rsp-p1" st-sort="claimed" translate>Claimed Messages</th>
+      <th class="rsp-p2" st-sort="free" translate>Free Messages</th>
+      <th class="rsp-p1" st-sort="total" translate>Total Messages</th>
       <th class="actions_column" translate>Actions</th>
     </tr>
   </thead>
@@ -49,7 +49,7 @@
       Include action-col if you want to perform actions.
       rsp-p1 rsp-p2 are responsive priority as user resizes window.
     -->
-    <tr ng-repeat-start="q in table.queuesSrc track by q.id">
+    <tr ng-repeat-start="q in table.queues track by q.id">
 
       <td class="multi_select_column">
         <input type="checkbox"
