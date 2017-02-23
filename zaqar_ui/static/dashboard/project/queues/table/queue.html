@@ -102,11 +102,10 @@
           </span>
         </div>
         <div class="row">
-
           <!-- additional unimportant metadata can be place here -->
-          <dl class="col-sm-12">
-            <dt translate>Metadata</dt>
-            <dd>{$ q.metadata $}</dd>
+          <dl class="col-sm-3" ng-repeat="(key, value) in q.metadata">
+            <dt>{$ key $}</dt>
+            <dd>{$ value $}</dd>
           </dl>
         </div>
         <ng-include src="table.subsTemplate"></ng-include>
