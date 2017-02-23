@@ -93,6 +93,8 @@ def subscription_list(request, queue_name):
     return [{'subscriber': s.subscriber,
              'id': s.id,
              'ttl': s.ttl,
+             'age': s.age,
+             'confirmed': s.confirmed,
              'options': s.options}
             for s in zaqarclient(request).subscriptions(queue_name)]
 
@@ -102,6 +104,8 @@ def subscription_create(request, queue_name, sub_data):
     return {'subscriber': subscription.subscriber,
             'id': subscription.id,
             'ttl': subscription.ttl,
+            'age': subscription.age,
+            'confirmed': subscription.confirmed,
             'options': subscription.options}
 
 
