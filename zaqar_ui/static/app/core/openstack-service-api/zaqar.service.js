@@ -29,6 +29,7 @@
   function ZaqarAPI(apiService, toast) {
 
     var queuePath = '/api/zaqar/queues/';
+    var msgPath = '/api/zaqar/queues/%s/messages/';
     var subPath = '/api/zaqar/queues/%s/subscriptions/';
     var poolPath = '/api/zaqar/pools/';
     var flavorPath = '/api/zaqar/flavors/';
@@ -40,6 +41,8 @@
       deleteQueue: deleteQueue,
       updateQueue: updateQueue,
       purgeQueue: purgeQueue,
+      postMessages: postMessages,
+      getMessages: getMessages,
       getSubscriptions: getSubscriptions,
       addSubscription: addSubscription,
       deleteSubscription: deleteSubscription,
@@ -90,6 +93,17 @@
       var url = queuePath + queueName + '/purge';
       var form = resourceTypes;
       return apiService.post(url, form).error(error(msg));
+    }
+
+    function getMessages(queueName) {
+      var url = interpolate(msgPath, [queueName]);
+      return apiService.get(url);
+    }
+
+    function postMessages(queueName, msgs) {
+      var msg = gettext('Unable to post messages.');
+      var url = interpolate(msgPath, [queueName]);
+      return apiService.post(url, msgs).error(error(msg));
     }
 
     function getSubscriptions(queue) {

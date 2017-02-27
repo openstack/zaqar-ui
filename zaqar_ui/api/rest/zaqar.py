@@ -12,6 +12,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import json
 import six
 import yaml
 
@@ -138,7 +139,7 @@ class Queues(generic.View):
 
 @urls.register
 class Subscriptions(generic.View):
-    """API for queues"""
+    """API for Subscriptions"""
     url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)/subscriptions/$'
 
     @rest_utils.ajax()
@@ -161,6 +162,35 @@ class Subscriptions(generic.View):
         Returns the new queue object on success.
         """
         return zaqar.subscription_create(request, queue_name, request.DATA)
+
+
+@urls.register
+class Messages(generic.View):
+    """API for messages"""
+    url_regex = r'zaqar/queues/(?P<queue_name>[^/]+)/messages/$'
+
+    @rest_utils.ajax()
+    def get(self, request, queue_name):
+        """Get a list of messages"""
+        result = zaqar.message_list(request, queue_name)
+        messages = []
+        for m in result:
+            claim_id = None
+            if m.claim_id:
+                claim_id = m.claim_id()
+            messages.append({'age': m.age,
+                             'body': m.body,
+                             'claim_id': claim_id,
+                             'id': m.id,
+                             'href': m.href,
+                             'ttl': m.ttl})
+        return messages
+
+    @rest_utils.ajax(data_required=True)
+    def post(self, request, queue_name):
+        """Create new messages"""
+        messages = json.loads(request.DATA.get("messages"))
+        return zaqar.message_post(request, queue_name, messages)
 
 
 @urls.register

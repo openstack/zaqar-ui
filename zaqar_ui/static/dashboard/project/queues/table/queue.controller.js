@@ -55,12 +55,14 @@
       var deleteWatcher = $scope.$on(events.DELETE_SUCCESS, onDeleteSuccess);
       var updateWatcher = $scope.$on(events.UPDATE_SUCCESS, onUpdateSuccess);
       var purgeWatcher = $scope.$on(events.PURGE_SUCCESS, onPurgeSuccess);
+      var postMessageWatcher = $scope.$on(events.POST_MESSAGE_SUCCESS, onPostMessageSuccess);
       var subWatcher = $scope.$on(events.SUBSCRIPTION_CREATE_SUCCESS, broadcastEvents);
       $scope.$on('$destroy', function destroy() {
         createWatcher();
         deleteWatcher();
         updateWatcher();
         purgeWatcher();
+        postMessageWatcher();
         subWatcher();
       });
     }
@@ -146,6 +148,10 @@
       refreshSubscriptions(queueName);
     }
 
+    function onPostMessageSuccess(e, queueName) {
+      e.stopPropagation();
+      refreshQueue(queueName);
+    }
   }
 
 })();

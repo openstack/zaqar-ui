@@ -33,6 +33,8 @@
     'horizon.dashboard.project.queues.actions.deleteQueueService',
     'horizon.dashboard.project.queues.actions.updateQueueService',
     'horizon.dashboard.project.queues.actions.purgeQueueService',
+    'horizon.dashboard.project.queues.actions.postMessageService',
+    'horizon.dashboard.project.queues.actions.listMessageService',
     'horizon.dashboard.project.queues.actions.createSubscriptionService',
     'horizon.dashboard.project.queues.resourceType'
   ];
@@ -43,12 +45,28 @@
     deleteQueueService,
     updateQueueService,
     purgeQueueService,
+    postMessageService,
+    listMessageService,
     createSubscriptionService,
     resourceType
   ) {
 
     var queueResourceType = registry.getResourceType(resourceType);
     queueResourceType.itemActions
+      .append({
+        id: 'messagesPost',
+        service: postMessageService,
+        template: {
+          text: gettext('Post Messages')
+        }
+      })
+      .append({
+        id: 'messagesList',
+        service: listMessageService,
+        template: {
+          text: gettext('View Messages')
+        }
+      })
       .append({
         id: 'queuesItemUpdate',
         service: updateQueueService,
