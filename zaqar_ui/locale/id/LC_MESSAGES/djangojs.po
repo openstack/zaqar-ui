@@ -4,17 +4,17 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.0.0b4.dev2\n"
+"Project-Id-Version: zaqar-ui 2.0.1.dev4\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-01-31 09:28+0000\n"
+"POT-Creation-Date: 2017-02-23 02:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-01-31 03:42+0000\n"
+"PO-Revision-Date: 2017-02-02 03:09+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "A queue name between 1-256 characters is required."
@@ -23,11 +23,26 @@ msgstr "Sebuah nama antrian antara 1-256 karakter diperlukan."
 msgid "Actions"
 msgstr "Aksi"
 
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr ""
+"Opsional permintaan komponen yang terkait dengan opsi storage-specific dalam "
+"format YAML."
+
 msgid "Capabilities"
 msgstr "Capabilities (kemampuan)"
 
 msgid "Claimed Messages"
 msgstr "Claimed Messages (pesan diklaim)"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "Confirm Delete Pool"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "Confirm Delete Pool Flavor"
 
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
@@ -35,6 +50,12 @@ msgstr[0] "Confirm Delete Queue (konfirmasi penghapusan antrian)"
 
 msgid "Create"
 msgstr "Membuat"
+
+msgid "Create Pool"
+msgstr "Buat pool"
+
+msgid "Create Pool Flavor"
+msgstr "Create Pool Flavor (buat pool flavor)"
 
 msgid "Create Queue"
 msgstr "Buat Queue (antrian)"
@@ -48,6 +69,20 @@ msgstr "Buat Langganan"
 msgid "Delete"
 msgstr "Hapus"
 
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "Delete Pool"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "Delete Pool Flavor"
+
+msgid "Delete Pool Flavors"
+msgstr "Delete Pool Flavors (hapus pool flavor)"
+
+msgid "Delete Pools"
+msgstr "Hapus pool"
+
 msgid "Delete Queue"
 msgid_plural "Delete Queues"
 msgstr[0] "Delete Queue (hapus antrian)"
@@ -56,9 +91,22 @@ msgid "Delete Queues"
 msgstr "Hapus Queues (antrian)"
 
 #, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "Deleted Pool Flavor: %s."
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "Deleted Pool: %s."
+
+#, python-format
 msgid "Deleted Queue: %s."
 msgid_plural "Deleted Queues: %s."
 msgstr[0] "Antrian terhapus: %s."
+
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "Menjelaskan kemampuan flavor-specific dalam format YAML."
 
 msgid "Enter a queue name"
 msgstr "Masukkan nama antrian"
@@ -72,6 +120,9 @@ msgstr "Free Messages (pesan bebas)"
 msgid "Group"
 msgstr "Group (grup))"
 
+msgid "Group of the pool."
+msgstr "Grup pool."
+
 # #-#-#-#-#  config_ml2_plug_in.pot (Networking Guide 0.9)  #-#-#-#-#
 # #-#-#-#-#  intro_os_networking_service.pot (Networking Guide 0.9)  #-#-#-#-#
 msgid "Metadata"
@@ -79,6 +130,12 @@ msgstr "Metadata"
 
 msgid "Name"
 msgstr "Nama"
+
+msgid "Name of the flavor."
+msgstr "Nama flavor."
+
+msgid "Name of the pool."
+msgstr "Nama pool."
 
 msgid ""
 "Note that you can create a queue without defining metadata.\n"
@@ -97,6 +154,14 @@ msgstr "Options (opsi)"
 msgid "Pool"
 msgstr "Pool (kolam)"
 
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "Pool %s berhasil dibuat."
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "Pool %s telah berhasil diperbarui."
+
 msgid "Pool Flavor"
 msgstr "Pool Flavor (flavor kolam)"
 
@@ -105,6 +170,17 @@ msgstr "Pool Flavors (flavor kolam)"
 
 msgid "Pool Group"
 msgstr "Pool Group (group kolam)"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "Pool flavor %s berhasil dibuat."
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "Pool flavor %s telah berhasil diperbarui."
+
+msgid "Pool group for flavor."
+msgstr "Grup pool flavor."
 
 msgid "Pools"
 msgstr "Pools (kolam)"
@@ -161,6 +237,9 @@ msgstr "Total Messages (total pesan)"
 msgid "URI"
 msgstr "URI"
 
+msgid "URI for storage engine of this pool."
+msgstr "URI untuk mesin penyimpanan pool ini."
+
 msgid "Unable to add subscription."
 msgstr "Tidak dapat menambahkan langganan."
 
@@ -172,6 +251,16 @@ msgstr "Tidak dapat membuat kolam."
 
 msgid "Unable to create the queue."
 msgstr "Tidak dapat membuat antrian."
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "Unable to delete Pool Flavor: %s."
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "Unable to delete Pool: %s."
 
 #, python-format
 msgid "Unable to delete Queue: %s."
@@ -208,17 +297,54 @@ msgstr "Tidak dapat memperbarui antrian."
 msgid "Update"
 msgstr "Perbaharui"
 
+msgid "Update Pool"
+msgstr "Perbaharui pool"
+
+msgid "Update Pool Flavor"
+msgstr "Update Pool Flavor (perbaharui pool flavor)"
+
 msgid "Update Queue"
 msgstr "Perbaharui Queue"
 
 msgid "Weight"
 msgstr "Weight (berat)"
 
+msgid "Weight of the pool."
+msgstr "Berat pool."
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "Anda tidak diizinkan untuk menghapus pool flavors: %s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "Anda tidak diizinkan untuk menghapus pool: %s"
+
 #, python-format
 msgid "You are not allowed to delete queues: %s"
 msgstr "Anda tidak diizinkan untuk menghapus queues: %s"
 
 #, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted Pool is not recoverable."
+
+#, python-format
 msgid "You have selected \"%s\". Deleted queue is not recoverable."
 msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
 msgstr[0] "Anda telah memilih \"%s\".  Antrian dihapus tidak dapat dipulihkan."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr ""
+"Anda harus menentukan salah satu kelompok pool yang dikonfigurasi dalam pool "
+"penyimpanan."
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "e.g. mongodb://127.0.0.1:27017"

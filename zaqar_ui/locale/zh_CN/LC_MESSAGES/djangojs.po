@@ -1,19 +1,20 @@
 # Linda <duleish@cn.ibm.com>, 2016. #zanata
 # hanchao <han.chaoB@h3c.com>, 2016. #zanata
 # zenglulu <zengluul@gmail.com>, 2016. #zanata
+# liujunpeng <liujunpeng@inspur.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 1.0.0.0b3.dev3\n"
+"Project-Id-Version: zaqar-ui 2.0.1.dev4\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-15 23:50+0000\n"
+"POT-Creation-Date: 2017-02-23 02:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-07-30 03:16+0000\n"
-"Last-Translator: zenglulu <zengluul@gmail.com>\n"
+"PO-Revision-Date: 2017-02-10 03:41+0000\n"
+"Last-Translator: liujunpeng <liujunpeng@inspur.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "A queue name between 1-256 characters is required."
@@ -22,8 +23,24 @@ msgstr "队列名称必须为1~256字符之间。 "
 msgid "Actions"
 msgstr "行为。"
 
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr "在YAML格式中，一个可选请求组件与指定存储选项有关。"
+
+msgid "Capabilities"
+msgstr "容量"
+
 msgid "Claimed Messages"
 msgstr "声明消息"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "确认删除池"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "确认删除类型"
 
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
@@ -31,6 +48,12 @@ msgstr[0] "确认删除队列。"
 
 msgid "Create"
 msgstr "已创建"
+
+msgid "Create Pool"
+msgstr "创建池"
+
+msgid "Create Pool Flavor"
+msgstr "创建类型池"
 
 msgid "Create Queue"
 msgstr "创建队列。"
@@ -44,6 +67,20 @@ msgstr "新建订阅"
 msgid "Delete"
 msgstr "删除"
 
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "删除池"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "类型池"
+
+msgid "Delete Pool Flavors"
+msgstr "删除类型池"
+
+msgid "Delete Pools"
+msgstr "删除池"
+
 msgid "Delete Queue"
 msgid_plural "Delete Queues"
 msgstr[0] "删除队列。"
@@ -52,9 +89,22 @@ msgid "Delete Queues"
 msgstr "删除队列。"
 
 #, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "删除类型： %s."
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "删除池：%s。"
+
+#, python-format
 msgid "Deleted Queue: %s."
 msgid_plural "Deleted Queues: %s."
 msgstr[0] "删除队列： %s。"
+
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "以YAML格式描述指定类型的容量。"
 
 msgid "Enter a queue name"
 msgstr "输入队列名称。"
@@ -65,17 +115,70 @@ msgstr "输入一个订阅者"
 msgid "Free Messages"
 msgstr "免费消息"
 
+msgid "Group"
+msgstr "组"
+
+msgid "Group of the pool."
+msgstr "池组。"
+
 msgid "Metadata"
 msgstr "元数据"
 
 msgid "Name"
 msgstr "名字"
 
+msgid "Name of the flavor."
+msgstr "类型名"
+
+msgid "Name of the pool."
+msgstr "池的名称。"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"请注意您已完成创建队列操作，该队列未定义元数据。\n"
+"      定义元数据为可选操作，但推荐为您创建的队列应以元数据。"
+
 msgid "Note that you can create a subscription without defining options."
 msgstr "请注意，您可以创建一个不带任何选项的订阅。"
 
 msgid "Options"
 msgstr "选项"
+
+msgid "Pool"
+msgstr "池"
+
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "更新池%s 成功。"
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "已成功更新池 %s。"
+
+msgid "Pool Flavor"
+msgstr "类型池"
+
+msgid "Pool Flavors"
+msgstr "类型池"
+
+msgid "Pool Group"
+msgstr "池组"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "创建类型池 %s 成功。"
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "类型%s 更新成功。"
+
+msgid "Pool group for flavor."
+msgstr "型的池组。"
+
+msgid "Pools"
+msgstr "池"
 
 #, python-format
 msgid "Queue %s was successfully created."
@@ -126,11 +229,33 @@ msgstr "生存时间"
 msgid "Total Messages"
 msgstr "消息总计。"
 
+msgid "URI"
+msgstr "URI"
+
+msgid "URI for storage engine of this pool."
+msgstr "池存储引擎的URI"
+
 msgid "Unable to add subscription."
 msgstr "无法添加订阅。"
 
+msgid "Unable to create the flavor."
+msgstr "无法创建类型。"
+
+msgid "Unable to create the pool."
+msgstr "无法创建池。"
+
 msgid "Unable to create the queue."
 msgstr "无法创建队列。"
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "不能删除类型：%s。"
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "不能删除池：%s。"
 
 #, python-format
 msgid "Unable to delete Queue: %s."
@@ -143,20 +268,76 @@ msgstr "无法删除订阅。"
 msgid "Unable to retrieve the Queues."
 msgstr "无法检索队列。"
 
+msgid "Unable to retrieve the flavor."
+msgstr "无法获取类型。"
+
+msgid "Unable to retrieve the flavors."
+msgstr "无法获取类型。"
+
+msgid "Unable to retrieve the pool."
+msgstr "无法获取池。"
+
+msgid "Unable to retrieve the pools."
+msgstr "无法获取池。"
+
+msgid "Unable to update the flavor."
+msgstr "无法更新类型。"
+
+msgid "Unable to update the pool."
+msgstr "无法更新池。"
+
 msgid "Unable to update the queue."
 msgstr "无法更新此队列。"
 
 msgid "Update"
 msgstr "更新"
 
+msgid "Update Pool"
+msgstr "更新池"
+
+msgid "Update Pool Flavor"
+msgstr "更新类型池"
+
 msgid "Update Queue"
 msgstr "修改队列。"
+
+msgid "Weight"
+msgstr "权重"
+
+msgid "Weight of the pool."
+msgstr "池的权重。"
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "你不被允许删除类型池：%s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "您不被允许删除池：%s"
 
 #, python-format
 msgid "You are not allowed to delete queues: %s"
 msgstr "您不被允许删除这些队列：%s"
 
 #, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] "已选择 \"%s\"。删除类型不可恢复。"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] "已选择 \"%s\"。删除池操作将不可恢复。"
+
+#, python-format
 msgid "You have selected \"%s\". Deleted queue is not recoverable."
 msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
 msgstr[0] "已选择 \"%s\"。删除队列操作将不可恢复。"
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr "你必须指定一个在存储池中配置的池组。"
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "比如 mongodb://127.0.0.1:27017"

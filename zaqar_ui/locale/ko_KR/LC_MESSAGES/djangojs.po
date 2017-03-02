@@ -1,19 +1,20 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+# Eunseop Shin <kairos9603@khu.ac.kr>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 1.0.0.0b3.dev9\n"
+"Project-Id-Version: zaqar-ui 2.0.1.dev4\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2016-08-19 02:16+0000\n"
+"POT-Creation-Date: 2017-02-23 02:21+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-09-14 04:38+0000\n"
-"Last-Translator: Ian Y. Choi <ianyrchoi@gmail.com>\n"
+"PO-Revision-Date: 2017-02-11 03:41+0000\n"
+"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
-"X-Generator: Zanata 3.7.3\n"
+"X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "A queue name between 1-256 characters is required."
@@ -22,8 +23,19 @@ msgstr "큐 이름은 1-256 문자로 되어야 합니다."
 msgid "Actions"
 msgstr "작업"
 
+msgid "Capabilities"
+msgstr "기능들"
+
 msgid "Claimed Messages"
 msgstr "요청 메시지"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "Pool 삭제 확인"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "Pool Flavor 삭제 확인"
 
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
@@ -31,6 +43,12 @@ msgstr[0] "큐 삭제 확인"
 
 msgid "Create"
 msgstr "생성"
+
+msgid "Create Pool"
+msgstr "Pool 생성"
+
+msgid "Create Pool Flavor"
+msgstr "Pool Flavor 생성"
 
 msgid "Create Queue"
 msgstr "큐 생성"
@@ -44,12 +62,36 @@ msgstr "구독 생성"
 msgid "Delete"
 msgstr "삭제"
 
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "풀 삭제"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "Pool Flavor 삭제"
+
+msgid "Delete Pool Flavors"
+msgstr "Pool Flavors 삭제"
+
+msgid "Delete Pools"
+msgstr "Pool 삭제"
+
 msgid "Delete Queue"
 msgid_plural "Delete Queues"
 msgstr[0] "큐 삭제"
 
 msgid "Delete Queues"
 msgstr "큐 삭제"
+
+#, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "삭제된 Pool Flavor: %s."
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "삭제된 풀: %s."
 
 #, python-format
 msgid "Deleted Queue: %s."
@@ -65,11 +107,23 @@ msgstr "구독자를 입력합니다"
 msgid "Free Messages"
 msgstr "프리 메시지"
 
+msgid "Group"
+msgstr "Group"
+
+msgid "Group of the pool."
+msgstr "풀 그룹입니다."
+
 msgid "Metadata"
 msgstr "메타데이터"
 
 msgid "Name"
 msgstr "이름"
+
+msgid "Name of the flavor."
+msgstr "Flavor의 이름."
+
+msgid "Name of the pool."
+msgstr "풀 이름입니다."
 
 msgid ""
 "Note that you can create a queue without defining metadata.\n"
@@ -83,6 +137,40 @@ msgstr "참고로 옵션 정의 없이 구독 생성이 가능합니다."
 
 msgid "Options"
 msgstr "옵션"
+
+msgid "Pool"
+msgstr "Pool"
+
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "Pool %s가 성공적으로 생성되었습니다."
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "풀 %s가 성공적으로 업데이트되었습니다."
+
+msgid "Pool Flavor"
+msgstr "Pool Flavor"
+
+msgid "Pool Flavors"
+msgstr "Pool Flavors"
+
+msgid "Pool Group"
+msgstr "풀 그룹"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "Pool flavor %s가 성공적으로 생성되었습니다."
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "Pool flavor %s가 성공적으로 업데이트 되었습니다."
+
+msgid "Pool group for flavor."
+msgstr "Flavor를 위한 Pool Group."
+
+msgid "Pools"
+msgstr "Pools"
 
 #, python-format
 msgid "Queue %s was successfully created."
@@ -133,11 +221,30 @@ msgstr "Time to Live"
 msgid "Total Messages"
 msgstr "총 메시지"
 
+msgid "URI"
+msgstr "URI"
+
 msgid "Unable to add subscription."
 msgstr "구독을 추가할 수 없습니다."
 
+msgid "Unable to create the flavor."
+msgstr "Flavor 생성을 할 수 없습니다."
+
+msgid "Unable to create the pool."
+msgstr "풀을 생성 할 수 없습니다."
+
 msgid "Unable to create the queue."
 msgstr "큐를 생성할 수 없습니다."
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "Pool Flavor를 삭제 할 수 없습니다.: %s."
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "Pool을 삭제할 수 없습니다: %s."
 
 #, python-format
 msgid "Unable to delete Queue: %s."
@@ -150,20 +257,72 @@ msgstr "구독을 삭제할 수 없습니다."
 msgid "Unable to retrieve the Queues."
 msgstr "큐를 가져올 수 없습니다."
 
+msgid "Unable to retrieve the flavor."
+msgstr "Flavor를 찾지 못했습니다."
+
+msgid "Unable to retrieve the flavors."
+msgstr "Flavor들을 찾지 못했습니다."
+
+msgid "Unable to retrieve the pool."
+msgstr "풀을 찾을 수 없습니다."
+
+msgid "Unable to retrieve the pools."
+msgstr "풀을 찾을 수 없습니다."
+
+msgid "Unable to update the flavor."
+msgstr "Flavor 업데이트를 할 수 없습니다."
+
+msgid "Unable to update the pool."
+msgstr "풀을 업데이트 할 수 없습니다."
+
 msgid "Unable to update the queue."
 msgstr "큐를 업데이트할 수 없습니다."
 
 msgid "Update"
 msgstr "업데이트"
 
+msgid "Update Pool"
+msgstr "풀 업데이트"
+
+msgid "Update Pool Flavor"
+msgstr "Pool Flavor 업데이트"
+
 msgid "Update Queue"
 msgstr "큐 업데이트"
+
+msgid "Weight"
+msgstr "Weight"
+
+msgid "Weight of the pool."
+msgstr "풀에서 풀 멤버 가중치입니다."
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "pool flavors 삭제가 허용되지 않았습니다 : %s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "Pool 삭제가 허용되어 있지 않습니다: %s"
 
 #, python-format
 msgid "You are not allowed to delete queues: %s"
 msgstr "큐 삭제가 허용되어 있지 않습니다: %s"
 
 #, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] "\"%s\"를 선택했습니다. 삭제된 Pool Flavor는 복구 할 수 없습니다."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] "\"%s\"를 선택했습니다. 삭제된 Pool은 복구 할 수 없습니다."
+
+#, python-format
 msgid "You have selected \"%s\". Deleted queue is not recoverable."
 msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
 msgstr[0] "\"%s\"를 선택했습니다. 삭제된 큐는 복구 할 수 없습니다."
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "e.g. mongodb://127.0.0.1:27017"
