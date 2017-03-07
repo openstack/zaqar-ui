@@ -5,6 +5,8 @@
     <tr>
       <th translate>Subscriber</th>
       <th translate>Time to Live</th>
+      <th translate>Age</th>
+      <th translate>Confirmed</th>
       <th translate>Options</th>
       <th translate>Actions</th>
     </tr>
@@ -16,6 +18,8 @@
     <tr ng-repeat="sub in subCtrl.queuesMap[q.name].subscriptions">
       <td>{$ sub.subscriber $}</td>
       <td>{$ sub.ttl $}</td>
+      <td>{$ sub.age $}</td>
+      <td>{$ sub.confirmed $}</td>
       <td>{$ sub.options $}</td>
       <td>
         <button class="btn btn-xs btn-danger"
