@@ -1,5 +1,4 @@
-# Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
-# Eunseop Shin <kairos9603@khu.ac.kr>, 2017. #zanata
+# liujunpeng <liujunpeng@inspur.com>, 2017. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zaqar-ui 2.0.1.dev18\n"
@@ -8,25 +7,25 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-11 03:30+0000\n"
-"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
-"Language-Team: Korean (South Korea)\n"
-"Language: ko-KR\n"
+"PO-Revision-Date: 2017-02-10 03:39+0000\n"
+"Last-Translator: liujunpeng <liujunpeng@inspur.com>\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh-CN\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "Messaging"
-msgstr "메시징"
+msgstr "消息"
 
 msgid "Pool Flavors"
-msgstr "Pool Flavors"
+msgstr "池类型"
 
 msgid "Pools"
-msgstr "풀"
+msgstr "池"
 
 msgid "Queues"
-msgstr "큐"
+msgstr "队列"
 
 #, python-format
 msgid "The specified input is not a valid YAML format: %s"
-msgstr "입력한 값이 YAML 포멧에 맞지 않습니다: %s"
+msgstr "给的的输入不是有效的YAML格式：%s"
