@@ -2,13 +2,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev18\n"
+"Project-Id-Version: zaqar-ui 2.0.1.dev23\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-03-08 02:34+0000\n"
+"POT-Creation-Date: 2017-04-11 01:18+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-02 09:40+0000\n"
+"PO-Revision-Date: 2017-04-11 03:57+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -21,6 +21,9 @@ msgstr "1-256 文字のキュー名が必要です。"
 msgid "Actions"
 msgstr "アクション"
 
+msgid "Age"
+msgstr "年齢"
+
 msgid ""
 "An optional request component related to storage-specific options in YAML "
 "format."
@@ -30,6 +33,9 @@ msgstr ""
 
 msgid "Capabilities"
 msgstr "機能"
+
+msgid "Choose resource to purge"
+msgstr "削除するリソースを選択してください。"
 
 msgid "Claimed Messages"
 msgstr "要求メッセージ数"
@@ -45,6 +51,9 @@ msgstr[0] "プールフレーバーの削除の確認"
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
 msgstr[0] "キューの削除の確認"
+
+msgid "Confirmed"
+msgstr "確認済み"
 
 msgid "Create"
 msgstr "作成"
@@ -121,6 +130,9 @@ msgstr "グループ"
 msgid "Group of the pool."
 msgstr "プールのグループ"
 
+msgid "Messages"
+msgstr "メッセージ"
+
 msgid "Name"
 msgstr "名前"
 
@@ -179,6 +191,16 @@ msgstr "フレーバーのプールグループ"
 msgid "Pools"
 msgstr "プール"
 
+msgid "Purge"
+msgstr "空にする"
+
+msgid "Purge Queue"
+msgstr "キューを空にする"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "キュー %s が正常に空にされました。"
+
 #, python-format
 msgid "Queue %s was successfully created."
 msgstr "キュー %s が正常に作成されました。"
@@ -218,6 +240,9 @@ msgstr "サブスクリプション"
 #, python-format
 msgid "Subscription %s was successfully created."
 msgstr "サブスクリプション %s が正常に作成されました。"
+
+msgid "Subscriptions"
+msgstr "サブスクリプション"
 
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "サブスクリプションの有効期間は、少なくとも 60 秒でなければなりません。"
@@ -266,6 +291,12 @@ msgstr[0] "キューを削除できません: %s"
 
 msgid "Unable to delete subscription."
 msgstr "サブスクリプションを削除できません。"
+
+msgid "Unable to purge the queue."
+msgstr "キューを空にできません。"
+
+msgid "Unable to retrieve the Queue."
+msgstr "キューを取得できません。"
 
 msgid "Unable to retrieve the Queues."
 msgstr "キューの一覧を取得できません。"
