@@ -4,13 +4,13 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev18\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b2.dev6\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-03-08 02:34+0000\n"
+"POT-Creation-Date: 2017-04-17 05:42+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-02 03:09+0000\n"
+"PO-Revision-Date: 2017-04-17 11:10+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -23,6 +23,9 @@ msgstr "Sebuah nama antrian antara 1-256 karakter diperlukan."
 msgid "Actions"
 msgstr "Aksi"
 
+msgid "Age"
+msgstr "Age"
+
 msgid ""
 "An optional request component related to storage-specific options in YAML "
 "format."
@@ -32,6 +35,9 @@ msgstr ""
 
 msgid "Capabilities"
 msgstr "Capabilities (kemampuan)"
+
+msgid "Choose resource to purge"
+msgstr "Choose resource to purge"
 
 msgid "Claimed Messages"
 msgstr "Claimed Messages (pesan diklaim)"
@@ -47,6 +53,9 @@ msgstr[0] "Confirm Delete Pool Flavor"
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
 msgstr[0] "Confirm Delete Queue (konfirmasi penghapusan antrian)"
+
+msgid "Confirmed"
+msgstr "Confirmed"
 
 msgid "Create"
 msgstr "Membuat"
@@ -123,6 +132,9 @@ msgstr "Group (grup))"
 msgid "Group of the pool."
 msgstr "Grup pool."
 
+msgid "Messages"
+msgstr "Messages"
+
 msgid "Name"
 msgstr "Nama"
 
@@ -180,6 +192,16 @@ msgstr "Grup pool flavor."
 msgid "Pools"
 msgstr "Pools (kolam)"
 
+msgid "Purge"
+msgstr "Purge"
+
+msgid "Purge Queue"
+msgstr "Purge Queue"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "Queue %s has been purged successfully."
+
 #, python-format
 msgid "Queue %s was successfully created."
 msgstr "Antian %s berhasil dibuat."
@@ -216,6 +238,9 @@ msgstr "Abonemen"
 #, python-format
 msgid "Subscription %s was successfully created."
 msgstr "Abonemen %s berhasil dibuat."
+
+msgid "Subscriptions"
+msgstr "Subscriptions"
 
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "TTL untuk berlangganan harus minimal 60 detik."
@@ -264,6 +289,12 @@ msgstr[0] "Tidak dapat menghapus antrian: %s."
 
 msgid "Unable to delete subscription."
 msgstr "Tidak dapat menghapus langganan."
+
+msgid "Unable to purge the queue."
+msgstr "Unable to purge the queue."
+
+msgid "Unable to retrieve the Queue."
+msgstr "Unable to retrieve the Queue."
 
 msgid "Unable to retrieve the Queues."
 msgstr "Tidak dapat mengambil Queues (antrian)"
