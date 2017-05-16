@@ -6,3 +6,8 @@
 textarea#messages {
   height: 28em;
 }
+
+.horizontal-checkboxes div {
+  display: table-cell;
+  padding-right: 10px;
+}
