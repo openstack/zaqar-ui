@@ -1,0 +1,391 @@
+# Mücahit Büyükyılmaz <mucahit@deltanoc.com>, 2015. #zanata
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 3.0.0.0b2.dev12\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-05-18 00:09+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-05-25 11:52+0000\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Turkish (Turkey)\n"
+"Language: tr-TR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Zanata 3.9.6\n"
+"X-POOTLE-MTIME: 1495713078.000000\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "1-256 karakter uzunluğunda kuyruk ismi gerekiyor."
+
+msgid "Actions"
+msgstr "İşlemler"
+
+msgid "Age"
+msgstr "Yaş"
+
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr ""
+"İsteğe bağlı, depolamaya-özel seçeneklerle ilgili YAML biçiminde istek "
+"bileşeni."
+
+msgid "Capabilities"
+msgstr "Yetenekler"
+
+msgid "Choose resource to purge"
+msgstr "Temizlenecek kaynağı seçin"
+
+msgid "Claimed Messages"
+msgstr "İstenen İletiler"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "Havuz Silmeyi Onayla"
+msgstr[1] "Havuzları Silmeyi Onayla"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "Havuz Niteliği Silmeyi Onayla"
+msgstr[1] "Havuz Niteliklerini Silmeyi Onayla"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Kuyruk Silmeyi Onayla"
+msgstr[1] "Kuyrukları Silmeyi Onayla"
+
+msgid "Confirmed"
+msgstr "Onaylandı"
+
+msgid "Create"
+msgstr "Oluştur"
+
+msgid "Create Pool"
+msgstr "Havuz Oluştur"
+
+msgid "Create Pool Flavor"
+msgstr "Havuz Niteliği Oluştur"
+
+msgid "Create Queue"
+msgstr "Kuyruk Oluştur"
+
+msgid "Create Queues"
+msgstr "Kuyruklar Oluştur"
+
+msgid "Create Subscription"
+msgstr "Abonelik Oluştur"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "Havuzu Sil"
+msgstr[1] "Havuzları Sil"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "Havuz Niteliğini Sil"
+msgstr[1] "Havuz Niteliklerini Sil"
+
+msgid "Delete Pool Flavors"
+msgstr "Havuz Niteliklerini Sil"
+
+msgid "Delete Pools"
+msgstr "Havuzları Sil"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Kuyruğu Sil"
+msgstr[1] "Kuyrukları Sil"
+
+msgid "Delete Queues"
+msgstr "Kuyrukları Sil"
+
+#, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "Havuz Niteliği Silindi: %s."
+msgstr[1] "Havuz Nitelikleri Silindi: %s."
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "Havuz Silindi: %s."
+msgstr[1] "Havuzlar Silindi: %s."
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "Kuyruk Silindi: %s."
+msgstr[1] "Kuyruklar Silindi: %s."
+
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "Niteliğe-özel yetenekleri YAML biçiminde tanımlar."
+
+msgid "Enter a queue name"
+msgstr "Bir kuyruk ismi girin"
+
+msgid "Enter a subscriber"
+msgstr "Bir abone girin"
+
+msgid "Free Messages"
+msgstr "Bağımsız İletiler"
+
+msgid "Group"
+msgstr "Grup"
+
+msgid "Group of the pool."
+msgstr "Havuzun grubu."
+
+msgid "Messages"
+msgstr "İletiler"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "Name of the flavor."
+msgstr "Nitelik adı."
+
+msgid "Name of the pool."
+msgstr "Havuz ismi."
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Metaveri tanımlamadan kuyruk oluşturabileceğinizi unutmayın.\n"
+"Metaveri adımı tavsiye edilir ama isteğe bağlıdır."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "Seçenekleri belirtmeden abonelik oluşturabileceğinizi unutmayın."
+
+msgid "Options"
+msgstr "Seçenekler"
+
+msgid "Pool"
+msgstr "Havuz"
+
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "Havuz %s başarıyla oluşturuldu."
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "Havuz %s başarıyla güncellendi."
+
+msgid "Pool Flavor"
+msgstr "Havuz Niteliği"
+
+msgid "Pool Flavors"
+msgstr "Havuz Nitelikleri"
+
+msgid "Pool Group"
+msgstr "Havuz Grubu"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "Havuz niteliği %s başarıyla oluşturuldu."
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "Havuz niteliği %s başarıyla güncellendi."
+
+msgid "Pool group for flavor."
+msgstr "Nitelik için havuz grubu."
+
+msgid "Pools"
+msgstr "Havuzlar"
+
+msgid "Purge"
+msgstr "Temizle"
+
+msgid "Purge Queue"
+msgstr "Kuyruğu Temizle"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "Kuyruk %s başarıyla temizlendi."
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "Kuyruk %s başarıyla oluşturuldu."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "Kuyruk %s başarıyla güncellendi."
+
+msgid "Queue Details"
+msgstr "Kuyruk Ayrıntıları"
+
+msgid "Queue Metadata"
+msgstr "Kuyruk Metaverisi"
+
+msgid "Queue Name"
+msgstr "Kuyruk İsmi"
+
+msgid "Queues"
+msgstr "Kuyruklar"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "%(subscriber)s abonesi %(queue)s kuyruğundan çıkarıldı."
+
+msgid "Subscriber"
+msgstr "Abone"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Aboneler mailto, HTTP, veya HTTPS biçiminde olmalı."
+
+msgid "Subscription"
+msgstr "Abonelik"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "%s aboneliği başarıyla oluşturuldu."
+
+msgid "Subscriptions"
+msgstr "Abonelikler"
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "Bir abonelik için TTL en az 60 sn uzunluğunda olmalı."
+
+msgid "Time To Live"
+msgstr "Yaşam Süresi"
+
+msgid "Time to Live"
+msgstr "Yaşama Süresi"
+
+msgid "Total Messages"
+msgstr "Toplam İleti"
+
+msgid "URI"
+msgstr "URI"
+
+msgid "URI for storage engine of this pool."
+msgstr "Bu havuzun depolama motoru için URI."
+
+msgid "Unable to add subscription."
+msgstr "Abonelik eklenemedi."
+
+msgid "Unable to create the flavor."
+msgstr "Nitelik oluşturulamadı."
+
+msgid "Unable to create the pool."
+msgstr "Havuz oluşturulamadı."
+
+msgid "Unable to create the queue."
+msgstr "Kuyruk oluşturulamadı."
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "Havuz Niteliği silinemiyor: %s."
+msgstr[1] "Havuz Nitelikleri silinemiyor: %s."
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "Havuz silinemedi: %s."
+msgstr[1] "Havuzlar silinemedi: %s."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Kuyruk silinemiyor: %s."
+msgstr[1] "Kuyruklar silinemiyor: %s."
+
+msgid "Unable to delete subscription."
+msgstr "Abonelik silinemedi."
+
+msgid "Unable to purge the queue."
+msgstr "Kuyruk temizlenemedi."
+
+msgid "Unable to retrieve the Queue."
+msgstr "Kuyruk alınamadı."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Kuyruklar alınamadı."
+
+msgid "Unable to retrieve the flavor."
+msgstr "Nitelik alınamadı."
+
+msgid "Unable to retrieve the flavors."
+msgstr "Nitelikler alınamadı."
+
+msgid "Unable to retrieve the pool."
+msgstr "Havuz alınamadı."
+
+msgid "Unable to retrieve the pools."
+msgstr "Havuzlar alınamadı."
+
+msgid "Unable to update the flavor."
+msgstr "Nitelik güncellenemedi."
+
+msgid "Unable to update the pool."
+msgstr "Havuz güncellenemedi."
+
+msgid "Unable to update the queue."
+msgstr "Kuyruk güncellenemedi."
+
+msgid "Update"
+msgstr "Güncelle"
+
+msgid "Update Pool"
+msgstr "Havuzu Güncelle"
+
+msgid "Update Pool Flavor"
+msgstr "Havuz Niteliğini Güncelle"
+
+msgid "Update Queue"
+msgstr "Kuyruğu Güncelle"
+
+msgid "Weight"
+msgstr "Ağırlık"
+
+msgid "Weight of the pool."
+msgstr "Havuz ağırlığı."
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "Havuz niteliklerini silme yetkiniz yok: %s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "Havuzları silme yetkiniz yok: %s"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "Kuyruk silme yetkiniz yok: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] "\"%s\" seçtiniz. Silinen Havuz Niteliği geri getirilemez."
+msgstr[1] "\"%s\" seçtiniz. Silinen Havuz Nitelikleri geri getirilemez."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] "\"%s\" seçtiniz. Silinen Havuz geri alınamaz."
+msgstr[1] "\"%s\" seçtiniz. Silinen Havuzlar geri alınamaz."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "\"%s\" seçtiniz. Silinen kuyruk geri getirilemez."
+msgstr[1] "\"%s\" seçtiniz. Silinen kuyruklar geri getirilemez."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr ""
+"Depolama havuzlarında yapılandırılmış havuz gruplarından birini "
+"belirtmelisiniz."
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "örn. mongodb://127.0.0.1:27017"
