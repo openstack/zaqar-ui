@@ -102,6 +102,12 @@ def message_list(request, queue_name):
     return zaqarclient(request).queue(queue_name).messages()
 
 
+def queue_signed_url(request, queue_name, paths, ttl_seconds, methods):
+    queue = zaqarclient(request).queue(queue_name, auto_create=False)
+    return queue.signed_url(paths=paths, ttl_seconds=ttl_seconds,
+                            methods=methods)
+
+
 def subscription_list(request, queue_name):
     return [{'subscriber': s.subscriber,
              'id': s.id,

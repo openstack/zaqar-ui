@@ -85,8 +85,11 @@ class QueueActions(generic.View):
             resource_types = request.DATA.get("resource_types")
             zaqar.queue_purge(request, queue_name, resource_types)
         elif action == "share":
-            # FIXME(flwang): This is placeholder for pre-signed feature.
-            pass
+            paths = request.DATA.get("paths")
+            ttl_seconds = request.DATA.get("ttl_seconds")
+            methods = request.DATA.get("methods")
+            return zaqar.queue_signed_url(request, queue_name, paths,
+                                          ttl_seconds, methods)
 
 
 @urls.register

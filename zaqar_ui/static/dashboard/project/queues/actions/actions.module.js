@@ -35,6 +35,7 @@
     'horizon.dashboard.project.queues.actions.purgeQueueService',
     'horizon.dashboard.project.queues.actions.postMessageService',
     'horizon.dashboard.project.queues.actions.listMessageService',
+    'horizon.dashboard.project.queues.actions.signedUrlService',
     'horizon.dashboard.project.queues.actions.createSubscriptionService',
     'horizon.dashboard.project.queues.resourceType'
   ];
@@ -47,6 +48,7 @@
     purgeQueueService,
     postMessageService,
     listMessageService,
+    signedUrlService,
     createSubscriptionService,
     resourceType
   ) {
@@ -65,6 +67,13 @@
         service: listMessageService,
         template: {
           text: gettext('View Messages')
+        }
+      })
+      .append({
+        id: 'queuesSignedUrl',
+        service: signedUrlService,
+        template: {
+          text: gettext('Signed URL')
         }
       })
       .append({

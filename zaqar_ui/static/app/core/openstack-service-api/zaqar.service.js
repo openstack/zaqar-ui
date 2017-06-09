@@ -43,6 +43,7 @@
       purgeQueue: purgeQueue,
       postMessages: postMessages,
       getMessages: getMessages,
+      signedUrl: signedUrl,
       getSubscriptions: getSubscriptions,
       addSubscription: addSubscription,
       deleteSubscription: deleteSubscription,
@@ -104,6 +105,12 @@
       var msg = gettext('Unable to post messages.');
       var url = interpolate(msgPath, [queueName]);
       return apiService.post(url, msgs).error(error(msg));
+    }
+
+    function signedUrl(queueName, form) {
+      var msg = gettext('Unable to create signed URL.');
+      var url = queuePath + queueName + '/share';
+      return apiService.post(url, form).error(error(msg));
     }
 
     function getSubscriptions(queue) {
