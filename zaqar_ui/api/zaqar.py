@@ -94,6 +94,14 @@ def queue_purge(request, queue_name, resource_types):
     queue.purge(resource_types=resource_types)
 
 
+def message_post(request, queue_name, messages_data):
+    return zaqarclient(request).queue(queue_name).post(messages_data)
+
+
+def message_list(request, queue_name):
+    return zaqarclient(request).queue(queue_name).messages()
+
+
 def subscription_list(request, queue_name):
     return [{'subscriber': s.subscriber,
              'id': s.id,

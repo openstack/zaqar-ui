@@ -1,0 +1,33 @@
+<table class="table tabler-inner"
+  ng-controller="horizon.dashboard.project.queues.actions.messageController as msgCtrl">
+  <thead>
+    <tr>
+      <th translate>ID</th>
+      <th translate>Body</th>
+      <th translate>Time to Live</th>
+      <th translate>Age</th>
+      <!--
+      <th></th>
+      -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-if="msgCtrl.messages.length === 0">
+      <td colspan="100">No message to show.</td>
+    </tr>
+    <tr ng-repeat="msg in msgCtrl.messages">
+      <td>{$ msg.id $}</td>
+      <td>{$ msg.body $}</td>
+      <td>{$ msg.ttl $}</td>
+      <td>{$ msg.age $}</td>
+      <!--
+      <td>
+        <button class="btn btn-xs btn-danger"
+          ng-click="msgCtrl.deleteMessage(msg)">
+          <span class="fa fa-trash"></span>
+        </button>
+      </td>
+      -->
+    </tr>
+  </tbody>
+</table>

@@ -50,6 +50,7 @@
       DELETE_SUCCESS: 'horizon.dashboard.project.queues.DELETE_SUCCESS',
       UPDATE_SUCCESS: 'horizon.dashboard.project.queues.UPDATE_SUCCESS',
       PURGE_SUCCESS: 'horizon.dashboard.project.queues.PURGE_SUCCESS',
+      POST_MESSAGE_SUCCESS: 'horizon.dashboard.project.queues.POST_MESSAGE_SUCCESS',
       SUBSCRIPTION_CREATE_SUCCESS: 'horizon.dashboard.project.queues.SUBSCRIPTION_CREATE_SUCCESS'
     };
   }
