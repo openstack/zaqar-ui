@@ -18,4 +18,4 @@ releasenotes/build
 *.mo
 *.pyc
 *.swp
-
+*nose_results.html
