@@ -13,4 +13,4 @@
 # limitations under the License.
 
 # Register the REST API URLs so they can be called from the JavaScript files
-import zaqar_ui.api.rest  # noqa
+import zaqar_ui.api.rest  # noqa: F401
