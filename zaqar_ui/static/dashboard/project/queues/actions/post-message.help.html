@@ -1,5 +1,5 @@
-<div class="hz-section col-sm-6" translate>
-  <p>
+<div class="hz-section col-sm-6">
+  <p translate>
     You can submit up to 10 messages in a single request, but you must always
     encapsulate the messages in a collection container (an array in JSON, even
     for a single message - without the JSON array, you receive the “Invalid
@@ -7,14 +7,14 @@
     response body might be used to retrieve the created messages for further
     processing.
   </p>
-  <p>
+  <p translate>
     The client specifies only the body and TTL for the message. The server
     inserts metadata, such as ID and age.
   </p>
-  <p>
+  <p translate>
     See a sample as below:
   </p>
-  <pre>
+  <pre translate>
 [
   {
     "body": {
