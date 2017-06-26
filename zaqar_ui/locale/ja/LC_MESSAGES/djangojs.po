@@ -2,13 +2,13 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev23\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b3.dev1\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-04-11 01:18+0000\n"
+"POT-Creation-Date: 2017-06-22 02:43+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-04-11 03:57+0000\n"
+"PO-Revision-Date: 2017-06-26 02:53+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -31,6 +31,9 @@ msgstr ""
 "ストレージ固有のオプションに関連付ける追加の要素を YAML 形式で入力してくださ"
 "い。"
 
+msgid "Body"
+msgstr "本文"
+
 msgid "Capabilities"
 msgstr "機能"
 
@@ -39,6 +42,9 @@ msgstr "削除するリソースを選択してください。"
 
 msgid "Claimed Messages"
 msgstr "要求メッセージ数"
+
+msgid "Claims"
+msgstr "請求"
 
 msgid "Confirm Delete Pool"
 msgid_plural "Confirm Delete Pools"
@@ -72,6 +78,12 @@ msgstr "キューの作成"
 
 msgid "Create Subscription"
 msgstr "サブスクリプションの作成"
+
+msgid "Creating Signed URL"
+msgstr "署名済み URL の作成中"
+
+msgid "DELETE"
+msgstr "DELETE"
 
 msgid "Delete"
 msgstr "削除"
@@ -124,14 +136,33 @@ msgstr "サブスクライバーを入力してください"
 msgid "Free Messages"
 msgstr "空きメッセージ数"
 
+msgid "GET"
+msgstr "GET"
+
 msgid "Group"
 msgstr "グループ"
 
 msgid "Group of the pool."
 msgstr "プールのグループ"
 
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "List Messages"
+msgstr "メッセージ一覧"
+
 msgid "Messages"
 msgstr "メッセージ"
+
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "キュー %s にメッセージが正常に送信されました。"
+
+msgid "Methods"
+msgstr "メソッド"
 
 msgid "Name"
 msgstr "名前"
@@ -154,8 +185,20 @@ msgstr ""
 "オプションを定義しないでサブスクリプションを作成できることに留意してくださ"
 "い。"
 
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
 msgid "Options"
 msgstr "オプション"
+
+msgid "POST"
+msgstr "POST"
+
+msgid "PUT"
+msgstr "PUT"
+
+msgid "Paths"
+msgstr "パス"
 
 msgid "Pool"
 msgstr "プール"
@@ -190,6 +233,12 @@ msgstr "フレーバーのプールグループ"
 
 msgid "Pools"
 msgstr "プール"
+
+msgid "Post"
+msgstr "送信"
+
+msgid "Post Messages"
+msgstr "メッセージの送信"
 
 msgid "Purge"
 msgstr "空にする"
@@ -226,6 +275,20 @@ msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr ""
 "キュー %(queue)s から、サブスクライバー %(subscriber)s が削除されました。"
 
+msgid "Signed URL"
+msgstr "署名済み URL"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "%s の署名済み URL"
+
+#, python-format
+msgid ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+msgstr ""
+"キュー %s の署名済み URL が期限 %s および署名 %s で正常に作成されました。"
+
 msgid "Subscriber"
 msgstr "サブスクライバー"
 
@@ -243,6 +306,9 @@ msgstr "サブスクリプション %s が正常に作成されました。"
 
 msgid "Subscriptions"
 msgstr "サブスクリプション"
+
+msgid "TTL Seconds"
+msgstr "TTL 秒数"
 
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "サブスクリプションの有効期間は、少なくとも 60 秒でなければなりません。"
@@ -264,6 +330,9 @@ msgstr "このプールのストレージプールの URI"
 
 msgid "Unable to add subscription."
 msgstr "サブスクリプションを追加できません。"
+
+msgid "Unable to create signed URL."
+msgstr "署名済み URL を作成できません。"
 
 msgid "Unable to create the flavor."
 msgstr "フレーバーを作成できません。"
@@ -291,6 +360,9 @@ msgstr[0] "キューを削除できません: %s"
 
 msgid "Unable to delete subscription."
 msgstr "サブスクリプションを削除できません。"
+
+msgid "Unable to post messages."
+msgstr "メッセージを送信できません。"
 
 msgid "Unable to purge the queue."
 msgstr "キューを空にできません。"
@@ -333,6 +405,9 @@ msgstr "プールフレーバーの更新"
 
 msgid "Update Queue"
 msgstr "キューの更新"
+
+msgid "View Messages"
+msgstr "メッセージ一覧の閲覧"
 
 msgid "Weight"
 msgstr "重み"
