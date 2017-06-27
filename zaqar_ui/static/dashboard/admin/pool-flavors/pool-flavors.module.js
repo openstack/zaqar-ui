@@ -94,7 +94,7 @@
     var path = $windowProvider.$get().STATIC_URL + 'dashboard/admin/pool-flavors/';
     $provide.constant('horizon.dashboard.admin.pool-flavors.basePath', path);
 
-    $routeProvider.when('/admin/pool-flavors', {
+    $routeProvider.when('/admin/pool_flavors', {
       templateUrl: path + 'panel.html'
     });
   }

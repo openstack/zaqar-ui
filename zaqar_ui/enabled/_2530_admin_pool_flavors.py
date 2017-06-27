@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PANEL = 'pool-flavors'
+PANEL = 'pool_flavors'
 PANEL_GROUP = 'messaging'
 PANEL_DASHBOARD = 'admin'
 
-ADD_PANEL = ('zaqar_ui.content.pool-flavors.panel.PoolFlavors')
+ADD_PANEL = ('zaqar_ui.content.pool_flavors.panel.PoolFlavors')
 ADD_ANGULAR_MODULES = ['horizon.dashboard.admin.pool-flavors']
 ADD_SCSS_FILES = ['dashboard/admin/pool-flavors/pool-flavors.scss']
 
