@@ -4,13 +4,13 @@
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev22\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b3.dev2\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-04-07 13:23+0000\n"
+"POT-Creation-Date: 2017-06-26 11:52+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-04-10 09:29+0000\n"
+"PO-Revision-Date: 2017-06-26 11:54+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -32,6 +32,9 @@ msgid ""
 msgstr ""
 "Eine optionale Anfragekomponente für Storage-spezifische Optionen im YAML-"
 "Format."
+
+msgid "Body"
+msgstr "Nachrichtentext"
 
 msgid "Capabilities"
 msgstr "Fähigkeiten"
@@ -77,6 +80,12 @@ msgstr "Erstelle Warteschlange"
 
 msgid "Create Subscription"
 msgstr "Erstelle Abonnement"
+
+msgid "Creating Signed URL"
+msgstr "Erstelle signierte URL"
+
+msgid "DELETE"
+msgstr "LÖSCHEN"
 
 msgid "Delete"
 msgstr "Löschen"
@@ -135,14 +144,33 @@ msgstr "Abonent eingeben"
 msgid "Free Messages"
 msgstr "Freie Nachrichten"
 
+msgid "GET"
+msgstr "GET"
+
 msgid "Group"
 msgstr "Gruppe"
 
 msgid "Group of the pool."
 msgstr "Gruppe des Pools."
 
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "List Messages"
+msgstr "Nachrichten anzeigen"
+
 msgid "Messages"
 msgstr "Nachrichten"
+
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "Nachricht wurde erfolgreich in die Warteschlange %s gestellt."
+
+msgid "Methods"
+msgstr "Methoden"
 
 msgid "Name"
 msgstr "Name"
@@ -164,8 +192,20 @@ msgstr ""
 msgid "Note that you can create a subscription without defining options."
 msgstr "Beachten Sie, dass Sie ein Abonnement ohne Optionen erstellen können."
 
+msgid "OPTIONS"
+msgstr "OPTIONEN"
+
 msgid "Options"
 msgstr "Optionen"
+
+msgid "POST"
+msgstr "POST"
+
+msgid "PUT"
+msgstr "PUT"
+
+msgid "Paths"
+msgstr "Pfade"
 
 msgid "Pool"
 msgstr "Pool"
@@ -201,6 +241,12 @@ msgstr "Pool-Gruppe der Variante."
 msgid "Pools"
 msgstr "Pools"
 
+msgid "Post"
+msgstr "Abschicken"
+
+msgid "Post Messages"
+msgstr "Nachrichten senden"
+
 msgid "Purge"
 msgstr "Bereinigen"
 
@@ -235,6 +281,13 @@ msgstr "Warteschlangen"
 msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr "%(subscriber)s Abonnementen von der %(queue)s Warteschlange gelöscht."
 
+msgid "Signed URL"
+msgstr "Signierte URL"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "Signierte URL für %s"
+
 msgid "Subscriber"
 msgstr "Abonnent"
 
@@ -250,6 +303,9 @@ msgstr "Abonnement %s wurde erfolgreich erstellt."
 
 msgid "Subscriptions"
 msgstr " Abonnements"
+
+msgid "TTL Seconds"
+msgstr "TTL Sekunden"
 
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "Die TTL für ein Abonnement muss wenigstens 60 Sekunden lang sein."
@@ -271,6 +327,9 @@ msgstr "URI für die Storage Engine dieses Pools."
 
 msgid "Unable to add subscription."
 msgstr "Konnte Abonnement nicht hinzufügen."
+
+msgid "Unable to create signed URL."
+msgstr "Signierte URL kann nicht erstellt werden."
 
 msgid "Unable to create the flavor."
 msgstr "Die Variante kann nicht erstellt werden."
@@ -301,6 +360,9 @@ msgstr[1] "Konnte Warteschlangen %s nicht löschen."
 
 msgid "Unable to delete subscription."
 msgstr "Konnte Abonnement nicht löschen."
+
+msgid "Unable to post messages."
+msgstr "Nachrichten können nicht abgeschickt werden."
 
 msgid "Unable to purge the queue."
 msgstr "Warteschlange konnte nicht bereinigt werden."
@@ -343,6 +405,9 @@ msgstr "Pool-Varianten aktualisieren"
 
 msgid "Update Queue"
 msgstr "Aktualisiere Warteschlange"
+
+msgid "View Messages"
+msgstr "Nachrichten ansehen"
 
 msgid "Weight"
 msgstr "Gewicht"
