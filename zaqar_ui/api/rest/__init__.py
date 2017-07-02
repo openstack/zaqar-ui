@@ -21,4 +21,4 @@ in https://wiki.openstack.org/wiki/APIChangeGuidelines.
 """
 
 # import REST API modules here
-from zaqar_ui.api.rest import zaqar  # noqa
+from zaqar_ui.api.rest import zaqar  # noqa: F401

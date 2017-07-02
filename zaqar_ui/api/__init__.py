@@ -27,4 +27,4 @@ shouldn't need to understand the finer details of APIs for
 Keystone/Nova/Glance/Swift et. al.
 """
 
-from zaqar_ui.api import zaqar  # noqa
+from zaqar_ui.api import zaqar  # noqa: F401
