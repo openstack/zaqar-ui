@@ -19,4 +19,4 @@ import horizon
 
 class PoolFlavors(horizon.Panel):
     name = _("Pool Flavors")
-    slug = "pool-flavors"
+    slug = "pool_flavors"
