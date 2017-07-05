@@ -4,13 +4,13 @@
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 3.0.0.0b3.dev2\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b3.dev20\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-06-26 11:52+0000\n"
+"POT-Creation-Date: 2017-07-02 22:48+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-06-26 11:54+0000\n"
+"PO-Revision-Date: 2017-07-04 10:31+0000\n"
 "Last-Translator: Robert Simai <robert.simai@suse.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
@@ -281,12 +281,23 @@ msgstr "Warteschlangen"
 msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr "%(subscriber)s Abonnementen von der %(queue)s Warteschlange gelöscht."
 
+msgid "See a sample as below:"
+msgstr "In Folgenden finden Sie ein Beispiel:"
+
 msgid "Signed URL"
 msgstr "Signierte URL"
 
 #, python-format
 msgid "Signed URL for %s"
 msgstr "Signierte URL für %s"
+
+#, python-format
+msgid ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+msgstr ""
+"Eine signierte URL für die Queue %s mit Ablaufdatum %s und Signatur %s wurde "
+"erstellt."
 
 msgid "Subscriber"
 msgstr "Abonnent"
@@ -309,6 +320,13 @@ msgstr "TTL Sekunden"
 
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "Die TTL für ein Abonnement muss wenigstens 60 Sekunden lang sein."
+
+msgid ""
+"The client specifies only the body and TTL for the message. The server\n"
+"    inserts metadata, such as ID and age."
+msgstr ""
+"Der Client gibt nur den Körper und die TTL der Nachricht an. Der Server\n"
+"    fügt Metadaten wie ID und Alter hinzu."
 
 msgid "Time To Live"
 msgstr "Lebenszeit"
