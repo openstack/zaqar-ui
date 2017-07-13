@@ -5,29 +5,24 @@ Zaqar UI
 Horizon plugin for Zaqar
 
 * Free software: Apache license
-* Source: http://git.openstack.org/cgit/openstack/zaqar-ui
-* Bugs: http://bugs.launchpad.net/zaqar-ui
+* Source: https://git.openstack.org/cgit/openstack/zaqar-ui
+* Bugs: https://bugs.launchpad.net/zaqar-ui
 
-Usage
------
-
-.. toctree::
-  :maxdepth: 1
-
-  install
-
-Release Notes
--------------
-
-* https://docs.openstack.org/releasenotes/zaqar-ui
-
-Source Code Reference
----------------------
+User Documentation
+------------------
 
 .. toctree::
-  :glob:
-  :maxdepth: 1
+   :maxdepth: 2
 
-  sourcecode/autoindex
+   install/index
+   configuration/index
+   Release Notes <https://docs.openstack.org/releasenotes/zaqar-ui>
 
+Contributor Guide
+-----------------
 
+.. toctree::
+   :glob:
+   :maxdepth: 2
+
+   contributor/index

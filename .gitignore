@@ -3,7 +3,7 @@ ChangeLog
 build
 cover
 dist
-doc/source/sourcecode
+doc/source/contributor/api
 zaqar_ui/test/.secret_key_store
 node_modules
 npm-debug.log
