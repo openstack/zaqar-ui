@@ -97,8 +97,9 @@
     }
 
     function getMessages(queueName) {
+      var msg = gettext('Unable to get messages.');
       var url = interpolate(msgPath, [queueName]);
-      return apiService.get(url);
+      return apiService.get(url).error(error(msg));
     }
 
     function postMessages(queueName, msgs) {

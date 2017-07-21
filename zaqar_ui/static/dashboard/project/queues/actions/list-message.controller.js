@@ -40,8 +40,10 @@
     var ctrl = this;
     ctrl.queue = $scope.model.id;
     ctrl.messages = [];
+    /* TODO: actions will be implemented later.
     ctrl.claimMessage = claimMessage;
     ctrl.deleteMessage = deleteMessage;
+    */
 
     zaqar.getMessages(ctrl.queue).success(function (response) {
       ctrl.messages = response;
