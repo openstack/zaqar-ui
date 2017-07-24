@@ -1,0 +1,37 @@
+---
+features:
+  - >
+    [`blueprint format-queue-metadata <https://blueprints.launchpad.net/zaqar-ui/+spec/format-queue-metadata>`_]
+    Show the queue metadata as each items in drawer.
+  - >
+    [`blueprint subscription-confirmation <https://blueprints.launchpad.net/zaqar-ui/+spec/subscription-confirmation>`_]
+    Support subscription age and confirmed. This shows age
+    and confirmation for subscription.
+  - >
+    [`blueprint purge-queue <https://blueprints.launchpad.net/zaqar-ui/+spec/purge-queue>`_]
+    Support purge queue. This allows user to purge a queue
+    to remove all the messages and subscriptions.
+  - >
+    [`blueprint post-get-messages <https://blueprints.launchpad.net/zaqar-ui/+spec/post-get-messages>`_]
+    Support post messages and get messages. "Post Messages"
+    and "View Messages" actions are added.
+  - >
+    [`blueprint support-presigned-queue <https://blueprints.launchpad.net/zaqar-ui/+spec/support-presigned-queue>`_]
+    Support signed url. "Signed URL" action for queue is
+    added.
+fixes:
+  - >
+    [`bug/1664374 <https://bugs.launchpad.net/zaqar-ui/+bug/1664374>`_]
+    Use AngularIndexView for queues panel. Also, this fixes
+    to show breadcrumb properly.
+upgrade:
+  - >
+    Support python 3.5.
+  - >
+    Use only tox for test and remove run_tests.sh that is
+    no longer used.
+  - >
+    Switch theme for documentation from oslosphinx to
+    openstackdocstheme.
+  - >
+    Use pbr autodoc feature rather than custom logic.
