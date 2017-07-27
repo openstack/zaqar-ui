@@ -23,13 +23,9 @@
   listMessageService.$inject = [
     '$q',
     'horizon.dashboard.project.queues.basePath',
-    'horizon.app.core.openstack-service-api.policy',
-    'horizon.app.core.openstack-service-api.zaqar',
-    'horizon.dashboard.project.queues.events',
     'horizon.framework.util.i18n.gettext',
     'horizon.framework.util.q.extensions',
-    'horizon.framework.widgets.form.ModalFormService',
-    'horizon.framework.widgets.toast.service'
+    'horizon.framework.widgets.form.ModalFormService'
   ];
 
   /**
@@ -37,26 +33,22 @@
    * @name horizon.dashboard.project.queues.actions.listMessageService
    * @param {Object} $q
    * @param {String} basePath
-   * @param {Object} policy
-   * @param {Object} zaqar
-   * @param {Object} events
    * @param {Object} gettext
    * @param {Object} $qExtensions
    * @param {Object} modal
-   * @param {Object} toast
    * @returns {Object} list messages service
    * @description Brings up the polling messages modal dialog.
    * On submit, poll messages from given queues.
    * On cancel, do nothing.
    */
   function listMessageService(
-    $q, basePath, policy, zaqar, events, gettext, $qExtensions, modal, toast
+    $q, basePath, gettext, $qExtensions, modal
   ) {
     // schema
     var schema = {
       type: "object",
       properties: {
-        postMessages: {
+        listMessages: {
           title: gettext("List Messages"),
           type: "string"
         }
@@ -86,14 +78,19 @@
     // model
     var model;
 
-    var message = {
-      success: gettext('Messages has been posted to queue %s successfully.')
-    };
-
     var service = {
       initAction: initAction,
       perform: perform,
       allowed: allowed
+    };
+
+    // modal config
+    var config = {
+      "title": gettext('List Messages'),
+      "submitText": gettext('List Messages'),
+      "schema": schema,
+      "form": form,
+      "model": model
     };
 
     return service;
@@ -108,17 +105,9 @@
     }
 
     function perform(selected) {
-      model = {
+      config.model = {
         id: selected.id,
         name: selected.name
-      };
-      // modal config
-      var config = {
-        "title": gettext('List Messages'),
-        "submitText": gettext('List Messages'),
-        "schema": schema,
-        "form": form,
-        "model": model
       };
       return modal.open(config).then(submit);
     }
@@ -126,11 +115,12 @@
     function submit(context) {
       var id = context.model.id;
       var name = context.model.name;
-      delete context.model.id;
-      delete context.model.name;
-      return zaqar.postMessages(id, context.model).then(function() {
-        toast.add('success', interpolate(message.success, [name]));
-      });
+      config.model = {
+        id: id,
+        name: name
+      };
+      // display new dialog
+      modal.open(config).then(submit);
     }
   }
 })();
