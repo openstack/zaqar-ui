@@ -1,17 +1,18 @@
 # Linda <duleish@cn.ibm.com>, 2016. #zanata
 # hanchao <han.chaoB@h3c.com>, 2016. #zanata
 # zenglulu <zengluul@gmail.com>, 2016. #zanata
+# Bin <liubin@glab.cn>, 2017. #zanata
 # liujunpeng <liujunpeng@inspur.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev18\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b3.dev35\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-03-08 02:34+0000\n"
+"POT-Creation-Date: 2017-07-28 05:53+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-10 03:41+0000\n"
-"Last-Translator: liujunpeng <liujunpeng@inspur.com>\n"
+"PO-Revision-Date: 2017-07-30 02:07+0000\n"
+"Last-Translator: Bin <liubin@glab.cn>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh-CN\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -23,16 +24,28 @@ msgstr "队列名称必须为1~256字符之间。 "
 msgid "Actions"
 msgstr "行为。"
 
+msgid "Age"
+msgstr "实效"
+
 msgid ""
 "An optional request component related to storage-specific options in YAML "
 "format."
 msgstr "在YAML格式中，一个可选请求组件与指定存储选项有关。"
 
+msgid "Body"
+msgstr "正文"
+
 msgid "Capabilities"
 msgstr "容量"
 
+msgid "Choose resource to purge"
+msgstr "选择清理资源"
+
 msgid "Claimed Messages"
 msgstr "声明消息"
+
+msgid "Claims"
+msgstr "声明"
 
 msgid "Confirm Delete Pool"
 msgid_plural "Confirm Delete Pools"
@@ -45,6 +58,9 @@ msgstr[0] "确认删除类型"
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
 msgstr[0] "确认删除队列。"
+
+msgid "Confirmed"
+msgstr "已确认"
 
 msgid "Create"
 msgstr "已创建"
@@ -63,6 +79,12 @@ msgstr "创建队列。"
 
 msgid "Create Subscription"
 msgstr "新建订阅"
+
+msgid "Creating Signed URL"
+msgstr "创建签名URL"
+
+msgid "DELETE"
+msgstr "DELETE"
 
 msgid "Delete"
 msgstr "删除"
@@ -115,11 +137,33 @@ msgstr "输入一个订阅者"
 msgid "Free Messages"
 msgstr "免费消息"
 
+msgid "GET"
+msgstr "GET"
+
 msgid "Group"
 msgstr "组"
 
 msgid "Group of the pool."
 msgstr "池组。"
+
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "List Messages"
+msgstr "消息列表"
+
+msgid "Messages"
+msgstr "消息"
+
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "消息已经成功发布到队列%s。"
+
+msgid "Methods"
+msgstr "方法"
 
 msgid "Name"
 msgstr "名字"
@@ -140,8 +184,20 @@ msgstr ""
 msgid "Note that you can create a subscription without defining options."
 msgstr "请注意，您可以创建一个不带任何选项的订阅。"
 
+msgid "OPTIONS"
+msgstr "选项"
+
 msgid "Options"
 msgstr "选项"
+
+msgid "POST"
+msgstr "POST"
+
+msgid "PUT"
+msgstr "PUT"
+
+msgid "Paths"
+msgstr "路径"
 
 msgid "Pool"
 msgstr "池"
@@ -177,6 +233,22 @@ msgstr "型的池组。"
 msgid "Pools"
 msgstr "池"
 
+msgid "Post"
+msgstr "发布"
+
+msgid "Post Messages"
+msgstr "发布消息"
+
+msgid "Purge"
+msgstr "清理"
+
+msgid "Purge Queue"
+msgstr "清理队列"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "队列%s已经被清理成功。"
+
 #, python-format
 msgid "Queue %s was successfully created."
 msgstr "创建队列 %s成功。"
@@ -201,6 +273,22 @@ msgstr "队列"
 msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr "将订阅者 %(subscriber)s从队列 %(queue)s中移除。 "
 
+msgid "See a sample as below:"
+msgstr "查看下面的例子："
+
+msgid "Signed URL"
+msgstr "签名URL"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "%s的签名URL"
+
+#, python-format
+msgid ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+msgstr "带过期%s和签名%s队列%s的签名URL已经成功创建。"
+
 msgid "Subscriber"
 msgstr "订阅者"
 
@@ -214,8 +302,19 @@ msgstr "订阅"
 msgid "Subscription %s was successfully created."
 msgstr "新建订阅%s 成功。"
 
+msgid "Subscriptions"
+msgstr "订阅"
+
+msgid "TTL Seconds"
+msgstr "TTL秒数"
+
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "一次订阅的生存时间必须至少为60s时长。"
+
+msgid ""
+"The client specifies only the body and TTL for the message. The server\n"
+"    inserts metadata, such as ID and age."
+msgstr "客户端仅仅指明消息的正文和TTL。服务端插入元数据，例如ID和年龄。"
 
 msgid "Time To Live"
 msgstr "生存时间"
@@ -234,6 +333,9 @@ msgstr "池存储引擎的URI"
 
 msgid "Unable to add subscription."
 msgstr "无法添加订阅。"
+
+msgid "Unable to create signed URL."
+msgstr "无法创建已签名URL。"
 
 msgid "Unable to create the flavor."
 msgstr "无法创建类型。"
@@ -261,6 +363,18 @@ msgstr[0] "无法删除队列: %s。"
 
 msgid "Unable to delete subscription."
 msgstr "无法删除订阅。"
+
+msgid "Unable to get messages."
+msgstr "无法获取信息。"
+
+msgid "Unable to post messages."
+msgstr "无法发送消息。"
+
+msgid "Unable to purge the queue."
+msgstr "无法清理队列。"
+
+msgid "Unable to retrieve the Queue."
+msgstr "无法获取队列。"
 
 msgid "Unable to retrieve the Queues."
 msgstr "无法检索队列。"
@@ -298,6 +412,9 @@ msgstr "更新类型池"
 msgid "Update Queue"
 msgstr "修改队列。"
 
+msgid "View Messages"
+msgstr "查看消息"
+
 msgid "Weight"
 msgstr "权重"
 
@@ -315,6 +432,21 @@ msgstr "您不被允许删除池：%s"
 #, python-format
 msgid "You are not allowed to delete queues: %s"
 msgstr "您不被允许删除这些队列：%s"
+
+msgid ""
+"You can submit up to 10 messages in a single request, but you must always\n"
+"    encapsulate the messages in a collection container (an array in JSON, "
+"even\n"
+"    for a single message - without the JSON array, you receive the "
+"\"Invalid\n"
+"    request body\" message). The resulting value of the Location header or\n"
+"    response body might be used to retrieve the created messages for "
+"further\n"
+"    processing."
+msgstr ""
+"您可以在一个请求中提交最多10条消息，但必须总是将消息封装在一个集合容器中（以"
+"JSON形式的数组，甚至数单个消息——没有JSON数组，你会收到“无效请求体”的消息）。"
+"定位头或响应体的最终值可能被用来寻回进一步处理刚创建的消息。"
 
 #, python-format
 msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
@@ -335,6 +467,27 @@ msgstr[0] "已选择 \"%s\"。删除队列操作将不可恢复。"
 msgid ""
 "You must specify one of the pool groups that is configured in storage pools."
 msgstr "你必须指定一个在存储池中配置的池组。"
+
+msgid ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
+msgstr ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
 
 msgid "e.g. mongodb://127.0.0.1:27017"
 msgstr "比如 mongodb://127.0.0.1:27017"
