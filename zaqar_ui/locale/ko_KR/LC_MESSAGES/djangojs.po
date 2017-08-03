@@ -2,16 +2,17 @@
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
 # Eunseop Shin <kairos9603@khu.ac.kr>, 2017. #zanata
+# minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev18\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b4.dev4\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-03-08 02:34+0000\n"
+"POT-Creation-Date: 2017-08-01 02:20+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-11 03:41+0000\n"
-"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
+"PO-Revision-Date: 2017-07-31 01:30+0000\n"
+"Last-Translator: minwook-shin <minwook0106@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -22,6 +23,12 @@ msgstr "큐 이름은 1-256 문자로 되어야 합니다."
 
 msgid "Actions"
 msgstr "작업"
+
+msgid "Age"
+msgstr "연령"
+
+msgid "Body"
+msgstr "내용"
 
 msgid "Capabilities"
 msgstr "기능들"
@@ -41,6 +48,9 @@ msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
 msgstr[0] "큐 삭제 확인"
 
+msgid "Confirmed"
+msgstr "Confirmed"
+
 msgid "Create"
 msgstr "생성"
 
@@ -58,6 +68,9 @@ msgstr "큐 생성"
 
 msgid "Create Subscription"
 msgstr "구독 생성"
+
+msgid "DELETE"
+msgstr "삭제"
 
 msgid "Delete"
 msgstr "삭제"
@@ -107,11 +120,26 @@ msgstr "구독자를 입력합니다"
 msgid "Free Messages"
 msgstr "프리 메시지"
 
+msgid "GET"
+msgstr "GET"
+
 msgid "Group"
 msgstr "Group"
 
 msgid "Group of the pool."
 msgstr "풀 그룹입니다."
+
+msgid "HEAD"
+msgstr "헤드"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "Messages"
+msgstr "Messages"
+
+msgid "Methods"
+msgstr "방법"
 
 msgid "Name"
 msgstr "이름"
@@ -132,8 +160,14 @@ msgstr ""
 msgid "Note that you can create a subscription without defining options."
 msgstr "참고로 옵션 정의 없이 구독 생성이 가능합니다."
 
+msgid "OPTIONS"
+msgstr "옵션"
+
 msgid "Options"
 msgstr "옵션"
+
+msgid "Paths"
+msgstr "경로"
 
 msgid "Pool"
 msgstr "Pool"
@@ -193,6 +227,9 @@ msgstr "큐"
 msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr "%(subscriber)s 구독자를 %(queue)s 큐에서 제거하였습니다."
 
+msgid "Signed URL"
+msgstr "서명된 URL"
+
 msgid "Subscriber"
 msgstr "구독자"
 
@@ -205,6 +242,9 @@ msgstr "구독"
 #, python-format
 msgid "Subscription %s was successfully created."
 msgstr "큐 %s 를 성공적으로 생성하였습니다."
+
+msgid "TTL Seconds"
+msgstr "TTL 초"
 
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "구독자에 대한 TTL은 적어도 60초 길이여야 합니다."
