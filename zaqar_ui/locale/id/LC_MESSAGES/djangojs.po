@@ -1,0 +1,172 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 1.0.1.dev9\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2016-10-25 12:22+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-08-12 08:18+0000\n"
+"Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "Nama antrian antara 1-256 karakter diperlukan."
+
+msgid "Actions"
+msgstr "Aksi"
+
+msgid "Claimed Messages"
+msgstr "Pesan yang diklaim"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Confirm Delete Queue"
+
+msgid "Create"
+msgstr "Membuat"
+
+msgid "Create Queue"
+msgstr "Membuat Queue"
+
+msgid "Create Queues"
+msgstr "Membuat Queues"
+
+msgid "Create Subscription"
+msgstr "Membuat Subscription"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Delete Queue"
+
+msgid "Delete Queues"
+msgstr "Menghapus Queues"
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "Deleted Queue: %s."
+
+msgid "Enter a queue name"
+msgstr "Masukkan nama antrian"
+
+msgid "Enter a subscriber"
+msgstr "Masukkan pelanggan"
+
+msgid "Free Messages"
+msgstr "Pesan bebas"
+
+# #-#-#-#-#  config_ml2_plug_in.pot (Networking Guide 0.9)  #-#-#-#-#
+# #-#-#-#-#  intro_os_networking_service.pot (Networking Guide 0.9)  #-#-#-#-#
+msgid "Metadata"
+msgstr "Metadata"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Perhatikan bahwa Anda dapat membuat antrian tanpa menentukan metadata.      "
+"Langkah metadata bersifat opsional tapi disarankan."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr ""
+"Perhatikan bahwa Anda dapat membuat subscription tanpa menentukan pilihan."
+
+msgid "Options"
+msgstr "Pilihan"
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "Queue %s berhasil dibuat."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "Queue %s berhasil diupdate"
+
+msgid "Queue Details"
+msgstr "Queue Details"
+
+msgid "Queue Metadata"
+msgstr "Queue Metadata"
+
+msgid "Queue Name"
+msgstr "Queue Name"
+
+msgid "Queues"
+msgstr "Queues (antrian)"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "Menghapus pelanggan %(subscriber)s dari antrian %(queue)s."
+
+msgid "Subscriber"
+msgstr "Subscriber (pelanggan)"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Pelanggan harus dalam bentuk mailto, HTTP, atau HTTPS."
+
+msgid "Subscription"
+msgstr "Subscription (berlangganan)"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "Subscription %s berhasil dibuat."
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "TTL untuk berlangganan harus minimal 60 detik."
+
+msgid "Time To Live"
+msgstr "Time To Live (TTL)"
+
+msgid "Time to Live"
+msgstr "Time to Live"
+
+msgid "Total Messages"
+msgstr "Total Pesan"
+
+msgid "Unable to add subscription."
+msgstr "Tidak dapat menambahkan subscription."
+
+msgid "Unable to create the queue."
+msgstr "Tidak dapat membuat (antrian)."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Unable to delete Queue: %s."
+
+msgid "Unable to delete subscription."
+msgstr "Tidak dapat menghapus subscription."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Tidak dapat mengambil kembali Queues (antrian)."
+
+msgid "Unable to update the queue."
+msgstr "Tidak dapat memperbarui (antrian)."
+
+msgid "Update"
+msgstr "Perbaharui"
+
+msgid "Update Queue"
+msgstr "Update Queue"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "Anda tidak diizinkan untuk menghapus antrian: %s"
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted queue is not recoverable."
