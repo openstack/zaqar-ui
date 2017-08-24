@@ -105,7 +105,7 @@
 
     function onMetadataChanged(newValue, oldValue) {
       if (newValue !== oldValue) {
-        $scope.$emit(events.METADATA_CHANGED, newValue);
+        $scope.stepModels.queueMetadataForm = newValue;
       }
     }
 
