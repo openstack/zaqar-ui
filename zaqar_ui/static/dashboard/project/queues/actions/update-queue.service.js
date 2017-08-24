@@ -69,30 +69,13 @@
     function initAction() {
     }
 
-    function onDetailChange(e, queue) {
-      angular.extend(model, queue);
-      e.stopPropagation();
-    }
-
-    function onMetadataChange(e, metadata) {
-      model.metadata = metadata;
-      e.stopPropagation();
-    }
-
     function perform(queue, $scope) {
       scope = $scope;
-      var queueWatcher = $scope.$on(events.DETAILS_CHANGED, onDetailChange);
-      var metadataWatcher = $scope.$on(events.METADATA_CHANGED, onMetadataChange);
-      $scope.$on('$destroy', function destroy() {
-        queueWatcher();
-        metadataWatcher();
-      });
 
       model = queue;
-      $scope.queue = model;
       model.queue_name = queue.name;
       wizard.modal({
-        scope: $scope,
+        data: {queue: model},
         workflow: updateQueueWorkflow,
         submit: submit
       });
@@ -102,7 +85,9 @@
       return policy.ifAllowed({ rules: [['queue', 'update_queue']] });
     }
 
-    function submit() {
+    function submit(stepModels) {
+      model = stepModels.queueDetailsForm;
+      model.metadata = stepModels.queueMetadataForm;
       return zaqar.updateQueue(model).then(success);
     }
 

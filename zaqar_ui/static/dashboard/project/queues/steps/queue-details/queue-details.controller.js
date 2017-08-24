@@ -22,44 +22,22 @@
     .controller('horizon.dashboard.project.queues.steps.QueueDetailsController', controller);
 
   controller.$inject = [
-    '$scope',
-    'horizon.app.core.openstack-service-api.zaqar',
-    'horizon.dashboard.project.queues.events'
+    '$scope'
   ];
 
   /**
    * @ngdoc controller
    * @name horizon.dashboard.project.queues.steps.QueueDetailsController
    * @param {Object} $scope
-   * @param {Object} zaqar
-   * @param {Object} events
    * @returns {undefined} Returns nothing
    * @description This controller is use for creating a queue.
    */
-  function controller($scope, zaqar, events) {
+  function controller($scope) {
 
     var ctrl = this;
     ctrl.queue = $scope.queue ? $scope.queue : {};
     ctrl.update = $scope.queue;
 
-    ////////////////////////
-
-    // watch this object, when it changes, emit to parent listeners
-    var watcher = $scope.$watchCollection(getQueue, onQueneChange);
-    $scope.$on('$destroy', function() {
-      watcher();
-    });
-
-    ////////////////////////
-
-    function getQueue() {
-      return ctrl.queue;
-    }
-
-    function onQueneChange(newValue, oldValue) {
-      if (newValue !== oldValue) {
-        $scope.$emit(events.DETAILS_CHANGED, newValue);
-      }
-    }
+    $scope.stepModels.queueDetailsForm = ctrl.queue;
   } // end of controller
 })();

@@ -70,22 +70,12 @@
     function initAction() {
     }
 
-    function onSubscriptionChange(e, subscription) {
-      angular.extend(model, subscription);
-      e.stopPropagation();
-    }
-
     function perform(queue, $scope) {
       scope = $scope;
-      var subWatcher = $scope.$on(events.SUBSCRIPTION_CHANGED, onSubscriptionChange);
-      $scope.$on('$destroy', function destroy() {
-        subWatcher();
-      });
 
       model = { subscriber: null, ttl: null, options: {} };
       model.queueName = queue.name;
       wizard.modal({
-        scope: scope,
         workflow: createSubWorkflow,
         submit: submit
       });
@@ -95,7 +85,8 @@
       return policy.ifAllowed({ rules: [['queue', 'add_subscriptions']] });
     }
 
-    function submit() {
+    function submit(stepModels) {
+      angular.extend(model, stepModels.subscriptionForm);
       return zaqar.addSubscription(model).then(success, error);
     }
 

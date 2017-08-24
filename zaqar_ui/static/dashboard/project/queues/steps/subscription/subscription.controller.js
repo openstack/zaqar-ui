@@ -23,46 +23,21 @@
       SubscriptionController);
 
   SubscriptionController.$inject = [
-    '$scope',
-    'horizon.app.core.openstack-service-api.zaqar',
-    'horizon.dashboard.project.queues.events'
+    '$scope'
   ];
 
   /**
    * @ngdoc controller
    * @name horizon.dashboard.project.queues.steps.SubscriptionController
    * @param {Object} $scope
-   * @param {Object} zaqar
-   * @param {Object} events
    * @returns {undefined} Returns nothing
    * @description This controller is use for creating a subscription.
    */
-  function SubscriptionController($scope, zaqar, events) {
+  function SubscriptionController($scope) {
 
     var ctrl = this;
     ctrl.subscription = { ttl: 3600 };
     ctrl.update = false;
-
-    ////////////////////////
-
-    // watch this object, when it changes, emit to parent listeners
-    var watcher = $scope.$watchCollection(getSubscription, onSubscriptionChange);
-    $scope.$on('$destroy', function() {
-      watcher();
-    });
-
-    ////////////////////////
-
-    function getSubscription() {
-      return ctrl.subscription;
-    }
-
-    function onSubscriptionChange(newValue, oldValue) {
-      if (newValue !== oldValue) {
-        $scope.$emit(events.SUBSCRIPTION_CHANGED, newValue);
-      }
-    }
-
+    $scope.stepModels.subscriptionForm = ctrl.subscription;
   } // end of SubscriptionController
-
 })();
