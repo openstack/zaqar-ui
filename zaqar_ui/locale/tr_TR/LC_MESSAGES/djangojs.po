@@ -4,13 +4,13 @@
 # işbaran akçayır <isbaran@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 3.0.0.0b2.dev12\n"
+"Project-Id-Version: zaqar-ui 3.0.0.0b4.dev7\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-05-18 00:09+0000\n"
+"POT-Creation-Date: 2017-08-10 23:12+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-05-25 11:52+0000\n"
+"PO-Revision-Date: 2017-08-24 12:54+0000\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Turkish (Turkey)\n"
 "Language: tr-TR\n"
@@ -34,6 +34,9 @@ msgstr ""
 "İsteğe bağlı, depolamaya-özel seçeneklerle ilgili YAML biçiminde istek "
 "bileşeni."
 
+msgid "Body"
+msgstr "Gövde"
+
 msgid "Capabilities"
 msgstr "Yetenekler"
 
@@ -42,6 +45,9 @@ msgstr "Temizlenecek kaynağı seçin"
 
 msgid "Claimed Messages"
 msgstr "İstenen İletiler"
+
+msgid "Claims"
+msgstr "Alacaklılar"
 
 msgid "Confirm Delete Pool"
 msgid_plural "Confirm Delete Pools"
@@ -78,6 +84,12 @@ msgstr "Kuyruklar Oluştur"
 
 msgid "Create Subscription"
 msgstr "Abonelik Oluştur"
+
+msgid "Creating Signed URL"
+msgstr "İmzalı URL Oluşturma"
+
+msgid "DELETE"
+msgstr "DELETE"
 
 msgid "Delete"
 msgstr "Sil"
@@ -136,14 +148,33 @@ msgstr "Bir abone girin"
 msgid "Free Messages"
 msgstr "Bağımsız İletiler"
 
+msgid "GET"
+msgstr "GET"
+
 msgid "Group"
 msgstr "Grup"
 
 msgid "Group of the pool."
 msgstr "Havuzun grubu."
 
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "ID"
+msgstr "Kimlik"
+
+msgid "List Messages"
+msgstr "İletileri Listele"
+
 msgid "Messages"
 msgstr "İletiler"
+
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "İleti %s kuyruğuna başarıyla gönderildi."
+
+msgid "Methods"
+msgstr "Yöntemler"
 
 msgid "Name"
 msgstr "İsim"
@@ -164,8 +195,20 @@ msgstr ""
 msgid "Note that you can create a subscription without defining options."
 msgstr "Seçenekleri belirtmeden abonelik oluşturabileceğinizi unutmayın."
 
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
 msgid "Options"
 msgstr "Seçenekler"
+
+msgid "POST"
+msgstr "POST"
+
+msgid "PUT"
+msgstr "PUT"
+
+msgid "Paths"
+msgstr "Yollar"
 
 msgid "Pool"
 msgstr "Havuz"
@@ -201,6 +244,12 @@ msgstr "Nitelik için havuz grubu."
 msgid "Pools"
 msgstr "Havuzlar"
 
+msgid "Post"
+msgstr "Gönderi"
+
+msgid "Post Messages"
+msgstr "İletileri Gönder"
+
 msgid "Purge"
 msgstr "Temizle"
 
@@ -235,6 +284,24 @@ msgstr "Kuyruklar"
 msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr "%(subscriber)s abonesi %(queue)s kuyruğundan çıkarıldı."
 
+msgid "See a sample as below:"
+msgstr "Aşağıdaki gibi bir örneğe göz atın:"
+
+msgid "Signed URL"
+msgstr "İmzalı URL"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "%s için imzalı URL"
+
+#, python-format
+msgid ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+msgstr ""
+"İmzalı URL %s kuyruğu için %s zaman aşımı ve %s imzasıyla başarıyla "
+"oluşturuldu."
+
 msgid "Subscriber"
 msgstr "Abone"
 
@@ -251,8 +318,18 @@ msgstr "%s aboneliği başarıyla oluşturuldu."
 msgid "Subscriptions"
 msgstr "Abonelikler"
 
+msgid "TTL Seconds"
+msgstr "TTL Saniye"
+
 msgid "The TTL for a subscription must be at least 60 seconds long."
 msgstr "Bir abonelik için TTL en az 60 sn uzunluğunda olmalı."
+
+msgid ""
+"The client specifies only the body and TTL for the message. The server\n"
+"    inserts metadata, such as ID and age."
+msgstr ""
+"İstemci yalnızca ileti gövdesini ve TTL değerini belirtiyor. Sunucu\n"
+"    kimlik ve yaş gibi metaveri ekler."
 
 msgid "Time To Live"
 msgstr "Yaşam Süresi"
@@ -271,6 +348,9 @@ msgstr "Bu havuzun depolama motoru için URI."
 
 msgid "Unable to add subscription."
 msgstr "Abonelik eklenemedi."
+
+msgid "Unable to create signed URL."
+msgstr "İmzalı URL oluşturulamıyor."
 
 msgid "Unable to create the flavor."
 msgstr "Nitelik oluşturulamadı."
@@ -301,6 +381,12 @@ msgstr[1] "Kuyruklar silinemiyor: %s."
 
 msgid "Unable to delete subscription."
 msgstr "Abonelik silinemedi."
+
+msgid "Unable to get messages."
+msgstr "İletiler alınamadı."
+
+msgid "Unable to post messages."
+msgstr "İletiler gönderilemedi."
 
 msgid "Unable to purge the queue."
 msgstr "Kuyruk temizlenemedi."
@@ -344,6 +430,9 @@ msgstr "Havuz Niteliğini Güncelle"
 msgid "Update Queue"
 msgstr "Kuyruğu Güncelle"
 
+msgid "View Messages"
+msgstr "İletileri Görüntüle"
+
 msgid "Weight"
 msgstr "Ağırlık"
 
@@ -361,6 +450,27 @@ msgstr "Havuzları silme yetkiniz yok: %s"
 #, python-format
 msgid "You are not allowed to delete queues: %s"
 msgstr "Kuyruk silme yetkiniz yok: %s"
+
+msgid ""
+"You can submit up to 10 messages in a single request, but you must always\n"
+"    encapsulate the messages in a collection container (an array in JSON, "
+"even\n"
+"    for a single message - without the JSON array, you receive the "
+"\"Invalid\n"
+"    request body\" message). The resulting value of the Location header or\n"
+"    response body might be used to retrieve the created messages for "
+"further\n"
+"    processing."
+msgstr ""
+"Tek bir istekte 10 iletiye kadar gönderi yapabilirsiniz, ama her zaman "
+"iletileri\n"
+"    bir toplama kapsayıcısına (JSON dizisi, tek bir ileti için bile - JSON "
+"dizisi olmadan\n"
+"    \"Geçersiz istek gövdesi\" iletisi alırsınız) sarmalamalısınız. İleri "
+"işleme için Konum\n"
+"    başlığının sonuç değeri veya yanıt gövdesi kullanılarak oluşturulan "
+"iletiler\n"
+"    alınabilir."
 
 #, python-format
 msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
@@ -386,6 +496,27 @@ msgid ""
 msgstr ""
 "Depolama havuzlarında yapılandırılmış havuz gruplarından birini "
 "belirtmelisiniz."
+
+msgid ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
+msgstr ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
 
 msgid "e.g. mongodb://127.0.0.1:27017"
 msgstr "örn. mongodb://127.0.0.1:27017"
