@@ -26,7 +26,7 @@
    * Controller for the messages table
    */
   angular
-    .module('horizon.dashboard.project.queues.actions')
+    .module('horizon.dashboard.project.queues')
     .controller('horizon.dashboard.project.queues.actions.messageController',
         messageController);
 
@@ -45,7 +45,7 @@
     ctrl.deleteMessage = deleteMessage;
     */
 
-    zaqar.getMessages(ctrl.queue).success(function (response) {
+    zaqar.getMessages(ctrl.queue).then(function (response) {
       ctrl.messages = response;
     });
 

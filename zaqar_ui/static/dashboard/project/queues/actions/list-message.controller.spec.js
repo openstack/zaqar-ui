@@ -15,39 +15,40 @@
 (function() {
   'use strict';
   describe('horizon.dashboard.project.queues.actions.messageController', function() {
-    var zaqar, controller, $scope, $q, deferred;
+    var zaqar, ctrl, $scope, $q, deferred;
 
     beforeEach(module('horizon.framework'));
     beforeEach(module('horizon.app.core.openstack-service-api'));
     beforeEach(module('horizon.dashboard.project.queues'));
 
-    beforeEach(inject(function ($injector, _$rootScope_) {
+    beforeEach(inject(function ($injector, $controller, _$rootScope_, _$q_) {
+      $q = _$q_;
       $scope = _$rootScope_.$new();
       $scope.model = {
-        id: ''
+        id: '1'
       };
       zaqar = $injector.get('horizon.app.core.openstack-service-api.zaqar');
-      controller = $injector.get('$controller');
-      controller(
+      deferred = $q.defer();
+      deferred.resolve([{id: '1'}]);
+      spyOn(zaqar, 'getMessages').and.returnValue(deferred.promise);
+
+      ctrl = $controller(
         'horizon.dashboard.project.queues.actions.messageController',
         {
-          $scope: $scope,
-          zaqar: zaqar
-        });
-      deferred = $q.defer();
-      deferred.resolve({data: {id: '1'}});
-      spyOn(zaqar, 'getMessages').and.returnValue(deferred.promise);
-      asdf();
+          '$scope': $scope,
+          'horizon.app.core.openstack-service-api.zaqar': zaqar
+        }
+      );
     }));
 
-    it('should load messages for queue', function() {
-      expect(zaqar.getMessages).toHaveBeenCalled();
+    it('should queue_id is provided by scope variable', function() {
+      expect(ctrl.queue).toBe('1');
     });
 
-    it('should queue_id is provided by scope variable', function() {
-      $scope.model.id = '1';
+    it('should load messages for queue', function() {
       $scope.$apply();
-      expect($scope.model.id).toBe('1');
+      expect(zaqar.getMessages).toHaveBeenCalled();
+      expect(ctrl.messages.length).toBe(1);
     });
   });
 })();
