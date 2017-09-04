@@ -25,7 +25,7 @@
   angular.module('horizon.dashboard.project.queues.actions', [
     'horizon.framework.conf',
     'horizon.app.core'])
-   .run(registerActions);
+    .run(registerActions);
 
   registerActions.$inject = [
     'horizon.framework.conf.resource-type-registry.service',
