@@ -87,7 +87,7 @@
         return {data: queue.metadata};
       } else {
         var deferred = $q.defer();
-        deferred.resolve({data: []});
+        deferred.resolve({data: {}});
         return deferred.promise;
       }
     }
@@ -95,10 +95,12 @@
     function getExistingMetdataPromise(queue) {
 
       if (angular.isDefined(queue.id)) {
+        $scope.stepModels.queueMetadataForm = queue.metadata;
         return {data: queue.metadata};
       } else {
         var deferred = $q.defer();
-        deferred.resolve({data: []});
+        deferred.resolve({data: {}});
+        $scope.stepModels.queueMetadataForm = {};
         return deferred.promise;
       }
     }
