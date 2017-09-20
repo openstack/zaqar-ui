@@ -5,13 +5,13 @@
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 3.0.0.0b4.dev6\n"
+"Project-Id-Version: zaqar-ui 3.0.1.dev10\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-08-08 05:16+0000\n"
+"POT-Creation-Date: 2017-09-05 05:46+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-10 10:36+0000\n"
+"PO-Revision-Date: 2017-08-28 02:15+0000\n"
 "Last-Translator: minwook-shin <minwook0106@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
@@ -27,14 +27,25 @@ msgstr "작업"
 msgid "Age"
 msgstr "연령"
 
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr "YAML 형식의 스토리지-특정 옵션과 관련된 선택적 요청 구성 요소."
+
 msgid "Body"
 msgstr "내용"
 
 msgid "Capabilities"
 msgstr "기능들"
 
+msgid "Choose resource to purge"
+msgstr "삭제할 리소스 선택"
+
 msgid "Claimed Messages"
 msgstr "요청 메시지"
+
+msgid "Claims"
+msgstr "청구"
 
 msgid "Confirm Delete Pool"
 msgid_plural "Confirm Delete Pools"
@@ -68,6 +79,9 @@ msgstr "큐 생성"
 
 msgid "Create Subscription"
 msgstr "구독 생성"
+
+msgid "Creating Signed URL"
+msgstr "서명된 URL 만들기"
 
 msgid "DELETE"
 msgstr "삭제"
@@ -111,6 +125,9 @@ msgid "Deleted Queue: %s."
 msgid_plural "Deleted Queues: %s."
 msgstr[0] "큐 삭제됨: %s."
 
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "YAML 형식의 flavor-specific 관련 기능을 설명합니다."
+
 msgid "Enter a queue name"
 msgstr "큐 이름을 입력합니다"
 
@@ -141,6 +158,10 @@ msgstr "메시지 목록"
 msgid "Messages"
 msgstr "Messages"
 
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "메시지가 큐 %s에 성공적으로 게시되었습니다."
+
 msgid "Methods"
 msgstr "방법"
 
@@ -168,6 +189,12 @@ msgstr "옵션"
 
 msgid "Options"
 msgstr "옵션"
+
+msgid "POST"
+msgstr "게시"
+
+msgid "PUT"
+msgstr "PUT"
 
 msgid "Paths"
 msgstr "경로"
@@ -212,6 +239,16 @@ msgstr "보내기"
 msgid "Post Messages"
 msgstr "포스트 메시지"
 
+msgid "Purge"
+msgstr "영구 제거"
+
+msgid "Purge Queue"
+msgstr "큐 제거"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "큐 %s가 성공적으로 제거되었습니다."
+
 #, python-format
 msgid "Queue %s was successfully created."
 msgstr "큐 %s 를 성공적으로 생성하였습니다."
@@ -236,8 +273,15 @@ msgstr "큐"
 msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
 msgstr "%(subscriber)s 구독자를 %(queue)s 큐에서 제거하였습니다."
 
+msgid "See a sample as below:"
+msgstr "아래 샘플을 보십시오:"
+
 msgid "Signed URL"
 msgstr "서명된 URL"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "%s에서의 서명된 URL"
 
 msgid "Subscriber"
 msgstr "구독자"
@@ -251,6 +295,9 @@ msgstr "구독"
 #, python-format
 msgid "Subscription %s was successfully created."
 msgstr "큐 %s 를 성공적으로 생성하였습니다."
+
+msgid "Subscriptions"
+msgstr "구독"
 
 msgid "TTL Seconds"
 msgstr "TTL 초"
@@ -270,8 +317,14 @@ msgstr "총 메시지"
 msgid "URI"
 msgstr "URI"
 
+msgid "URI for storage engine of this pool."
+msgstr "이 풀의 스토리지 엔진에 대한 URI입니다."
+
 msgid "Unable to add subscription."
 msgstr "구독을 추가할 수 없습니다."
+
+msgid "Unable to create signed URL."
+msgstr "서명된 URL을 만들 수 없습니다."
 
 msgid "Unable to create the flavor."
 msgstr "Flavor 생성을 할 수 없습니다."
@@ -299,6 +352,18 @@ msgstr[0] "큐를 삭제할 수 없습니다: %s."
 
 msgid "Unable to delete subscription."
 msgstr "구독을 삭제할 수 없습니다."
+
+msgid "Unable to get messages."
+msgstr "메시지를 가져올 수 없습니다."
+
+msgid "Unable to post messages."
+msgstr "메시지를 게시할 수 없습니다."
+
+msgid "Unable to purge the queue."
+msgstr "큐를 제거 할 수 없습니다."
+
+msgid "Unable to retrieve the Queue."
+msgstr "큐를 검색 할 수 없습니다."
 
 msgid "Unable to retrieve the Queues."
 msgstr "큐를 가져올 수 없습니다."
@@ -372,6 +437,10 @@ msgstr[0] "\"%s\"를 선택했습니다. 삭제된 Pool은 복구 할 수 없습
 msgid "You have selected \"%s\". Deleted queue is not recoverable."
 msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
 msgstr[0] "\"%s\"를 선택했습니다. 삭제된 큐는 복구 할 수 없습니다."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr "저장 영역 풀에 구성된 풀 그룹 중 하나를 지정해야합니다."
 
 msgid ""
 "[\n"
