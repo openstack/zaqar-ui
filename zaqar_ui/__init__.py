@@ -14,5 +14,4 @@
 
 import pbr.version
 
-__version__ = pbr.version.VersionInfo(
-    'neutron_lbaas_dashboard').version_string()
+__version__ = pbr.version.VersionInfo('zaqar_ui').version_string()
