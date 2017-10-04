@@ -1,17 +1,18 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
 # Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+# ByungYeol Woo <wby1089@gmail.com>, 2017. #zanata
 # Eunseop Shin <kairos9603@khu.ac.kr>, 2017. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 2.0.1.dev4\n"
+"Project-Id-Version: zaqar-ui 2.0.1.dev9\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-02-23 02:21+0000\n"
+"POT-Creation-Date: 2017-03-05 21:24+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-02-11 03:41+0000\n"
-"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
+"PO-Revision-Date: 2017-09-30 05:29+0000\n"
+"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko-KR\n"
 "X-Generator: Zanata 3.9.6\n"
@@ -23,6 +24,12 @@ msgstr "큐 이름은 1-256 문자로 되어야 합니다."
 msgid "Actions"
 msgstr "작업"
 
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr ""
+"YAML 형식으로 된 storage-specific 옵션과 관련된 선택적인 요청 구성요소입니다."
+
 msgid "Capabilities"
 msgstr "기능들"
 
@@ -31,11 +38,11 @@ msgstr "요청 메시지"
 
 msgid "Confirm Delete Pool"
 msgid_plural "Confirm Delete Pools"
-msgstr[0] "Pool 삭제 확인"
+msgstr[0] "풀 삭제 확인"
 
 msgid "Confirm Delete Pool Flavor"
 msgid_plural "Confirm Delete Pool Flavors"
-msgstr[0] "Pool Flavor 삭제 확인"
+msgstr[0] "풀 Flavor 삭제 확인"
 
 msgid "Confirm Delete Queue"
 msgid_plural "Confirm Delete queues"
@@ -45,10 +52,10 @@ msgid "Create"
 msgstr "생성"
 
 msgid "Create Pool"
-msgstr "Pool 생성"
+msgstr "풀 생성"
 
 msgid "Create Pool Flavor"
-msgstr "Pool Flavor 생성"
+msgstr "풀 Flavor 생성"
 
 msgid "Create Queue"
 msgstr "큐 생성"
@@ -68,13 +75,13 @@ msgstr[0] "풀 삭제"
 
 msgid "Delete Pool Flavor"
 msgid_plural "Delete Pool Flavors"
-msgstr[0] "Pool Flavor 삭제"
+msgstr[0] "풀 Flavor 삭제"
 
 msgid "Delete Pool Flavors"
-msgstr "Pool Flavors 삭제"
+msgstr "풀 Flavors 삭제"
 
 msgid "Delete Pools"
-msgstr "Pool 삭제"
+msgstr "풀 삭제"
 
 msgid "Delete Queue"
 msgid_plural "Delete Queues"
@@ -86,7 +93,7 @@ msgstr "큐 삭제"
 #, python-format
 msgid "Deleted Pool Flavor: %s."
 msgid_plural "Deleted Pool Flavors: %s."
-msgstr[0] "삭제된 Pool Flavor: %s."
+msgstr[0] "삭제된 풀 Flavor: %s."
 
 #, python-format
 msgid "Deleted Pool: %s."
@@ -98,6 +105,9 @@ msgid "Deleted Queue: %s."
 msgid_plural "Deleted Queues: %s."
 msgstr[0] "큐 삭제됨: %s."
 
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "flavor-specific 기능을 YAML 포맷으로 설명합니다."
+
 msgid "Enter a queue name"
 msgstr "큐 이름을 입력합니다"
 
@@ -108,7 +118,7 @@ msgid "Free Messages"
 msgstr "프리 메시지"
 
 msgid "Group"
-msgstr "Group"
+msgstr "그룹"
 
 msgid "Group of the pool."
 msgstr "풀 그룹입니다."
@@ -139,38 +149,38 @@ msgid "Options"
 msgstr "옵션"
 
 msgid "Pool"
-msgstr "Pool"
+msgstr "풀"
 
 #, python-format
 msgid "Pool %s was successfully created."
-msgstr "Pool %s가 성공적으로 생성되었습니다."
+msgstr "풀 %s가 성공적으로 생성되었습니다."
 
 #, python-format
 msgid "Pool %s was successfully updated."
 msgstr "풀 %s가 성공적으로 업데이트되었습니다."
 
 msgid "Pool Flavor"
-msgstr "Pool Flavor"
+msgstr "풀 Flavor"
 
 msgid "Pool Flavors"
-msgstr "Pool Flavors"
+msgstr "풀 Flavors"
 
 msgid "Pool Group"
 msgstr "풀 그룹"
 
 #, python-format
 msgid "Pool flavor %s was successfully created."
-msgstr "Pool flavor %s가 성공적으로 생성되었습니다."
+msgstr "풀 flavor %s가 성공적으로 생성되었습니다."
 
 #, python-format
 msgid "Pool flavor %s was successfully updated."
-msgstr "Pool flavor %s가 성공적으로 업데이트 되었습니다."
+msgstr "풀 flavor %s가 성공적으로 업데이트 되었습니다."
 
 msgid "Pool group for flavor."
-msgstr "Flavor를 위한 Pool Group."
+msgstr "Flavor를 위한 풀 그룹."
 
 msgid "Pools"
-msgstr "Pools"
+msgstr "풀"
 
 #, python-format
 msgid "Queue %s was successfully created."
@@ -224,6 +234,9 @@ msgstr "총 메시지"
 msgid "URI"
 msgstr "URI"
 
+msgid "URI for storage engine of this pool."
+msgstr "이 풀의 스토리지 엔진에 대한 URI입니다."
+
 msgid "Unable to add subscription."
 msgstr "구독을 추가할 수 없습니다."
 
@@ -239,12 +252,12 @@ msgstr "큐를 생성할 수 없습니다."
 #, python-format
 msgid "Unable to delete Pool Flavor: %s."
 msgid_plural "Unable to delete Pool Flavors: %s."
-msgstr[0] "Pool Flavor를 삭제 할 수 없습니다.: %s."
+msgstr[0] "풀 Flavor를 삭제 할 수 없습니다.: %s."
 
 #, python-format
 msgid "Unable to delete Pool: %s."
 msgid_plural "Unable to delete Pools: %s."
-msgstr[0] "Pool을 삭제할 수 없습니다: %s."
+msgstr[0] "풀을 삭제할 수 없습니다: %s."
 
 #, python-format
 msgid "Unable to delete Queue: %s."
@@ -285,24 +298,24 @@ msgid "Update Pool"
 msgstr "풀 업데이트"
 
 msgid "Update Pool Flavor"
-msgstr "Pool Flavor 업데이트"
+msgstr "풀 Flavor 업데이트"
 
 msgid "Update Queue"
 msgstr "큐 업데이트"
 
 msgid "Weight"
-msgstr "Weight"
+msgstr "가중치"
 
 msgid "Weight of the pool."
 msgstr "풀에서 풀 멤버 가중치입니다."
 
 #, python-format
 msgid "You are not allowed to delete pool flavors: %s"
-msgstr "pool flavors 삭제가 허용되지 않았습니다 : %s"
+msgstr "풀 flavors 삭제가 허용되지 않았습니다 : %s"
 
 #, python-format
 msgid "You are not allowed to delete pools: %s"
-msgstr "Pool 삭제가 허용되어 있지 않습니다: %s"
+msgstr "풀 삭제가 허용되어 있지 않습니다: %s"
 
 #, python-format
 msgid "You are not allowed to delete queues: %s"
@@ -312,17 +325,21 @@ msgstr "큐 삭제가 허용되어 있지 않습니다: %s"
 msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
 msgid_plural ""
 "You have selected \"%s\". Deleted Pool Flavors are not recoverable."
-msgstr[0] "\"%s\"를 선택했습니다. 삭제된 Pool Flavor는 복구 할 수 없습니다."
+msgstr[0] "\"%s\"를 선택했습니다. 삭제된 풀 Flavor는 복구 할 수 없습니다."
 
 #, python-format
 msgid "You have selected \"%s\". Deleted Pool is not recoverable."
 msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
-msgstr[0] "\"%s\"를 선택했습니다. 삭제된 Pool은 복구 할 수 없습니다."
+msgstr[0] "\"%s\"를 선택했습니다. 삭제된 풀은 복구 할 수 없습니다."
 
 #, python-format
 msgid "You have selected \"%s\". Deleted queue is not recoverable."
 msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
 msgstr[0] "\"%s\"를 선택했습니다. 삭제된 큐는 복구 할 수 없습니다."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr "스토리지 풀에 설정된 풀 그룹 중 하나를 지정해야 합니다."
 
 msgid "e.g. mongodb://127.0.0.1:27017"
 msgstr "e.g. mongodb://127.0.0.1:27017"
