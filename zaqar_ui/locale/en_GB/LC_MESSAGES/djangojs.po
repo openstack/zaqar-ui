@@ -1,0 +1,521 @@
+# OpenStack Infra <zanata@openstack.org>, 2015. #zanata
+# Andi Chandler <andi@gowling.com>, 2016. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
+# Andi Chandler <andi@gowling.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui 3.0.1.dev15\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2017-10-05 03:50+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-10-05 12:52+0000\n"
+"Last-Translator: Andi Chandler <andi@gowling.com>\n"
+"Language-Team: English (United Kingdom)\n"
+"Language: en-GB\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "A queue name between 1-256 characters is required."
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Age"
+msgstr "Age"
+
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+
+msgid "Body"
+msgstr "Body"
+
+msgid "Capabilities"
+msgstr "Capabilities"
+
+msgid "Choose resource to purge"
+msgstr "Choose resource to purge"
+
+msgid "Claimed Messages"
+msgstr "Claimed Messages"
+
+msgid "Claims"
+msgstr "Claims"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "Confirm Delete Pool"
+msgstr[1] "Confirm Delete Pools"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "Confirm Delete Pool Flavour"
+msgstr[1] "Confirm Delete Pool Flavours"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Confirm Delete Queue"
+msgstr[1] "Confirm Delete queues"
+
+msgid "Confirmed"
+msgstr "Confirmed"
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Create Pool"
+msgstr "Create Pool"
+
+msgid "Create Pool Flavor"
+msgstr "Create Pool Flavour"
+
+msgid "Create Queue"
+msgstr "Create Queue"
+
+msgid "Create Queues"
+msgstr "Create Queues"
+
+msgid "Create Subscription"
+msgstr "Create Subscription"
+
+msgid "Creating Signed URL"
+msgstr "Creating Signed URL"
+
+msgid "DELETE"
+msgstr "DELETE"
+
+msgid "Delete"
+msgstr "Delete"
+
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "Delete Pool"
+msgstr[1] "Delete Pools"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "Delete Pool Flavour"
+msgstr[1] "Delete Pool Flavours"
+
+msgid "Delete Pool Flavors"
+msgstr "Delete Pool Flavours"
+
+msgid "Delete Pools"
+msgstr "Delete Pools"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Delete Queue"
+msgstr[1] "Delete Queues"
+
+msgid "Delete Queues"
+msgstr "Delete Queues"
+
+#, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "Deleted Pool Flavour: %s."
+msgstr[1] "Deleted Pool Flavours: %s."
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "Deleted Pool: %s."
+msgstr[1] "Deleted Pools: %s."
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "Deleted Queue: %s."
+msgstr[1] "Deleted Queues: %s."
+
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "Describes flavour-specific capabilities in YAML format."
+
+msgid "Enter a queue name"
+msgstr "Enter a queue name"
+
+msgid "Enter a subscriber"
+msgstr "Enter a subscriber"
+
+msgid "Free Messages"
+msgstr "Free Messages"
+
+msgid "GET"
+msgstr "GET"
+
+msgid "Group"
+msgstr "Group"
+
+msgid "Group of the pool."
+msgstr "Group of the pool."
+
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "List Messages"
+msgstr "List Messages"
+
+msgid "Messages"
+msgstr "Messages"
+
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "Messages has been posted to queue %s successfully."
+
+msgid "Methods"
+msgstr "Methods"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Name of the flavor."
+msgstr "Name of the flavour."
+
+msgid "Name of the pool."
+msgstr "Name of the pool."
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "Note that you can create a subscription without defining options."
+
+msgid "OPTIONS"
+msgstr "OPTIONS"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "POST"
+msgstr "POST"
+
+msgid "PUT"
+msgstr "PUT"
+
+msgid "Paths"
+msgstr "Paths"
+
+msgid "Pool"
+msgstr "Pool"
+
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "Pool %s was successfully created."
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "Pool %s was successfully updated."
+
+msgid "Pool Flavor"
+msgstr "Pool Flavour"
+
+msgid "Pool Flavors"
+msgstr "Pool Flavours"
+
+msgid "Pool Group"
+msgstr "Pool Group"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "Pool flavour %s was successfully created."
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "Pool flavour %s was successfully updated."
+
+msgid "Pool group for flavor."
+msgstr "Pool group for flavour."
+
+msgid "Pools"
+msgstr "Pools"
+
+msgid "Post"
+msgstr "Post"
+
+msgid "Post Messages"
+msgstr "Post Messages"
+
+msgid "Purge"
+msgstr "Purge"
+
+msgid "Purge Queue"
+msgstr "Purge Queue"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "Queue %s has been purged successfully."
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "Queue %s was successfully created."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "Queue %s was successfully updated."
+
+msgid "Queue Details"
+msgstr "Queue Details"
+
+msgid "Queue Metadata"
+msgstr "Queue Metadata"
+
+msgid "Queue Name"
+msgstr "Queue Name"
+
+msgid "Queues"
+msgstr "Queues"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "Removed %(subscriber)s subscriber from the %(queue)s queue."
+
+msgid "See a sample as below:"
+msgstr "See a sample as below:"
+
+msgid "Signed URL"
+msgstr "Signed URL"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "Signed URL for %s"
+
+#, python-format
+msgid ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+msgstr ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+
+msgid "Subscriber"
+msgstr "Subscriber"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+
+msgid "Subscription"
+msgstr "Subscription"
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "Subscription %s was successfully created."
+
+msgid "Subscriptions"
+msgstr "Subscriptions"
+
+msgid "TTL Seconds"
+msgstr "TTL Seconds"
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr "The TTL for a subscription must be at least 60 seconds long."
+
+msgid ""
+"The client specifies only the body and TTL for the message. The server\n"
+"    inserts metadata, such as ID and age."
+msgstr ""
+"The client specifies only the body and TTL for the message. The server\n"
+"    inserts metadata, such as ID and age."
+
+msgid "Time To Live"
+msgstr "Time To Live"
+
+msgid "Time to Live"
+msgstr "Time to Live"
+
+msgid "Total Messages"
+msgstr "Total Messages"
+
+msgid "URI"
+msgstr "URI"
+
+msgid "URI for storage engine of this pool."
+msgstr "URI for storage engine of this pool."
+
+msgid "Unable to add subscription."
+msgstr "Unable to add subscription."
+
+msgid "Unable to create signed URL."
+msgstr "Unable to create signed URL."
+
+msgid "Unable to create the flavor."
+msgstr "Unable to create the flavour."
+
+msgid "Unable to create the pool."
+msgstr "Unable to create the pool."
+
+msgid "Unable to create the queue."
+msgstr "Unable to create the queue."
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "Unable to delete Pool Flavour: %s."
+msgstr[1] "Unable to delete Pool Flavours: %s."
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "Unable to delete Pool: %s."
+msgstr[1] "Unable to delete Pools: %s."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Unable to delete Queue: %s."
+msgstr[1] "Unable to delete Queues: %s."
+
+msgid "Unable to delete subscription."
+msgstr "Unable to delete subscription."
+
+msgid "Unable to get messages."
+msgstr "Unable to get messages."
+
+msgid "Unable to post messages."
+msgstr "Unable to post messages."
+
+msgid "Unable to purge the queue."
+msgstr "Unable to purge the queue."
+
+msgid "Unable to retrieve the Queue."
+msgstr "Unable to retrieve the Queue."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Unable to retrieve the Queues."
+
+msgid "Unable to retrieve the flavor."
+msgstr "Unable to retrieve the flavour."
+
+msgid "Unable to retrieve the flavors."
+msgstr "Unable to retrieve the flavours."
+
+msgid "Unable to retrieve the pool."
+msgstr "Unable to retrieve the pool."
+
+msgid "Unable to retrieve the pools."
+msgstr "Unable to retrieve the pools."
+
+msgid "Unable to update the flavor."
+msgstr "Unable to update the flavour."
+
+msgid "Unable to update the pool."
+msgstr "Unable to update the pool."
+
+msgid "Unable to update the queue."
+msgstr "Unable to update the queue."
+
+msgid "Update"
+msgstr "Update"
+
+msgid "Update Pool"
+msgstr "Update Pool"
+
+msgid "Update Pool Flavor"
+msgstr "Update Pool Flavour"
+
+msgid "Update Queue"
+msgstr "Update Queue"
+
+msgid "View Messages"
+msgstr "View Messages"
+
+msgid "Weight"
+msgstr "Weight"
+
+msgid "Weight of the pool."
+msgstr "Weight of the pool."
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "You are not allowed to delete pool flavours: %s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "You are not allowed to delete pools: %s"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "You are not allowed to delete queues: %s"
+
+msgid ""
+"You can submit up to 10 messages in a single request, but you must always\n"
+"    encapsulate the messages in a collection container (an array in JSON, "
+"even\n"
+"    for a single message - without the JSON array, you receive the "
+"\"Invalid\n"
+"    request body\" message). The resulting value of the Location header or\n"
+"    response body might be used to retrieve the created messages for "
+"further\n"
+"    processing."
+msgstr ""
+"You can submit up to 10 messages in a single request, but you must always\n"
+"    encapsulate the messages in a collection container (an array in JSON, "
+"even\n"
+"    for a single message - without the JSON array, you receive the "
+"\"Invalid\n"
+"    request body\" message). The resulting value of the Location header or\n"
+"    response body might be used to retrieve the created messages for "
+"further\n"
+"    processing."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted Pool Flavour is not recoverable."
+msgstr[1] ""
+"You have selected \"%s\". Deleted Pool Flavours are not recoverable."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted Pool is not recoverable."
+msgstr[1] "You have selected \"%s\". Deleted Pools are not recoverable."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "You have selected \"%s\". Deleted queue is not recoverable."
+msgstr[1] "You have selected \"%s\". Deleted queues are not recoverable."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr ""
+"You must specify one of the pool groups that is configured in storage pools."
+
+msgid ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
+msgstr ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "e.g. mongodb://127.0.0.1:27017"
