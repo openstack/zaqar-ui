@@ -9,6 +9,7 @@ node_modules
 npm-debug.log
 releasenotes/build
 .coverage*
+.idea
 .project
 .pydevproject
 .tox
