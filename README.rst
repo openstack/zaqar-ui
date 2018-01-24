@@ -2,8 +2,8 @@
 Team and repository tags
 ========================
 
-.. image:: http://governance.openstack.org/badges/zaqar-ui.svg
-    :target: http://governance.openstack.org/reference/tags/index.html
+.. image:: https://governance.openstack.org/tc/badges/zaqar-ui.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
 
 .. Change things from this point on
 
@@ -14,8 +14,8 @@ zaqar-ui
 Zaqar Dashboard
 
 * Free software: Apache license
-* Source: http://git.openstack.org/cgit/openstack/zaqar-ui
-* Bugs: http://bugs.launchpad.net/zaqar-ui
+* Source: https://git.openstack.org/cgit/openstack/zaqar-ui
+* Bugs: https://bugs.launchpad.net/zaqar-ui
 
 Enabling in DevStack
 --------------------
