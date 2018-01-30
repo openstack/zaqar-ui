@@ -1,0 +1,8 @@
+---
+fixes:
+  - >
+    [`bug/1647995 <https://bugs.launchpad.net/zaqar-ui/+bug/1647995>`_]
+    Fixed queue create/update without metadata modification.
+    When metadata is not modified in queue create/update,
+    the operation had been failed.
+

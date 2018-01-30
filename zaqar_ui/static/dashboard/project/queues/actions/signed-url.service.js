@@ -65,42 +65,48 @@
     // form
     var form = [
       {
-        type: "section",
-        htmlClass: "col-sm-12",
+        type: 'section',
+        htmlClass: 'row',
         items: [
-          { // for result message
-            type: "help",
-            helpvalue: "",
-            condition: true
-          },
           {
-            key: "paths",
-            type: "checkboxes",
-            title: gettext("Paths"),
-            titleMap: [
-              {value: "messages", name: gettext("Messages")},
-              {value: "subscriptions", name: gettext("Subscriptions")},
-              {value: "claims", name: gettext("Claims")}
-            ],
-            htmlClass: "horizontal-checkboxes"
-          },
-          {
-            key: "ttl_seconds",
-            title: gettext("TTL Seconds")
-          },
-          {
-            key: "methods",
-            title: gettext("Methods"),
-            type: "checkboxes",
-            titleMap: [
-              {value: "GET", name: gettext("GET")},
-              {value: "HEAD", name: gettext("HEAD")},
-              {value: "OPTIONS", name: gettext("OPTIONS")},
-              {value: "POST", name: gettext("POST")},
-              {value: "PUT", name: gettext("PUT")},
-              {value: "DELETE", name: gettext("DELETE")}
-            ],
-            htmlClass: "horizontal-checkboxes"
+            type: "section",
+            htmlClass: "col-sm-12",
+            items: [
+              { // for result message
+                type: "help",
+                helpvalue: "",
+                condition: true
+              },
+              {
+                key: "paths",
+                type: "checkboxes",
+                title: gettext("Paths"),
+                titleMap: [
+                  {value: "messages", name: gettext("Messages")},
+                  {value: "subscriptions", name: gettext("Subscriptions")},
+                  {value: "claims", name: gettext("Claims")}
+                ],
+                htmlClass: "horizontal-checkboxes"
+              },
+              {
+                key: "ttl_seconds",
+                title: gettext("TTL Seconds")
+              },
+              {
+                key: "methods",
+                title: gettext("Methods"),
+                type: "checkboxes",
+                titleMap: [
+                  {value: "GET", name: gettext("GET")},
+                  {value: "HEAD", name: gettext("HEAD")},
+                  {value: "OPTIONS", name: gettext("OPTIONS")},
+                  {value: "POST", name: gettext("POST")},
+                  {value: "PUT", name: gettext("PUT")},
+                  {value: "DELETE", name: gettext("DELETE")}
+                ],
+                htmlClass: "horizontal-checkboxes"
+              }
+            ]
           }
         ]
       }
@@ -172,11 +178,11 @@
         config.form = angular.copy(form);
 
         // for result message
-        config.form[0].items[0].helpvalue = "<div class='alert alert-success'>" +
+        config.form[0].items[0].items[0].helpvalue = "<div class='alert alert-success'>" +
           interpolate(message.success,
                       [name, response.data.expires, response.data.signature]
           ) + "</div>";
-        config.form[0].items[0].condition = false;
+        config.form[0].items[0].items[0].condition = false;
 
         // display new dialog
         waitSpinner.hideModalSpinner();

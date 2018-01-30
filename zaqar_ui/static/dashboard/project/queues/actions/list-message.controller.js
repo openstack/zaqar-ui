@@ -46,7 +46,7 @@
     */
 
     zaqar.getMessages(ctrl.queue).then(function (response) {
-      ctrl.messages = response;
+      ctrl.messages = response.data;
     });
 
     //////////

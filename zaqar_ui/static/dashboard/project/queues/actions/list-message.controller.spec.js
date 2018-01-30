@@ -29,7 +29,7 @@
       };
       zaqar = $injector.get('horizon.app.core.openstack-service-api.zaqar');
       deferred = $q.defer();
-      deferred.resolve([{id: '1'}]);
+      deferred.resolve({data: [{id: '1'}]});
       spyOn(zaqar, 'getMessages').and.returnValue(deferred.promise);
 
       ctrl = $controller(
