@@ -1,0 +1,504 @@
+# Rodrigo Loures <rmoraesloures@gmail.com>, 2018. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: zaqar-ui VERSION\n"
+"Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
+"POT-Creation-Date: 2018-01-30 22:25+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-01-30 09:26+0000\n"
+"Last-Translator: Rodrigo Loures <rmoraesloures@gmail.com>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt-BR\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgid "A queue name between 1-256 characters is required."
+msgstr "É requerido um nome de fila entre 1-256 caracteres."
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "Age"
+msgstr "Idade"
+
+msgid ""
+"An optional request component related to storage-specific options in YAML "
+"format."
+msgstr ""
+"Um componente de requisição opcional relacionado a opções específicas de "
+"armazenamento no formato YAML."
+
+msgid "Body"
+msgstr "Corpo"
+
+msgid "Capabilities"
+msgstr "Capacidades"
+
+msgid "Claimed Messages"
+msgstr "Mensagens reivindicadas"
+
+msgid "Claims"
+msgstr "Reivindicações"
+
+msgid "Confirm Delete Pool"
+msgid_plural "Confirm Delete Pools"
+msgstr[0] "Confirma exclusão de Pool"
+msgstr[1] "Confirma exclusão de Pools"
+
+msgid "Confirm Delete Pool Flavor"
+msgid_plural "Confirm Delete Pool Flavors"
+msgstr[0] "Confirma a exclusão do Pool de Sabor"
+msgstr[1] "Confirma a exclusão do Pool de Sabores"
+
+msgid "Confirm Delete Queue"
+msgid_plural "Confirm Delete queues"
+msgstr[0] "Confirma excluir a fila"
+msgstr[1] "Confirma excluir as filas"
+
+msgid "Confirmed"
+msgstr "Confirmado"
+
+msgid "Create"
+msgstr "Criar"
+
+msgid "Create Pool"
+msgstr "Criar Pool"
+
+msgid "Create Pool Flavor"
+msgstr "Criar Pool de Sabor"
+
+msgid "Create Queue"
+msgstr "Criar fila"
+
+msgid "Create Queues"
+msgstr "Criar filas"
+
+msgid "Create Subscription"
+msgstr "Criar Subscrição"
+
+msgid "Creating Signed URL"
+msgstr "Criando URL assinada"
+
+msgid "DELETE"
+msgstr "DELETE"
+
+msgid "Delete"
+msgstr "Excluir"
+
+msgid "Delete Pool"
+msgid_plural "Delete Pools"
+msgstr[0] "Excluir Pool"
+msgstr[1] "Excluir Pools"
+
+msgid "Delete Pool Flavor"
+msgid_plural "Delete Pool Flavors"
+msgstr[0] "Excluir Pool de Sabor"
+msgstr[1] "Excluir Pool de Sabores"
+
+msgid "Delete Pool Flavors"
+msgstr "Excluir Pool de Sabores"
+
+msgid "Delete Pools"
+msgstr "Excluir Pools"
+
+msgid "Delete Queue"
+msgid_plural "Delete Queues"
+msgstr[0] "Excluir fila"
+msgstr[1] "Excluir filas"
+
+msgid "Delete Queues"
+msgstr "Excluir filas"
+
+#, python-format
+msgid "Deleted Pool Flavor: %s."
+msgid_plural "Deleted Pool Flavors: %s."
+msgstr[0] "Pool de sabor excluído: %s."
+msgstr[1] "Pool de sabores excluídos: %s."
+
+#, python-format
+msgid "Deleted Pool: %s."
+msgid_plural "Deleted Pools: %s."
+msgstr[0] "Pool excluído: %s."
+msgstr[1] "Pools excluídos: %s."
+
+#, python-format
+msgid "Deleted Queue: %s."
+msgid_plural "Deleted Queues: %s."
+msgstr[0] "Excluir fila: %s."
+msgstr[1] "Excluir filas: %s."
+
+msgid "Describes flavor-specific capabilities in YAML format."
+msgstr "Descreva as capacidades específicas do sabor no formato YAML."
+
+msgid "Enter a queue name"
+msgstr "Informe o nome da fila"
+
+msgid "Enter a subscriber"
+msgstr "Informe o subscritor"
+
+msgid "Free Messages"
+msgstr "Mensagens isentas"
+
+msgid "GET"
+msgstr "GET"
+
+msgid "Group"
+msgstr "Grupo"
+
+msgid "Group of the pool."
+msgstr "Grupo do pool."
+
+msgid "HEAD"
+msgstr "HEAD"
+
+msgid "ID"
+msgstr "ID"
+
+msgid "List Messages"
+msgstr "Lista de mensagens"
+
+msgid "Messages"
+msgstr "Mensagens"
+
+#, python-format
+msgid "Messages has been posted to queue %s successfully."
+msgstr "Mensagens foram publicadas na fila %s com sucesso."
+
+msgid "Methods"
+msgstr "Métodos"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Name of the flavor."
+msgstr "Nome do sabor."
+
+msgid "Name of the pool."
+msgstr "Nome do pool."
+
+msgid ""
+"Note that you can create a queue without defining metadata.\n"
+"      The metadata step is optional but recommended."
+msgstr ""
+"Note que você pode criar uma fila sem definir metadado. O passo de metadado "
+"é opcional mas recomendado."
+
+msgid "Note that you can create a subscription without defining options."
+msgstr "Note que você pode criar uma subscrição sem definir as opções."
+
+msgid "OPTIONS"
+msgstr "OPÇÕES"
+
+msgid "Options"
+msgstr "Opções"
+
+msgid "POST"
+msgstr "POST"
+
+msgid "PUT"
+msgstr "PUT"
+
+msgid "Paths"
+msgstr "Caminhos"
+
+msgid "Pool"
+msgstr "Pool"
+
+#, python-format
+msgid "Pool %s was successfully created."
+msgstr "O Pool %s foi criado com sucesso."
+
+#, python-format
+msgid "Pool %s was successfully updated."
+msgstr "O Pool %s foi atualizado com sucesso."
+
+msgid "Pool Flavor"
+msgstr "Pool de Sabor"
+
+msgid "Pool Flavors"
+msgstr "Pool de Sabores"
+
+msgid "Pool Group"
+msgstr "Grupo de Pool"
+
+#, python-format
+msgid "Pool flavor %s was successfully created."
+msgstr "O Pool de sabor %s foi criado com sucesso."
+
+#, python-format
+msgid "Pool flavor %s was successfully updated."
+msgstr "Pool de sabor %s foi atualizado com sucesso."
+
+msgid "Pool group for flavor."
+msgstr "Grupo de pool para o sabor."
+
+msgid "Pools"
+msgstr "Pools"
+
+msgid "Post"
+msgstr "Publicar"
+
+msgid "Post Messages"
+msgstr "Publicar mensagens."
+
+#, python-format
+msgid "Queue %s was successfully created."
+msgstr "A fila %s foi criada com sucesso."
+
+#, python-format
+msgid "Queue %s was successfully updated."
+msgstr "A fila %s foi atualizada com sucesso."
+
+msgid "Queue Details"
+msgstr "Detalhes da fila"
+
+msgid "Queue Metadata"
+msgstr "Metadados da fila"
+
+msgid "Queue Name"
+msgstr "Nome da fila"
+
+msgid "Queues"
+msgstr "Filas"
+
+#, python-format
+msgid "Removed %(subscriber)s subscriber from the %(queue)s queue."
+msgstr "Removido o %(subscriber)s subscritor da %(queue)s fila."
+
+msgid "See a sample as below:"
+msgstr "Veja um exemplo como abaixo:"
+
+msgid "Signed URL"
+msgstr "URL assinada"
+
+#, python-format
+msgid "Signed URL for %s"
+msgstr "URL assinada para %s"
+
+#, python-format
+msgid ""
+"Signed URL was successfully created for the queue %s with expires %s and "
+"signature %s."
+msgstr ""
+"A URL assinada foi criada com sucesso na fila %s com expiração %s e "
+"assinatura %s."
+
+msgid "Subscriber"
+msgstr "Subscritor"
+
+msgid "Subscribers must be in the form of mailto, HTTP, or HTTPS."
+msgstr "Subscritores devem estar no formulário de mailto, HTTP ou HTTPS."
+
+msgid "Subscription"
+msgstr "Subscrição "
+
+#, python-format
+msgid "Subscription %s was successfully created."
+msgstr "A Subscrição %s foi criada com sucesso."
+
+msgid "Subscriptions"
+msgstr "Subscrições"
+
+msgid "TTL Seconds"
+msgstr "Segundos TTL"
+
+msgid "The TTL for a subscription must be at least 60 seconds long."
+msgstr ""
+"O TTL para uma subscrição deve estar com ao menos 60 segundos de duração."
+
+msgid ""
+"The client specifies only the body and TTL for the message. The server\n"
+"    inserts metadata, such as ID and age."
+msgstr ""
+"O cliente especifica somente o corpo e TTL para a mensagem.  O servidor "
+"insere metadados, tal como ID e idade."
+
+msgid "Time To Live"
+msgstr "Tempo de vida"
+
+msgid "Time to Live"
+msgstr "Tempo de vida"
+
+msgid "Total Messages"
+msgstr "Total de mensagens"
+
+msgid "URI"
+msgstr "URI"
+
+msgid "URI for storage engine of this pool."
+msgstr "URI para motor de armazenamento desse pool."
+
+msgid "Unable to add subscription."
+msgstr "Não foi possível adicionar a subscrição."
+
+msgid "Unable to create signed URL."
+msgstr "Não foi possível criar URL assinada."
+
+msgid "Unable to create the flavor."
+msgstr "Não foi possível criar o sabor."
+
+msgid "Unable to create the pool."
+msgstr "Não foi possível criar o pool."
+
+msgid "Unable to create the queue."
+msgstr "Não foi possível criar a fila."
+
+#, python-format
+msgid "Unable to delete Pool Flavor: %s."
+msgid_plural "Unable to delete Pool Flavors: %s."
+msgstr[0] "Não foi possível excluir o Pool de Sabor: %s."
+msgstr[1] "Não foi possível excluir o Pool de Sabores: %s."
+
+#, python-format
+msgid "Unable to delete Pool: %s."
+msgid_plural "Unable to delete Pools: %s."
+msgstr[0] "Não é possível excluir o Pool: %s."
+msgstr[1] "Não é possível excluir os Pools: %s."
+
+#, python-format
+msgid "Unable to delete Queue: %s."
+msgid_plural "Unable to delete Queues: %s."
+msgstr[0] "Não foi possível excluir a fila: %s."
+msgstr[1] "Não foi possível excluir as filas: %s."
+
+msgid "Unable to delete subscription."
+msgstr "Não foi possível excluir a subscrição. "
+
+msgid "Unable to get messages."
+msgstr "Não foi possível obter mensagens."
+
+msgid "Unable to post messages."
+msgstr "Não foi possível postar mensagens."
+
+msgid "Unable to purge the queue."
+msgstr "Não foi possível limpar a fila."
+
+msgid "Unable to retrieve the Queue."
+msgstr "Não foi possível recuperar a fila."
+
+msgid "Unable to retrieve the Queues."
+msgstr "Não foi possível recuperar as filas."
+
+msgid "Unable to retrieve the flavor."
+msgstr "Não foi possível recuperar o sabor."
+
+msgid "Unable to retrieve the flavors."
+msgstr "Não foi possível recuperar os sabores."
+
+msgid "Unable to retrieve the pool."
+msgstr "Não foi possível recuperar o pool."
+
+msgid "Unable to retrieve the pools."
+msgstr "Não foi possível recuperar os pools."
+
+msgid "Unable to update the flavor."
+msgstr "Não foi possível atualizar o sabor."
+
+msgid "Unable to update the pool."
+msgstr "Não foi possível atualizar o pool."
+
+msgid "Unable to update the queue."
+msgstr "Não foi possível atualizar a fila."
+
+msgid "Update"
+msgstr "Atualizar"
+
+msgid "Update Pool"
+msgstr "Atualizar Pool"
+
+msgid "Update Pool Flavor"
+msgstr "Atualizar Pool de Sabor"
+
+msgid "Update Queue"
+msgstr "Atualizar fila"
+
+msgid "View Messages"
+msgstr "Visualizar mensagens"
+
+msgid "Weight"
+msgstr "Peso"
+
+msgid "Weight of the pool."
+msgstr "Peso do pool."
+
+#, python-format
+msgid "You are not allowed to delete pool flavors: %s"
+msgstr "Você não está autorizado a excluir o pool de sabores: %s"
+
+#, python-format
+msgid "You are not allowed to delete pools: %s"
+msgstr "Você não está permitido para excluir pools: %s"
+
+#, python-format
+msgid "You are not allowed to delete queues: %s"
+msgstr "Você não está autorizado a excluir filas: %s"
+
+msgid ""
+"You can submit up to 10 messages in a single request, but you must always\n"
+"    encapsulate the messages in a collection container (an array in JSON, "
+"even\n"
+"    for a single message - without the JSON array, you receive the "
+"\"Invalid\n"
+"    request body\" message). The resulting value of the Location header or\n"
+"    response body might be used to retrieve the created messages for "
+"further\n"
+"    processing."
+msgstr ""
+"Você pode submeter até 10 mensagens em uma requisição única, mas você deve "
+"sempre encapsular as mensagens em uma coleção de container (um vetor em "
+"JSON, até para uma única mensagem - sem o vetor JSON, você recebe  a "
+"mensagem \"Corpo da requisição inválida\"). O valor resultante do cabeçalho "
+"de localização ou o corpo de resposta deve ser usado para recuperar a "
+"mensagem criada para mais processamento."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool Flavor is not recoverable."
+msgid_plural ""
+"You have selected \"%s\". Deleted Pool Flavors are not recoverable."
+msgstr[0] "Você selecionou \"%s\". Pool de Sabor excluído não é recuperável."
+msgstr[1] ""
+"Você selecionou \"%s\". Pool de Sabores excluídos não são recuperáveis."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted Pool is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted Pools are not recoverable."
+msgstr[0] "Você selecionou \"%s\". Pool excluído não é recuperável."
+msgstr[1] "Você selecionou \"%s\". Pools excluídos não são recuperáveis."
+
+#, python-format
+msgid "You have selected \"%s\". Deleted queue is not recoverable."
+msgid_plural "You have selected \"%s\". Deleted queues are not recoverable."
+msgstr[0] "Você selecionou \"%s\". A fila excluída não é recuperável."
+msgstr[1] "Você selecionou \"%s\". As filas excluídas não são recuperáveis."
+
+msgid ""
+"You must specify one of the pool groups that is configured in storage pools."
+msgstr ""
+"Você deve especificar um dos grupos de pools que é configurado no "
+"armazenamento de pools."
+
+msgid ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
+msgstr ""
+"[\n"
+"  {\n"
+"    \"body\": {\n"
+"      \"event\": \"BackupProgress\",\n"
+"      \"current_bytes\": \"2341134\",\n"
+"      \"total_bytes\": \"99614720\"\n"
+"    }\n"
+"  }\n"
+"]"
+
+msgid "e.g. mongodb://127.0.0.1:27017"
+msgstr "e.g. mongodb://127.0.0.1:27017"
