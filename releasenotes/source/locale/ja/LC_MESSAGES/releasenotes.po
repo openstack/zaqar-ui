@@ -1,13 +1,14 @@
 # Shu Muto <shu-mutou@rf.jp.nec.com>, 2017. #zanata
+# Shu Muto <shu-mutou@rf.jp.nec.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Zaqar UI Release Notes 3.0.1\n"
+"Project-Id-Version: Zaqar UI Release Notes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-05 05:46+0000\n"
+"POT-Creation-Date: 2018-02-05 01:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-25 05:53+0000\n"
+"PO-Revision-Date: 2018-02-05 04:47+0000\n"
 "Last-Translator: Shu Muto <shu-mutou@rf.jp.nec.com>\n"
 "Language-Team: Japanese\n"
 "Language: ja\n"
@@ -16,6 +17,12 @@ msgstr ""
 
 msgid "2.0.0"
 msgstr "2.0.0"
+
+msgid "3.0.0"
+msgstr "3.0.0"
+
+msgid "4.0.0.0b3-3"
+msgstr "4.0.0.0b3-3"
 
 msgid "Bug Fixes"
 msgstr "バグ修正"
@@ -133,6 +140,15 @@ msgstr ""
 "[`blueprint support-presigned-queue <https://blueprints.launchpad.net/zaqar-"
 "ui/+spec/support-presigned-queue>`_] 署名済み URL をサポートしました。キュー"
 "に「署名済み URL」アクションをついかしました。"
+
+msgid ""
+"[`bug/1647995 <https://bugs.launchpad.net/zaqar-ui/+bug/1647995>`_] Fixed "
+"queue create/update without metadata modification. When metadata is not "
+"modified in queue create/update, the operation had been failed."
+msgstr ""
+"[`bug/1647995 <https://bugs.launchpad.net/zaqar-ui/+bug/1647995>`_] メタデー"
+"タの編集をしない場合の、キューの作成／更新を修正しました。キューの作成／削除"
+"でメタデータを編集しない場合に、操作に失敗していました。"
 
 msgid ""
 "[`bug/1664374 <https://bugs.launchpad.net/zaqar-ui/+bug/1664374>`_] Use "
