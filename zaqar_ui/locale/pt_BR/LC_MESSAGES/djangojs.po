@@ -1,17 +1,18 @@
+# Fernando Pimenta <fernando.c.pimenta@gmail.com>, 2018. #zanata
 # Rodrigo Loures <rmoraesloures@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zaqar-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-01-30 22:25+0000\n"
+"POT-Creation-Date: 2018-02-09 00:54+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-30 09:26+0000\n"
-"Last-Translator: Rodrigo Loures <rmoraesloures@gmail.com>\n"
+"PO-Revision-Date: 2018-02-15 11:06+0000\n"
+"Last-Translator: Fernando Pimenta <fernando.c.pimenta@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
-"Language: pt-BR\n"
-"X-Generator: Zanata 3.9.6\n"
+"Language: pt_BR\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 msgid "A queue name between 1-256 characters is required."
@@ -35,6 +36,9 @@ msgstr "Corpo"
 
 msgid "Capabilities"
 msgstr "Capacidades"
+
+msgid "Choose resource to purge"
+msgstr "Escolha o recurso para limpar"
 
 msgid "Claimed Messages"
 msgstr "Mensagens reivindicadas"
@@ -242,6 +246,16 @@ msgstr "Publicar"
 
 msgid "Post Messages"
 msgstr "Publicar mensagens."
+
+msgid "Purge"
+msgstr "Limpar"
+
+msgid "Purge Queue"
+msgstr "Limpar Fila"
+
+#, python-format
+msgid "Queue %s has been purged successfully."
+msgstr "A fila %s foi limpa com sucesso."
 
 #, python-format
 msgid "Queue %s was successfully created."
