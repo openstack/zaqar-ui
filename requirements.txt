@@ -12,3 +12,4 @@ python-zaqarclient>=1.0.0 # Apache-2.0
 Babel!=2.4.0,>=2.3.4 # BSD
 Django<2.0,>=1.8 # BSD
 django-babel>=0.5.1 # BSD
+horizon>=13.0.0 # Apache-2.0
