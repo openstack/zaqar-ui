@@ -21,7 +21,6 @@ from zaqar_ui.test import test_data
 
 class APITestCase(helpers.APITestCase):
     """Extends the base Horizon APITestCase for zaqarclient"""
-
     def setUp(self):
         super(APITestCase, self).setUp()
         self._original_magnumclient = api.zaqar.zaqarclient
