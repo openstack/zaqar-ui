@@ -7,13 +7,15 @@ Team and repository tags
 
 .. Change things from this point on
 
-===============================
-zaqar-ui
-===============================
+========
+Zaqar UI
+========
 
-Zaqar Dashboard
+Horizon plugin for Zaqar
 
 * Free software: Apache license
+* Documentation: https://docs.openstack.org/zaqar-ui/latest/
+* Release notes: https://docs.openstack.org/releasenotes/zaqar-ui/
 * Source: https://git.openstack.org/cgit/openstack/zaqar-ui
 * Bugs: https://bugs.launchpad.net/zaqar-ui
 
