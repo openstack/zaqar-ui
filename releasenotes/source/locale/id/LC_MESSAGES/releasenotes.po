@@ -1,17 +1,18 @@
 # suhartono <cloudsuhartono@gmail.com>, 2017. #zanata
+# suhartono <cloudsuhartono@gmail.com>, 2018. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: Zaqar UI Release Notes 3.0.1\n"
+"Project-Id-Version: zaqar-ui\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-21 04:30+0000\n"
+"POT-Creation-Date: 2018-04-09 07:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-09-21 12:40+0000\n"
+"PO-Revision-Date: 2018-05-13 04:12+0000\n"
 "Last-Translator: suhartono <cloudsuhartono@gmail.com>\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 
 msgid "2.0.0"
@@ -19,6 +20,9 @@ msgstr "2.0.0"
 
 msgid "3.0.0"
 msgstr "3.0.0"
+
+msgid "4.0.0"
+msgstr "4.0.0"
 
 msgid "Bug Fixes"
 msgstr "Perbaikan bug"
@@ -37,6 +41,9 @@ msgstr "Catatan lainnya"
 
 msgid "Pike Series Release Notes"
 msgstr "Catatan Rilis Seri Pike"
+
+msgid "Queens Series Release Notes"
+msgstr "Catatan Rilis Seri Queen"
 
 msgid ""
 "Storage pool flavors management panel is added. This panel is added into "
@@ -133,6 +140,15 @@ msgstr ""
 "[`blueprint support-presigned-queue <https://blueprints.launchpad.net/zaqar-"
 "ui/+spec/support-presigned-queue>`_] Dukungan signed url. Tindakan \"Signed "
 "URL\" untuk antrean ditambahkan."
+
+msgid ""
+"[`bug/1647995 <https://bugs.launchpad.net/zaqar-ui/+bug/1647995>`_] Fixed "
+"queue create/update without metadata modification. When metadata is not "
+"modified in queue create/update, the operation had been failed."
+msgstr ""
+"[`bug/1647995 <https://bugs.launchpad.net/zaqar-ui/+bug/1647995>`_] Create/"
+"update antrean perbaikan tanpa modifikasi metadata. Ketika metadata tidak "
+"diubah dalam create/update antrean, operasi telah gagal."
 
 msgid ""
 "[`bug/1664374 <https://bugs.launchpad.net/zaqar-ui/+bug/1664374>`_] Use "
