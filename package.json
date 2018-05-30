@@ -24,7 +24,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/karma ]; then tox -ekarma --notest; pip install -U -t ./.tox/karma/lib/python3.5/site-packages/ ../horizon; fi",
+    "postinstall": "if [ ! -d .tox ] || [ ! -d .tox/karma ]; then tox -ekarma --notest; python3.5 -m pip install -U -t ./.tox/karma/lib/python3.5/site-packages/ ../horizon; fi",
     "lint": "eslint --no-color zaqar_ui/static",
     "lintq": "eslint --quiet zaqar_ui/static",
     "test": "karma start zaqar_ui/karma.conf.js --single-run"
