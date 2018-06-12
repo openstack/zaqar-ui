@@ -1,9 +1,7 @@
 - project:
     check:
       jobs:
-        - horizon-openstack-tox-py35dj20:
-            required-projects:
-              openstack/horizon
+        - horizon-openstack-tox-python3-django111
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
@@ -19,9 +17,7 @@
               openstack/horizon
     gate:
       jobs:
-        - horizon-openstack-tox-py35dj20:
-            required-projects:
-              openstack/horizon
+        - horizon-openstack-tox-python3-django111
         - nodejs-npm-run-lint:
             vars:
               node_version: 4
