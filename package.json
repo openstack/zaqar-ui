@@ -8,7 +8,7 @@
   "version": "0.0.0",
   "private": true,
   "license": "Apache 2.0",
-  "author": "Openstack <openstack-dev@lists.openstack.org>",
+  "author": "Openstack <openstack-discuss@lists.openstack.org>",
   "devDependencies": {
     "eslint": "^1.10.3",
     "eslint-config-openstack": "^1.2.4",
