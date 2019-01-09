@@ -11,18 +11,18 @@
 # limitations under the License.
 
 # Default to Horizons test settings to avoid any missing keys
-from horizon.test.settings import *  # noqa: F403,H303
-from openstack_dashboard.test.settings import *  # noqa: F403,H303
-
-# pop these keys to avoid log warnings about deprecation
-# update_dashboards will populate them anyway
-HORIZON_CONFIG.pop('dashboards', None)
-HORIZON_CONFIG.pop('default_dashboard', None)
+from horizon.test.settings import *  # noqa
+from openstack_dashboard.test.settings import *  # noqa
 
 # Update the dashboards with zaqar_ui
 import openstack_dashboard.enabled
 from openstack_dashboard.utils import settings
 import zaqar_ui.enabled
+
+# pop these keys to avoid log warnings about deprecation
+# update_dashboards will populate them anyway
+HORIZON_CONFIG.pop('dashboards', None)
+HORIZON_CONFIG.pop('default_dashboard', None)
 
 settings.update_dashboards(
     [
