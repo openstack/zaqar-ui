@@ -3,7 +3,7 @@
   "description": "Zaqar UI JavaScript tests",
   "repository": {
     "type": "git",
-    "url": "git://git.openstack.org/openstack/zaqar-ui"
+    "url": "https://git.openstack.org/openstack/zaqar-ui"
   },
   "version": "0.0.0",
   "private": true,
