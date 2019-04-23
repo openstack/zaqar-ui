@@ -16,7 +16,7 @@ Horizon plugin for Zaqar
 * Free software: Apache license
 * Documentation: https://docs.openstack.org/zaqar-ui/latest/
 * Release notes: https://docs.openstack.org/releasenotes/zaqar-ui/
-* Source: https://git.openstack.org/cgit/openstack/zaqar-ui
+* Source: https://opendev.org/openstack/zaqar-ui
 * Bugs: https://bugs.launchpad.net/zaqar-ui
 
 Enabling in DevStack
