@@ -2,6 +2,7 @@
     templates:
       - openstack-lower-constraints-jobs-horizon
       - check-requirements
+      - horizon-non-primary-django-jobs
       - horizon-nodejs10-jobs
       - openstack-python-jobs-horizon
       - publish-openstack-docs-pti
@@ -12,7 +13,3 @@
             voting: false
             required-projects:
               - openstack/horizon
-        - horizon-openstack-tox-python3-django111
-    gate:
-      jobs:
-        - horizon-openstack-tox-python3-django111
