@@ -4,7 +4,7 @@
       - check-requirements
       - horizon-non-primary-django-jobs
       - horizon-nodejs10-jobs
-      - openstack-python-jobs-horizon
+      - openstack-python3-ussuri-jobs-horizon
       - publish-openstack-docs-pti
       - release-notes-jobs-python3
     check:
