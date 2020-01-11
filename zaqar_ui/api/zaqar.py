@@ -14,7 +14,6 @@
 
 from __future__ import absolute_import
 import logging
-import six
 from zaqarclient.queues import client as zaqar_client
 
 from horizon import exceptions
@@ -78,7 +77,7 @@ def queue_update(request, queue_name, metadata):
 
     queue = zaqarclient(request).queue(queue_name, auto_create=False)
     for key in RESERVED_QUEUE_METADATA:
-        if (key in metadata and isinstance(metadata[key], six.string_types)):
+        if (key in metadata and isinstance(metadata[key], str)):
             metadata[key] = int(metadata[key])
 
     queue.metadata(new_meta=metadata)

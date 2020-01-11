@@ -13,7 +13,6 @@
 #    under the License.
 
 import json
-import six
 import yaml
 
 from django.views import generic
@@ -39,7 +38,7 @@ def _load_yaml(data):
             loaded_data = yaml.safe_load(data)
         except Exception as ex:
             raise Exception(_('The specified input is not a valid '
-                              'YAML format: %s') % six.text_type(ex))
+                              'YAML format: %s') % str(ex))
     return loaded_data
 
 
