@@ -1,6 +1,5 @@
 - project:
     templates:
-      - openstack-lower-constraints-jobs-horizon
       - check-requirements
       - horizon-non-primary-django-jobs
       - horizon-nodejs14-jobs
