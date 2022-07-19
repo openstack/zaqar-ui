@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.conf import urls
+from django.urls import re_path
 from horizon.browsers import views
 from zaqar_ui.content.queues import panel
 
 title = panel.Queues.name
 urlpatterns = [
-    urls.url(r'^$', views.AngularIndexView.as_view(title=title), name='index'),
+    re_path(r'^$', views.AngularIndexView.as_view(title=title), name='index'),
 ]
