@@ -10,10 +10,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.conf import urls
+from django.urls import re_path
 from horizon.browsers import views
 
 
 urlpatterns = [
-    urls.url(r'^$', views.AngularIndexView.as_view(), name='index'),
+    re_path(r'^$', views.AngularIndexView.as_view(), name='index'),
 ]
