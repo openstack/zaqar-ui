@@ -50,7 +50,8 @@ def zaqarclient(request):
 
 
 def queue_list(request, limit=None, marker=None):
-    return zaqarclient(request).queues(limit=limit, marker=marker)
+    result, count = zaqarclient(request).queues(limit=limit, marker=marker)
+    return result
 
 
 def queue_create(request, queue_name, metadata):
