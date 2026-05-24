@@ -3,15 +3,7 @@
 ZAQAR_UI_DIR=$(cd $(dirname $BASH_SOURCE)/.. && pwd)
 
 function install_zaqar_ui {
-    # NOTE(shu-mutou): workaround for devstack bug: 1540328
-    # where devstack install 'test-requirements' but should not do it
-    # for zaqar-ui project as it installs Horizon from url.
-    # Remove following two 'mv' commands when mentioned bug is fixed.
-    mv $ZAQAR_UI_DIR/test-requirements.txt $ZAQAR_UI_DIR/_test-requirements.txt
-
     setup_develop ${ZAQAR_UI_DIR}
-
-    mv $ZAQAR_UI_DIR/_test-requirements.txt $ZAQAR_UI_DIR/test-requirements.txt
 }
 
 function configure_zaqar_ui {
