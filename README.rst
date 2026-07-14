@@ -20,15 +20,15 @@ Enabling in DevStack
 Add this repo as an external repository into your ``local.conf`` file::
 
     [[local|localrc]]
-    enable_plugin zaqar-ui https://github.com/openstack/zaqar-ui
+    enable_plugin zaqar-ui https://opendev.org/openstack/zaqar-ui
 
 Manual Installation
 -------------------
 
 Begin by cloning the Horizon and Zaqar UI repositories::
 
-    git clone https://github.com/openstack/horizon
-    git clone https://github.com/openstack/zaqar-ui
+    git clone https://opendev.org/openstack/horizon
+    git clone https://opendev.org/openstack/zaqar-ui
 
 Create a virtual environment and install Horizon dependencies::
 
