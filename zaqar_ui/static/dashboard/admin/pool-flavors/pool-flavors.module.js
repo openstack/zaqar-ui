@@ -39,7 +39,8 @@
 
   function run(zaqar, basePath, resourceType, flavorsService, registry) {
     registry.getResourceType(resourceType)
-      .setNames(gettext('Pool Flavor'), gettext('Pool Flavors'))
+      .setNames('Pool Flavor', 'Pool Flavors',
+                ngettext('Pool Flavor', 'Pool Flavors', 1))
       .setSummaryTemplateUrl(basePath + 'drawer.html')
       .setProperties(flavorProperties())
       .setListFunction(flavorsService.getFlavorsPromise)

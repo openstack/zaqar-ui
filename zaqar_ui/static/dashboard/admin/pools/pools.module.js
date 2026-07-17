@@ -39,7 +39,7 @@
 
   function run(zaqar, basePath, resourceType, poolsService, registry) {
     registry.getResourceType(resourceType)
-      .setNames(gettext('Pool'), gettext('Pools'))
+      .setNames('Pool', 'Pools', ngettext('Pool', 'Pools', 1))
       .setSummaryTemplateUrl(basePath + 'drawer.html')
       .setProperties(poolProperties())
       .setListFunction(poolsService.getPoolsPromise)
