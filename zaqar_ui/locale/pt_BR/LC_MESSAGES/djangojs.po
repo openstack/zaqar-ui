@@ -1,13 +1,14 @@
 # Rodrigo Loures <rmoraesloures@gmail.com>, 2018. #zanata
+# Rodrigo Loures <rmoraesloures@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zaqar-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2018-02-19 00:40+0000\n"
+"POT-Creation-Date: 2026-07-17 16:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-01-30 09:26+0000\n"
+"PO-Revision-Date: 2026-07-17 04:30+0000\n"
 "Last-Translator: Rodrigo Loures <rmoraesloures@gmail.com>\n"
 "Language-Team: Portuguese (Brazil)\n"
 "Language: pt_BR\n"
@@ -203,8 +204,11 @@ msgstr "PUT"
 msgid "Paths"
 msgstr "Caminhos"
 
+#, fuzzy
 msgid "Pool"
-msgstr "Pool"
+msgid_plural "Pools"
+msgstr[0] "Pool"
+msgstr[1] ""
 
 #, python-format
 msgid "Pool %s was successfully created."
@@ -214,11 +218,11 @@ msgstr "O Pool %s foi criado com sucesso."
 msgid "Pool %s was successfully updated."
 msgstr "O Pool %s foi atualizado com sucesso."
 
+#, fuzzy
 msgid "Pool Flavor"
-msgstr "Pool de Sabor"
-
-msgid "Pool Flavors"
-msgstr "Pool de Sabores"
+msgid_plural "Pool Flavors"
+msgstr[0] "Pool de Sabor"
+msgstr[1] ""
 
 msgid "Pool Group"
 msgstr "Grupo de Pool"
@@ -233,9 +237,6 @@ msgstr "Pool de sabor %s foi atualizado com sucesso."
 
 msgid "Pool group for flavor."
 msgstr "Grupo de pool para o sabor."
-
-msgid "Pools"
-msgstr "Pools"
 
 msgid "Post"
 msgstr "Publicar"
@@ -479,6 +480,7 @@ msgstr ""
 "Você deve especificar um dos grupos de pools que é configurado no "
 "armazenamento de pools."
 
+#, python-brace-format
 msgid ""
 "[\n"
 "  {\n"

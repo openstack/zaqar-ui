@@ -3,16 +3,17 @@
 # zenglulu <zengluul@gmail.com>, 2016. #zanata
 # Bin <liubin@glab.cn>, 2017. #zanata
 # liujunpeng <liujunpeng@inspur.com>, 2017. #zanata
+# liujunpeng <liujunpeng@inspur.com>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zaqar-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2021-02-16 08:30+0000\n"
+"POT-Creation-Date: 2026-07-17 16:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-07-30 02:07+0000\n"
-"Last-Translator: Bin <liubin@glab.cn>\n"
+"PO-Revision-Date: 2026-07-17 04:30+0000\n"
+"Last-Translator: liujunpeng <liujunpeng@inspur.com>\n"
 "Language-Team: Chinese (China)\n"
 "Language: zh_CN\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -199,8 +200,10 @@ msgstr "PUT"
 msgid "Paths"
 msgstr "路径"
 
+#, fuzzy
 msgid "Pool"
-msgstr "池"
+msgid_plural "Pools"
+msgstr[0] "池"
 
 #, python-format
 msgid "Pool %s was successfully created."
@@ -210,11 +213,10 @@ msgstr "更新池%s 成功。"
 msgid "Pool %s was successfully updated."
 msgstr "已成功更新池 %s。"
 
+#, fuzzy
 msgid "Pool Flavor"
-msgstr "类型池"
-
-msgid "Pool Flavors"
-msgstr "类型池"
+msgid_plural "Pool Flavors"
+msgstr[0] "类型池"
 
 msgid "Pool Group"
 msgstr "池组"
@@ -229,9 +231,6 @@ msgstr "类型%s 更新成功。"
 
 msgid "Pool group for flavor."
 msgstr "型的池组。"
-
-msgid "Pools"
-msgstr "池"
 
 msgid "Post"
 msgstr "发布"
@@ -468,6 +467,7 @@ msgid ""
 "You must specify one of the pool groups that is configured in storage pools."
 msgstr "你必须指定一个在存储池中配置的池组。"
 
+#, python-brace-format
 msgid ""
 "[\n"
 "  {\n"

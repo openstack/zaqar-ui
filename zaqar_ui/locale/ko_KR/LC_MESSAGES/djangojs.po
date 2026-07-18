@@ -1,19 +1,20 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2016. #zanata
 # Ian Y. Choi <ianyrchoi@gmail.com>, 2016. #zanata
-# Sungjin Kang <gang.sungjin@gmail.com>, 2016. #zanata
+# Sungjin Kang <ujuc@ujuc.me>, 2016. #zanata
 # Eunseop Shin <kairos9603@khu.ac.kr>, 2017. #zanata
 # minwook-shin <minwook0106@gmail.com>, 2017. #zanata
 # ByungYeol Woo <wby1089@gmail.com>, 2019. #zanata
+# Eunseop Shin <kairos9603@khu.ac.kr>, 2026. #zanata
 msgid ""
 msgstr ""
 "Project-Id-Version: zaqar-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2019-04-25 01:55+0000\n"
+"POT-Creation-Date: 2026-07-17 16:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-05-01 10:52+0000\n"
-"Last-Translator: ByungYeol Woo <wby1089@gmail.com>\n"
+"PO-Revision-Date: 2026-07-17 04:30+0000\n"
+"Last-Translator: Eunseop Shin <kairos9603@khu.ac.kr>\n"
 "Language-Team: Korean (South Korea)\n"
 "Language: ko_KR\n"
 "X-Generator: Zanata 4.3.3\n"
@@ -200,8 +201,10 @@ msgstr "PUT"
 msgid "Paths"
 msgstr "경로"
 
+#, fuzzy
 msgid "Pool"
-msgstr "Pool"
+msgid_plural "Pools"
+msgstr[0] "Pool"
 
 #, python-format
 msgid "Pool %s was successfully created."
@@ -211,11 +214,10 @@ msgstr "Pool %s가 성공적으로 생성되었습니다."
 msgid "Pool %s was successfully updated."
 msgstr "풀 %s가 성공적으로 업데이트되었습니다."
 
+#, fuzzy
 msgid "Pool Flavor"
-msgstr "Pool Flavor"
-
-msgid "Pool Flavors"
-msgstr "Pool Flavors"
+msgid_plural "Pool Flavors"
+msgstr[0] "Pool Flavor"
 
 msgid "Pool Group"
 msgstr "풀 그룹"
@@ -230,9 +232,6 @@ msgstr "Pool flavor %s가 성공적으로 업데이트 되었습니다."
 
 msgid "Pool group for flavor."
 msgstr "Flavor를 위한 Pool Group."
-
-msgid "Pools"
-msgstr "Pools"
 
 msgid "Post"
 msgstr "보내기"
@@ -443,6 +442,7 @@ msgid ""
 "You must specify one of the pool groups that is configured in storage pools."
 msgstr "저장 영역 풀에 구성된 풀 그룹 중 하나를 지정해야합니다."
 
+#, python-brace-format
 msgid ""
 "[\n"
 "  {\n"

@@ -3,19 +3,20 @@
 # Andreas Jaeger <jaegerandi@gmail.com>, 2017. #zanata
 # Frank Kloeker <eumel@arcor.de>, 2017. #zanata
 # Robert Simai <robert.simai@suse.com>, 2017. #zanata
+# Andreas Jaeger <jaegerandi@gmail.com>, 2026. #zanata
 msgid ""
 msgstr ""
-"Project-Id-Version: zaqar-ui 3.0.1.dev10\n"
+"Project-Id-Version: zaqar-ui VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.launchpad.net/openstack-i18n/\n"
-"POT-Creation-Date: 2017-09-05 05:46+0000\n"
+"POT-Creation-Date: 2026-07-17 16:30+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-08-21 10:46+0000\n"
-"Last-Translator: Frank Kloeker <eumel@arcor.de>\n"
+"PO-Revision-Date: 2026-07-17 04:30+0000\n"
+"Last-Translator: Andreas Jaeger <jaegerandi@gmail.com>\n"
 "Language-Team: German\n"
 "Language: de\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Zanata 4.3.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 msgid "A queue name between 1-256 characters is required."
@@ -211,8 +212,11 @@ msgstr "PUT"
 msgid "Paths"
 msgstr "Pfade"
 
+#, fuzzy
 msgid "Pool"
-msgstr "Pool"
+msgid_plural "Pools"
+msgstr[0] "Pool"
+msgstr[1] ""
 
 #, python-format
 msgid "Pool %s was successfully created."
@@ -222,11 +226,11 @@ msgstr "Pool %s wurde erfolgreich erstellt."
 msgid "Pool %s was successfully updated."
 msgstr "Pool %s wurde erfolgreich aktualisiert."
 
+#, fuzzy
 msgid "Pool Flavor"
-msgstr "Pool Variante"
-
-msgid "Pool Flavors"
-msgstr "Pool Varianten"
+msgid_plural "Pool Flavors"
+msgstr[0] "Pool Variante"
+msgstr[1] ""
 
 msgid "Pool Group"
 msgstr "Pool Gruppe"
@@ -241,9 +245,6 @@ msgstr "Pool-Variante %s wurde erfolgreich aktualisiert."
 
 msgid "Pool group for flavor."
 msgstr "Pool-Gruppe der Variante."
-
-msgid "Pools"
-msgstr "Pools"
 
 msgid "Post"
 msgstr "Abschicken"
@@ -509,6 +510,7 @@ msgid ""
 msgstr ""
 "Sie müssen eine der in Storage Pools konfigurierten Pool-Gruppe angeben."
 
+#, python-brace-format
 msgid ""
 "[\n"
 "  {\n"
